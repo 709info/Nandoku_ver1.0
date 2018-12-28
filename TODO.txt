@@ -1,0 +1,26 @@
+＜DEBUGリスト＞
+
+○全体
+
+　・検索結果の文字化け「??」
+
+○class.html
+
+○kanken.html
+
+○siritori~.html
+
+　・一問目が漢字４文字のときのアニメーション
+
+
+＜TODOリスト＞
+
+○全体
+
+　・スマホ対応
+　・初級編-上級編に対応した問題ページ
+
+○siritori~.html
+
+
+＜CODEリスト＞

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123486040-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-123486040-2');
+	</script>
+
+    <meta charset="utf-8">
+    <title>難読漢字検定 - 「１級　熟字訓・当て字」分析</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <style type="text/css">
+        body {
+            background-color: #000000;
+            background-image: URL("../../img/img_home.jpg");
+            background-attachment: fixed;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    </style>
+
+    <noscript>
+    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+    </noscript>
+
+</head>
+
+<body>
+
+    <p class="page_title">「１級　熟字訓・当て字」分析</p>
+
+    <div id="intro_page">
+
+        <article id="intro_field" class="field">
+
+			<p class="intro_title margin_on_title">＜熟字訓・当て字について＞</p>
+			
+	        <div id="ateji_about" class="normal_text center_text">
+	            <p>漢検１級では、<y>「熟字訓・当て字」</y>という分野が出題されます。<br>
+	            １０問全て読み問題で、１問１点です。</p>
+				<article name="ateji_reidai" class="table_article">
+					<div id="ateji_reidai" class="center_text">
+						<p><br>平成25年度第1回　熟字訓・当て字<br>
+						<a href="https://www.kanken.or.jp/kanken/outline/degree/example.html" target="_blank">「各級の出題内容と審査基準」漢検公式ＨＰ</a></p>
+						<img src="../../img/ateji_kaitou.png">
+						<img src="../../img/ateji_mondai.png">
+					</div>
+				</article>
+	            <p>このページでは、<y>過去に本試験で出題された当て字</y>のデータを元に、<br>
+	            頻出度や傾向などについて考察します。</p>
+	        </div>
+
+			<p class="intro_title margin_on_title">＜過去の出題＞</p>
+			
+	        <div class="normal_text center_text">
+	            <p>過去に出題された当て字を以下にまとめました。(限定公開)</p>
+	        </div>
+	        
+			<img id="key_lock" src="../../img/key_lock.png">
+	        <article id="panel_ateji_ranking_asked" class="bar_panel ateji_bar margin_on_bar">
+	        	<a href="#" onClick="Password_check();">
+	        		<p>「熟字訓・当て字」保管庫</p>
+	        	</a>
+	        </article>
+	        
+	        <div class="normal_text center_text">
+				<div id="ateji_articles">
+					<article name="past_data_list" class="table_article">
+						<div class="mini_panel toggle_panel">
+							<p onClick="Toggle_table()">表示</p>
+						</div>
+						<p class="percent_text">「熟字訓・当て字」過去問データ集計状況</p>
+						<table name="legend_of_asked" class="analysis_table" border="1">
+							<tr>
+								<th>実施年度</th>
+								<td>第１回</td>
+								<td>第２回</td>
+								<td>第３回</td>
+								<td>受検者平均点</td>
+								<td>合格者平均点</td>
+							</tr>
+	    				</table>
+						<table name="ranking_of_asked" class="analysis_table" border="1">
+	    				</table>
+						<p class="mini_text">「×」に該当するデータをお持ちの方は、私の<a href="https://twitter.com/709info_0103" target="_brank">Twitter</a>にてご報告下さると助かります。</p>
+	    			</article>
+				</div>
+	        </div>
+
+			<p class="intro_title margin_on_title">＜出題回数ランキング＞</p>
+			
+	        <div class="normal_text center_text">
+	            <p><y>過去に出題された回数</y>を基準に当て字を順位付けします。</p>
+	        </div>
+
+	        <article class="bar_panel ateji_bar margin_on_bar">
+	        	<a href="./ateji_ranking_of_asked.html">
+	        		<p>出題回数ランキング</p>
+	        	</a>
+	        </article>
+	        
+			<p class="intro_title margin_on_title">＜問題集 的中率算出システム＞</p>
+			
+	        <div class="normal_text center_text">
+	            <p>問題集ごとに<y>過去の本試験と的中した確率</y>を算出します。</p>
+	        </div>
+
+	        <article class="bar_panel ateji_bar margin_on_bar">
+	        	<a href="./ateji_about_hitting_rate.html">
+	        		<p>的中率とは？</p>
+	        	</a>
+	        </article>
+	        
+	        <article class="bar_panel ateji_bar margin_on_bar" style="margin-top:20px;">
+	        	<a href="./ateji_hit_on_workbook.html">
+	        		<p>的中率算出システム</p>
+	        	</a>
+	        </article>
+	        
+            <div id="button_saiten" class="button only_one_button">
+                <input type="submit" value="戻る" onclick="location.href='../../index.html'">
+            </div>
+			
+        </article>
+
+	</div>
+
+    <script type="text/javascript" src="../../js/get_time.js"></script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+
+    <script type="text/javascript">
+    
+        // cssの読み込み
+
+        $("head").append('<link rel="stylesheet" href="../../css/all_pages.css?v=' + time + '">');
+        $("head").append('<link rel="stylesheet" href="../../css/ateji.css?v=' + time + '">');
+
+        const js_name = "../../js/kanji_data/data_ateji_past_exam.js";
+        
+        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+    </script>
+    
+    <script type="text/javascript">
+    
+        function Password_check() {
+        	let word = prompt("Password:");
+        	
+        	if (word === null || word === "") word = "ateji_analysis";
+        	
+        	location.href = './' + word + '.html';
+        }
+        
+        function Toggle_table() {
+        	$('article[name="past_data_list"] table').fadeToggle();
+        	if ($('.toggle_panel p').html() === "表示") {
+        		$('.toggle_panel p').html("非表示");
+        	} else {
+        		$('.toggle_panel p').html("表示");
+        	}
+        }
+        
+	    for (let year = 15; year <= 30; year++) {
+	    
+	    	let exam_data = new Array();
+	    	
+	    	for (let part = 1; part <= 3; part++) {
+	    		if (typeof(DATA[year][part]) !== "undefined") {
+	    			exam_data[part] = "〇";
+	    		} else {
+	    			exam_data[part] = "×";
+	    		}
+	    		
+	    		if (year === 30 && part === 3) exam_data[part] = "-";
+	    	}
+    		
+    		let ateji_html = 	'<tr>' +
+    							'	<th>平成' + year + '年度</th>' +
+    							'	<td>' + exam_data[1] + '</td>' +
+    							'	<td>' + exam_data[2] + '</td>' +
+    							'	<td>' + exam_data[3] + '</td>' +
+    							'	<td>※</td>' +
+    							'	<td>※</td>' +
+    							'</tr>';
+    		
+    		$('table[name="ranking_of_asked"]').append(ateji_html);
+	    }
+	    
+    </script>
+
+</body>
+
+</html>

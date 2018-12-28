@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>五級　検定試験</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style type="text/css">
+        <!-- body {
+            background-color: #000000;
+            background-image: URL("../img/img2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+
+        -->
+    </style>
+
+	<script type="text/javascript" src="//23193612.ranking.fc2.com/analyze.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var h = $(window).height();
+
+            $('#wrap').css('display', 'none');
+            $('#loader-bg ,#loader').height(h).css('display', 'block');
+        });
+
+        $(window).load(function() { //全ての読み込みが完了したら実行
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+            $('#wrap').css('display', 'block');
+        });
+
+        //10秒たったら強制的にロード画面を非表示
+        $(function() {
+            setTimeout('stopload()', 10000);
+        });
+
+        function stopload() {
+            $('#wrap').css('display', 'block');
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+        }
+    </script>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/data_5class.js"></script>
+    <script type="text/javascript">
+        <!--
+
+        // Quiz Setting
+        var MAIN_Q_NUM = 4;
+        var Q_NUM = [10, 10, 10, 5]; // Q_NUM[0] --> Q1_NUM
+        var MAX_SCORE = 100;
+
+        var category = new Array(); // category[0] --> selected Q1's category
+        var main_q; // main_q = 0 --> Q1
+        var rndmem = new Array(); // rndmem[0] --> selected rndmem_Q1
+
+        for (main_q = 0; main_q < MAIN_Q_NUM; main_q++) {
+            var CATEGORY_NUM = KANJI[main_q].length;
+            category[main_q] = Math.floor(Math.random() * CATEGORY_NUM);
+        }
+
+        // - - 出題準備 - -
+
+        function Be_on_the_test() {
+
+            $("#clear_line_here").html('検定レベル：五級（ふつう）<br><br>合格ライン：' + MAX_SCORE + '点中' + (MAX_SCORE * 0.8) + '点以上');
+
+            var kanji; // Array of kanji[MAIN_Q][CATEGORY][q]
+            var yomi; // Array of yomi[MAIN_Q][CATEGORY][q]
+            var str; // innerHTML string
+            var rnd; // random number of index
+
+            for (main_q = 0; main_q < MAIN_Q_NUM; main_q++) {
+
+                for (var i = 0; i < KANJI[main_q].length; i++) {
+                    if (category[main_q] === i) {
+                        str = QUESTION_STR[main_q][i];
+                        break;
+                    }
+                }
+
+                var tmp_rndmem = new Array();
+
+                for (var i = 0; i < Q_NUM[main_q]; i++) {
+                    rnd = Math.floor(Math.random() * KANJI[main_q][category[main_q]].length);
+                    if (tmp_rndmem.indexOf(rnd) === -1) {
+                        tmp_rndmem.push(rnd);
+                    } else {
+                        i--;
+                        continue;
+                    }
+
+                    kanji = KANJI[main_q][category[main_q]].concat();
+                    yomi = YOMI[main_q][category[main_q]].concat();
+
+                    // 2段組にすべきか判断
+                    if (i === 0) {
+                        str += '<table class="float_left">';
+                    }
+                    if (!(Q_NUM[main_q] % 2)) {
+                        if (i === Q_NUM[main_q] / 2) {
+                            str += '<table class="float_right">';
+                        }
+                        str += '<tr><th><h4><toi>問' + (i + 1) + '</toi><kanji>' + kanji[tmp_rndmem[i]] + '</kanji></h4></th><td><p class="answer answer_Q' + (main_q + 1) + '_' + i + '">　</p><input type="text" name="q' + (i + 1) + '"><p class="answer answer_Q' + (main_q + 1) + '_' + i + '">' + yomi[tmp_rndmem[i]] + '</p></td></tr>';
+                        if (i === (Q_NUM[main_q] / 2) - 1 || i === Q_NUM[main_q] - 1) {
+                            str += '</table>';
+                        }
+                    } else {
+                        str += '<tr><th><h4><toi>問' + (i + 1) + '</toi><kanji>' + kanji[tmp_rndmem[i]] + '</kanji></h4></th><td><p class="answer answer_Q' + (main_q + 1) + '_' + i + '">　</p><input type="text" name="q' + (i + 1) + '"><p class="answer answer_Q' + (main_q + 1) + '_' + i + '">' + yomi[tmp_rndmem[i]] + '</p></td></tr>';
+                        if (i === Q_NUM[main_q] - 1) {
+                            str += '</table>';
+                        }
+                    }
+                }
+
+                rndmem[main_q] = tmp_rndmem.concat();
+
+                //console.log(str);
+                $("#testQ" + (main_q + 1) + "_here").html(str);
+            }
+        }
+
+        // - - 採点開始 - -
+
+        function Saiten() {
+            if (confirm("採点を開始します。よろしいですか?")) {
+                var correct_num = 0;
+                var score = 0;
+
+                var inputAns = $("form input").map(function(index, el) {
+                    return $(this).val();
+                });
+
+                var yomi = new Array();
+                var checked_q_num = 0;
+
+                // 大問ずつ処理
+                for (var main_q = 0; main_q < MAIN_Q_NUM; main_q++) {
+                    yomi = YOMI[main_q][category[main_q]].concat();
+
+                    // 一問ずつ正誤判定
+                    for (var i = 0; i < Q_NUM[main_q]; i++) {
+                        answers = yomi[rndmem[main_q][i]]; // 別解も含む
+                        correct_answer = answers.split(":");
+                        var ans_flag = 0;
+                        for (var ans_i = 0; ans_i < correct_answer.length; ans_i++) {
+                            if (inputAns[i + checked_q_num] === correct_answer[ans_i]) {
+                                $('form[name="Q' + (main_q + 1) + '"] input[name="q' + (i + 1) + '"]').css({
+                                    'background-color': 'coral'
+                                });
+                                correct_num++;
+                                ans_flag = 1;
+                                break;
+                            }
+                        }
+                        if (ans_flag === 0) {
+                            $('form[name="Q' + (main_q + 1) + '"] input[name="q' + (i + 1) + '"]').css({
+                                'background-color': 'cornflowerblue'
+                            });
+                            $('.answer_Q' + (main_q + 1) + '_' + i).css("display", "block");
+                        }
+                        ans_flag = 0;
+                    }
+                    checked_q_num += i;
+
+                    var unit_score;
+                    if (main_q < 3) {
+                        unit_score = 3;
+                    } else {
+                        unit_score = 2;
+                    }
+                    score += correct_num * unit_score;
+                    correct_num = 0;
+                }
+
+                Result_output(score);
+            }
+        }
+
+        // - - 採点結果の出力 - -
+
+        function Result_output(score) {
+            var judge;
+            var score_color;
+            var gokaku = new String();
+
+            if (score === MAX_SCORE) {
+                judge = "満点合格";
+                score_color = 1;
+                gokaku = "manten";
+            } else if (score >= MAX_SCORE * 0.8) {
+                judge = "合格";
+                score_color = 2;
+                gokaku = "gokaku";
+            } else {
+                judge = "不合格";
+                score_color = 3;
+            }
+
+            $("#clear_line_here").css("display", "none");
+            window.scrollTo(0, 0);
+            $("#saiten_kekka").css("display", "block");
+            $("#saiten_kekka").html('採点結果： <span id="score' + score_color + '">' + score + '点</span> /' + MAX_SCORE + '点<br><br>判定： <span id=' + gokaku + '>' + judge + '</span> です。');
+            $("#button_saiten").css("display", "none");
+            $("#button_retry").css("display", "default");
+            $("#button_home").css("display", "default");
+        }
+
+        function Retry() {
+        	location.reload();
+        	window.scrollTo(0, 0);
+        }
+
+        // 右クリック禁止
+        $(function() {
+            $(document).on('contextmenu', function(e) {
+                return false;
+            });
+        });
+
+        //-->
+    </script>
+
+    <noscript>
+   <META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html">
+  </noscript>
+
+</head>
+
+<body onCopy="return false;" onSelectStart="return false;" id="no_select" onload="Be_on_the_test()">
+
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="../img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+            <p>Now Loading...</p>
+        </div>
+    </div>
+
+    <div id="wrap">
+
+        <h1>難読漢字検定　五級</h1>
+
+        <article id="question">
+
+            <h3 id="clear_line_here"></h3>
+            <h3 id="saiten_kekka"></h3>
+
+            <form name="Q1">
+                <div id="testQ1_here"></div>
+            </form>
+
+            <form name="Q2">
+                <div id="testQ2_here"></div>
+            </form>
+
+            <form name="Q3">
+                <div id="testQ3_here"></div>
+            </form>
+
+            <form name="Q4" class="form-q">
+                <div id="testQ4_here"></div>
+            </form>
+
+            <div id="button_saiten"><input type="submit" value="採点開始" onclick="Saiten()"></div>
+            <div id="button_retry" style="display:none"><input type="submit" value="再挑戦" onclick="Retry()"></div>
+            <div id="button_home" style="display:none"><input type="submit" value="ホームに戻る" onclick="location.href='../index.html'"></div>
+
+        </article>
+
+    </div>
+
+   <!-- [FC2 Analyzer] http://analyzer.fc2.com/  -->
+   <script language="javascript" src="//analyzer54.fc2.com/ana/processor.php?uid=2747672" type="text/javascript"></script>
+   <noscript><div align="right"><img src="//analyzer54.fc2.com/ana/icon.php?uid=2747672&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+   <div style="width:180px;display:inline;"><ol style="text-align:left;list-style-type:none;margin:3px;font-size:10pt;display:inline;"></ol></div>
+   <!-- [FC2 Analyzer]  -->
+
+</body>
+
+</html>

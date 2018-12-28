@@ -1,0 +1,250 @@
+
+/* index.html */
+
+.add_delay {
+  opacity:0;
+}
+
+/* 「当サイトについて」等のパネル */
+
+#panel_introduction {
+  margin-bottom:10px;
+}
+#panel_about_movie {
+  margin-bottom:10px;
+  background: linear-gradient(#FF2A2A, rgba(255, 101, 166, 0.5));
+}
+#panel_movie_list {
+  margin-bottom:10px;
+  background: linear-gradient(#FF05FF, rgba(200,0,255,0.5));
+}
+
+/* 「難読漢字検定」パネル */
+
+#class_panels {
+  width:1340px; 
+  margin:0 auto; 
+}
+#panel_6class {
+  background: linear-gradient(#05FBFF, rgba(0,180,255,0.7));
+}
+#panel_5class {
+  background: linear-gradient(#05BBFF, rgba(0,80,255,0.5));
+}
+#panel_4class {
+  background: linear-gradient(#056BFF, rgba(0,0,255,0.5));
+}
+#panel_3class {
+  background: linear-gradient(#8040FF, rgba(50,0,55,0.5));
+}
+#panel_2class {
+  background: linear-gradient(#CF00CF, rgba(200,0,255,0.5));
+}
+#panel_1class {
+  background: linear-gradient(#FF0020, rgba(255,0,55,0.5));
+}
+
+#class_panels a {
+  position:relative;
+}
+
+hr {
+  height: 5px;
+  clear: both;
+  margin: 30px 20px;
+}
+
+/* 「漢検トレーニング」パネル */
+
+#kanken_jun1_panels {
+  width:900px; 
+  margin: auto;
+}
+#kanken_1_panels {
+  position:absolute;
+  left:50%; 
+  width:1330px; 
+  margin-left:-665px; 
+}
+#kanken_jun1_panels article {
+  background: linear-gradient(#CDFF4F, rgba(100,255,55,0.6));
+}
+#kanken_1_panels article {
+  background: linear-gradient(#00FF20, rgba(0,150,55,0.5));
+}
+
+.panel_ichiran {
+  margin-top: 0px;
+  height: 55px;
+}
+.panel_ichiran a {
+  height: 55px;
+}
+.panel_ichiran p {
+  font-family: メイリオ;
+  font-size: 20px;
+}
+
+/* 「しりとり対決」パネル */
+
+#siritori_panels {
+  width: 1350px; 
+  margin: 0 auto; 
+}
+#panel_siritori1 {
+  background: linear-gradient(#FFD700, rgba(255,255,0,0.4));
+}
+#panel_siritori2 {
+  background: linear-gradient(#FF8000, rgba(255,150,0,0.5));
+}
+#panel_siritori3 {
+  background: linear-gradient(#CF00CF, rgba(200,0,255,0.5));
+}
+#siritori_panels a {
+  position:relative;
+}
+
+/* 「当て字対策」パネル */
+
+#panel_ateji_analysis {
+  margin-bottom:10px;
+  background: linear-gradient(#05FBFF, rgba(0,180,255,0.7));
+}
+#panel_ateji_good_taisaku {
+  margin-bottom:10px;
+  background: linear-gradient(#05BBFF, rgba(0,80,255,0.5));
+}
+#panel_ateji_bad_taisaku {
+  margin-bottom:10px;
+  background: linear-gradient(#056BFF, rgba(0,0,255,0.5));
+}
+
+/* 「リンク」「おまけ」パネル */
+
+#panel_link {
+  margin-bottom:10px;
+}
+#panel_omake {
+  background:linear-gradient(#FFFFFF, rgba(255,255,255,0.4));
+  width: 150px;
+}
+
+/* 上からのポップアップメッセージ */
+#news {
+  width: 300px;
+  border: 2px solid orange;
+  border-radius: 8px;
+  background: linear-gradient(#FFE4A4, rgba(255, 255, 150, 1));
+  padding: 15px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  z-index:1; 
+  text-decoration:none; 
+  display:none;
+}
+#news a {
+  width: 300px;
+  border: 2px solid orange;
+  border-radius: 8px;
+  background: linear-gradient(#FFE4A4, rgba(255, 255, 150, 1));
+  padding: 15px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+#news p {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  font-family: 'メイリオ';
+  text-align: center;
+}
+
+/* メダル・王冠など */
+
+.adv_on_home {
+  position: absolute;
+  top:10%; 
+  right:8%;
+}
+#panel_siritori2 .adv_on_home {
+  top:17%; 
+}
+
+.medal_on_home {
+  float: left;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.crown_on_home {
+  position: absolute;
+  top:0%;
+  width: 110px;
+  height: 110px;
+}
+
+.manten_num {
+  font-size: 30px;
+  font-family: メイリオ;
+  color:black;
+  position:absolute; 
+  top:17%; 
+  left:21%; 
+  opacity:0;
+}
+
+/* １級・準１級 切り替えスイッチ */
+
+.switch {
+  margin: 5px;
+}
+.switch input {
+  display: none;
+}
+.switch label {
+  padding: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.switch label:before {
+  padding: 6px 10px;
+  content: '準一級';
+  border-radius: 6px 0 0 6px;
+  background: linear-gradient(to bottom, #F0F0F0 0%, #DDD 100%);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  color: #333;
+}
+.switch label:after {
+  padding: 6px 10px;
+  content: '一級';
+  border-radius: 0 6px 6px 0;
+  background: limegreen;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  color: #FFF;
+}
+.switch input+label:hover:before {
+  opacity: 0.5;
+}
+.switch input:checked+label:before {
+  background: greenyellow;
+  color: #FFF;
+  opacity: 1;
+}
+.switch input:checked+label:after {
+  background: linear-gradient(to bottom, #F0F0F0 0%, #DDD 100%);
+  color: #333;
+}
+.switch input:checked+label:hover:after {
+  opacity: 0.5;
+}
+
+#kanken_switch {
+  text-align: center;
+}

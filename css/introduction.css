@@ -1,0 +1,572 @@
+
+/* introduction.html */
+
+#intro_field {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 1200px;
+}
+#intro_field img {
+  border:double 4px #FFFFFF;
+}
+
+/* テキストぺージに関する設定 */
+.margin_on_title {
+  margin-top: 60px;
+}
+.margin_on_bar {
+  margin-top: 40px;
+}
+
+.intro_title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.0;
+}
+
+.center_text p {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  line-height: 0.9;
+}
+
+.intro_panel, .attention_panel {
+  background-color: rgba(135, 206, 235, 0.7);
+  border: solid 1px skyblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+  width: 380px;
+  margin: 30px 30px 30px 30px;
+  padding: 0;
+}
+.attention_panel {
+  background:linear-gradient(#FFB000, rgba(200,58,0,0.7));
+  margin:0 auto;
+  width: 480px;
+  float: none;
+}
+
+.intro_panel p, .attention_panel p {
+  text-align: center;
+  color: black;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.attention_panel p {
+  font-size: 28px;
+  line-height: 1.0;
+  margin:10px auto;
+}
+.attention_panel a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  padding: 0px;
+}
+
+#intro_panel_6class {
+  background: linear-gradient(#65FBFF, rgba(0,180,255,0.7));
+}
+#intro_panel_5class {
+  background: linear-gradient(#058BFF, rgba(0,80,255,0.5));
+}
+#intro_panel_4class {
+  background: linear-gradient(#053BFF, rgba(0,0,255,0.5));
+}
+#intro_panel_3class {
+  background: linear-gradient(#8040FF, rgba(50,40,55,0.6));
+}
+#intro_panel_2class {
+  background: linear-gradient(#CF00CF, rgba(200,0,255,0.3));
+}
+#intro_panel_1class {
+  background: linear-gradient(#FF0020, rgba(255,0,55,0.3));
+}
+
+.intro_class_text p {
+  width:750px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  float: right;
+  margin:10px auto;
+}
+
+.normal_text p {
+  width:900px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin:20px auto;
+}
+.normal_text p a, .center_text p a {
+  color: Orange;
+}
+
+/* movie_list.html */
+
+.youtube_frame {
+  width: 560px;
+  height: 315px;
+  margin:0 320px;
+  border:double 4px #FFFFFF; 
+}
+
+.movie_list_table {
+  margin:auto; 
+  margin-top:30px; 
+  color:white; 
+  text-align:center;
+}
+.movie_list_table th {
+  width:250px; 
+  font-size: 22px; 
+  font-family:メイリオ;
+}
+.movie_list_table td {
+  width:500px; 
+  font-size: 22px; 
+  font-family:メイリオ;
+}
+.movie_list_table a {
+  color: yellow;
+}
+
+/* link.html */
+
+.my_links {
+  position: relative; 
+  margin-right: 40px; 
+  margin-left: -80px;
+}
+.my_links img {
+  position:absolute; 
+  width: 200px;
+}
+.my_links .left_img {
+  top:15%; 
+  right:18%; 
+}
+.my_links .right_img {
+  top:15%; 
+  right:0%; 
+}
+
+/* about_movie.html */
+
+.about_movie_field img {
+  width: 600px;
+  margin:0 300px;
+}
+
+/* ateji_analysis */
+
+#ateji_about p {
+  font-size: 28px;
+  line-height: 1.2;
+}
+#ateji_reidai {
+  width: 1000px; 
+  margin:0 auto; 
+  padding: 20px;
+}
+#ateji_reidai p {
+  position: absolute;
+  font-size: 24px;
+  width: 650px;
+  float: left;
+}
+
+img#key_lock {
+  width: 50px;
+  border: none;
+  vertical-align: text-bottom;
+  float: left;
+  margin-left: 300px;
+}
+
+.ateji_bar {
+  background: linear-gradient(#FFD700, rgba(255,255,0,0.4));
+}
+
+#panel_ateji_ranking_asked {
+  margin: 20px auto;
+}
+
+.analysis_table {
+  text-align:center;
+  margin: 0 auto;
+  width: 600px;
+}
+.analysis_table th {
+  width:50px; 
+  font-size: 22px; 
+}
+.analysis_table td {
+  font-size: 28px; 
+}
+.analysis_table th:nth-child(1) {
+  width:100px; 
+}
+.analysis_table td:nth-child(2) {
+  width:50px; 
+}
+.analysis_table td:nth-child(3) {
+  width:50px; 
+}
+.analysis_table td:nth-child(4) {
+  width:50px; 
+}
+.analysis_table td:nth-child(5) {
+  width:50px; 
+}
+.analysis_table td:nth-child(6) {
+  width:50px; 
+}
+
+p.mini_text {
+  font-size: 20px;
+  line-height: 2.5;
+  margin: 0;
+  clear: both;
+}
+
+.toggle_panel {
+  width: auto;
+  right: 170px;
+  top: 10px;
+}
+.toggle_panel p {
+  width: auto;
+  color: black;
+  padding: 0 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.toggle_panel:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+article[name="past_data_list"] {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  position:relative;
+}
+article[name="past_data_list"] table {
+  display: none;
+}
+
+/* ateji_past_exam */
+
+.float_left {
+  clear: both;
+  float: left;
+  width: 50%;
+}
+.float_right {
+  float: right;
+  width: 50%;
+}
+
+.year_text p {
+  font-size:32px;
+}
+
+.table_article {
+  font-family:メイリオ;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 100px;
+  padding: 40px;
+  padding-bottom: 20px;
+}
+
+.ateji_table {
+  text-align:center;
+  width: 450px;
+}
+.ateji_table th {
+  width:50px; 
+  font-size: 22px; 
+}
+.ateji_table td {
+  font-size: 28px; 
+}
+.ateji_table td:nth-child(2) {
+  width:130px; 
+}
+.ateji_table td:nth-child(3) {
+  width:170px; 
+  line-height: 1.0;
+}
+.ateji_table a {
+  color: yellow;
+}
+
+.question_text {
+  color: white;
+  font-size: 24px;
+  line-height: 1.0;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.percent_text {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  line-height: 2.5;
+  margin: 0;
+  clear: both;
+}
+
+/* ateji_ranking_asked.html */
+
+.ranking_table {
+  text-align:center;
+  margin: 0 auto;
+  width: 900px;
+}
+.ranking_table th {
+  width:50px; 
+  font-size: 22px; 
+}
+.ranking_table td {
+  font-size: 28px; 
+}
+.ranking_table th:nth-child(1) {
+  width:80px; 
+}
+.ranking_table td:nth-child(2) {
+  width:130px; 
+}
+.ranking_table td:nth-child(3) {
+  width:170px; 
+  line-height: 1.0;
+}
+.ranking_table td:nth-child(4) {
+  width:250px; 
+  font-size: 22px; 
+}
+.ranking_table a {
+  color: yellow;
+}
+
+table[name="legend_of_asked"] {
+  margin-bottom: 20px;
+}
+table[name="legend_of_asked"] td {
+  font-size: 22px; 
+}
+article[name="ateji_reidai"] {
+  padding-top: 20px;
+  width: 1000px;
+  margin: 0 auto;
+}
+article[name="ranking_of_asked"] {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  position:relative;
+}
+
+/* ateji_ranking_asked.html */
+
+.margin_on_text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.class_text {
+  margin-top: 60px;
+}
+.class_text p {
+  font-size: 38px;
+}
+
+.two_count_text th {
+ font-color: yellow;
+}
+
+#ateji_mondai_book {
+  width: 750px; 
+  margin: 0 auto; 
+  padding-bottom: 20px;
+}
+#ateji_mondai_book p {
+  width: 750px; 
+}
+
+#ateji_jiten_book {
+  width: 750px; 
+  margin: 0 auto; 
+  padding-bottom: 20px;
+}
+#ateji_jiten_book p {
+  width: 750px; 
+}
+
+#ateji_nandoku_book {
+  width: 250px; 
+  margin: 0 auto; 
+  padding-bottom: 20px;
+}
+#ateji_nandoku_book p {
+  width: 250px; 
+}
+
+article[name="goal_on_taisaku"] {
+  padding: 0px;
+}
+article[name="goal_on_taisaku"] p {
+  font-family: 'HG教科書体';
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+article[name="rei_on_taisaku"] {
+  padding: 0px;
+}
+article[name="rei_on_taisaku"] p {
+  font-family: 'HG教科書体';
+  font-weight: bold;
+  text-align: center;
+  font-size: 26px;
+}
+
+input[type="text"] {
+  width:2em;
+  font-size:26px;
+}
+
+.eval_panel {
+  background: linear-gradient(#FFD700, rgba(255,255,0,0.4));
+  right: 100px;
+  top: 15px;
+}
+.eval_panel p {
+  width: auto;
+  color: black;
+  padding: 0 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.eval_panel:hover {
+  background-color: white;
+  cursor: pointer;
+}
+/* ateji_*_taisaku.html */
+
+#panel_1_ateji {
+  margin: 40px auto;
+  background: linear-gradient(#00FF20, rgba(0,150,55,0.5));
+}
+
+.blue_field {
+  margin: 40px 200px;
+  border: solid 2px skyblue;
+  background-color: rgba(0, 0, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+}
+.blue_field p {
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+/* ateji_hit_on_workbook.html */
+
+.book_title_text p {
+  font-size: 34px;
+}
+
+.text_of_hitting_ratio {
+  width: 850px;
+  padding:20px;
+  margin: 20px;
+  margin-bottom: 40px;
+  border: solid 2px skyblue;
+  background-color: rgba(0, 0, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+}
+.text_of_hitting_ratio p {
+  width: 650px;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hit_on_workbook_article {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  position:relative;
+}
+
+.hit_on_workbook_article img {
+  width: 200px;
+  float: right;
+}
+
+table[name="legend_of_hit"] {
+  margin-bottom: 20px;
+}
+table[name="legend_of_hit"] td {
+  font-size: 22px; 
+}
+article[name="ateji_reidai"] {
+  padding-top: 20px;
+  width: 1000px;
+  margin: 0 auto;
+}
+article[name="ranking_of_asked"] {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  position:relative;
+}
+
+.hit_table {
+  text-align:center;
+  margin: 0 auto;
+  width: 580px;
+}
+.hit_table th {
+  width:50px; 
+  font-size: 22px; 
+}
+.hit_table td {
+  font-size: 28px; 
+}
+.hit_table th:nth-child(1) {
+  width:150px; 
+}
+.hit_table td:nth-child(2) {
+  width:100px; 
+}
+.hit_table td:nth-child(3) {
+  width:100px; 
+}
+.hit_table td:nth-child(4) {
+  width:100px; 
+}
+.hit_table td:nth-child(5) {
+  width:130px; 
+}
+
+table[name="sum_of_hit"] {
+  margin-top: 20px;
+  width: 580px;
+}
+table[name="sum_of_hit"] th:nth-child(1) {
+  width: 150px;
+}
+table[name="sum_of_hit"] td:nth-child(2) {
+  width: 430px;
+}

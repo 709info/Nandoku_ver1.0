@@ -1,0 +1,124 @@
+article {background-color:rgba(135,206,235,0.7);
+         border:solid 1px skyblue;
+  	     border-radius:10px;
+  	     box-shadow:3px 3px 15px #ffffff;
+	     width:380px;
+	     margin-left:auto;
+	     margin-right:auto;
+         margin-top:20px;
+         margin-bottom:20px}
+        
+div	{padding:10px;
+     padding-bottom:0}
+       
+h1	{text-align:center;
+     font-size:60px;
+     font-family:'HG教科書体';
+     text-shadow:2px 2px 3px #ffffff}
+
+h2	{text-align:center;
+     color:rgba(255,255,255,0.7);
+     font-size:24px;
+     font-family:'HG教科書体';}
+
+h3	{text-align:center;
+     color:black;
+     font-size:32px;
+     font-family:'HG教科書体';}
+	   
+h4	{color:rgba(255,255,255,0.7);
+     font-size:22px;
+     font-family:'HG教科書体';
+     line-height:0}
+	   
+k	{color:rgba(255,255,255,1.0);
+     font-size:28px;
+     font-family:'HG教科書体';
+     line-height:0}
+     
+table	{border-spacing:auto;
+         table-layout:fixed;}
+
+th	{text-align:left;}
+
+form input	{margin-right:8em}
+
+#6to4class	{width:1300px;
+			 overflow: hidden}
+	   
+#6class	{width:400px;
+		 float:left;
+		 background-color:white}
+		 
+#5class {width:400px;
+		 float:left}
+
+#4class {width:400px;
+		 float:left}
+
+#posts article a	{color:#000000;
+                     text-decoration:none;
+                     display:block;
+                     overflow:hidden;
+                     padding:0px}
+
+#posts article a:hover	{background-color:rgba(255,255,255,0.7);
+						 border-radius:10px}
+
+#posts article {padding:0}
+
+#question {background-color:rgba(0,0,0,0.7);
+           border:solid 1px skyblue;
+		   box-shadow:3px 3px 15px #ffffff;
+		   width:1200px;
+		   margin-left:auto;
+		   margin-right:auto;
+           margin-top:20px;
+           margin-bottom:20px;
+           padding:0px 10px 0px 10px}
+        
+#sub-saiten,#sub-home	{text-align:center;
+		 				 padding:40px}
+		 
+#selectableDiv {-ms-user-select:none;
+    			cursor:default;}
+
+#clear_line	{color:rgba(255,255,255,0.9);
+		     text-align:center;
+		     padding:30px}
+		 
+#saiten		{color:white;
+             text-align:center;
+             padding:10px;
+             display:none}
+
+.form-q input[type=text]:focus,
+.form-q textarea:focus{outline:none;
+                       background:rgb(255,255,100);}
+
+#home-text	{color:rgba(255,255,255,0.9);
+			 text-align:center}
+
+#JSNG h2	{color:rgba(255,255,255,0.9)}
+	
+a:link,
+a:visited,
+a:hover,
+a:active	{color:rgba(255,255,255,0.9)}
+
+input[type="text"]   {background-color:rgba(255,255,255,0.9);
+					  margin-left:100px}
+
+input[type="submit"] {width:200px;
+					  font-weight:bold;
+					  font-family:'HG教科書体';
+					  padding:10px 0px 10px 0px;
+					  background-image:linear-gradient(
+					  to bottom,
+					  #b0e0e6 0%,
+					  #00bfff 100%);
+					  opacity:0.9}
+					  
+#sub-saiten input	{font-size:30px;}
+
+#sub-home input	{font-size:24px;}

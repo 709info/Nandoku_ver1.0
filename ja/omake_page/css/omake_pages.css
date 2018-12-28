@@ -1,0 +1,442 @@
+
+/* おまけページに関する設定 */
+
+body {
+  font-family: 'HG教科書体';
+  overflow-x: hidden;
+}
+
+article {
+  background-color: rgba(135, 206, 235, 0.7);
+  border: solid 1px skyblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+}
+
+div {
+  padding: 0px;
+}
+
+.page_title {
+  text-align: center;
+  text-shadow: 2px 2px 3px #ffffff, -2px -2px 3px #ffffff;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 30px auto;
+}
+
+.home_text p {
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000, -1px -1px 1px #000000;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  line-height: 0.8;
+}
+
+h5 {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'メイリオ';
+  font-size: 24px;
+}
+
+kanji {
+  color: white;
+  font-size: 34px;
+  line-height: 0;
+}
+
+uni {
+  font-weight: normal;
+  font-size: 30px;
+}
+uni2 {
+  font-weight: normal;
+  font-size: 73px;
+}
+
+y {
+  color: yellow;
+}
+g {
+  color: gold;
+}
+
+.medal {
+  float: left;
+  position: absolute;
+}
+
+.battle_medal {
+  float: left;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#loader_bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: black;
+  z-index: 1;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+}
+#wrap {
+  display: none;
+}
+
+.anim1 {
+  -webkit-animation: 0.7s forwards anim1;
+  animation: 0.7s forwards anim1;
+}
+
+@-webkit-keyframes anim1 {
+  0% {
+    -webkit-transform: translate(300px, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    transform: translate(300px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.anim2 {
+  -webkit-animation: 0.7s forwards anim2;
+  animation: 0.7s forwards anim2;
+}
+
+@-webkit-keyframes anim2 {
+  0% {
+    -webkit-transform: translate(-300px, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: translate(-300px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.anim1_out {
+  -webkit-animation: 0.7s forwards anim1_out;
+  animation: 0.7s forwards anim1_out;
+}
+
+@-webkit-keyframes anim1_out {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(700px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes anim1_out {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(700px, 0);
+    opacity: 0;
+  }
+}
+
+.anim2_out {
+  -webkit-animation: 0.7s forwards anim2_out;
+  animation: 0.7s forwards anim2_out;
+}
+
+@-webkit-keyframes anim2_out {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-700px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes anim2_out {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-700px, 0);
+    opacity: 0;
+  }
+}
+
+input::-ms-clear {
+  /* IEのinput内のxを非表示 */
+  display: none;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+}
+
+.flexiblebox {
+  display: -webkit-flex;
+  display: flex;
+  /* 縦方向中央揃え */
+  -webkit-align-items: center;
+  align-items: center;
+  /* 横方向中央揃え */
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+#cookie_valid, #cookie_invalid {
+	margin:0;
+	color: black;
+	font-family: 'メイリオ';
+	font-weight: normal;
+	font-size:20px;
+}
+.valid_box{
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    color: #00BCD4;
+    background: #e4fcff;/*背景色*/
+    border-top: solid 6px #1dc1d6;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+    width:310px;
+    height:30px;
+}
+.invalid_box{
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    color: #ff7d6e;
+    background: #ffebe9;/*背景色*/
+    border-top: solid 10px #ff7d6e;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+    width:310px;
+    height:30px;
+}
+
+/* 文字拡大 */
+.zoom_up {
+	z-index: 1;
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+.zoom_up:hover {
+    text-shadow: 2px 2px 2px #000000, -2px 2px 2px #000000, 2px -2px 2px #000000, -2px -2px 2px #000000;
+    -webkit-transform: scale(2.0,2.0);
+    -moz-transform: scale(2.0,2.0);
+    -o-transform: scale(2.0,2.0);
+    -ms-transform: scale(2.0,2.0);
+    transform: scale(2.0,2.0);
+}
+
+.intro_title, .nanikore_title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.0;
+  margin-top: 60px;
+}
+.nanikore_title {
+  font-family:'HG行書体';
+}
+.nanikore_text p {
+  text-align: center;
+  color: white;
+  line-height: 0.9;
+  font-family:'HG行書体'; 
+  font-size:36px;
+}
+
+.button {
+  text-align: center;
+  padding: 40px;
+  clear: both;
+}
+
+.button input {
+  font-size: 30px;
+}
+
+#button_home, #button_retry {
+  padding: 20px;
+}
+
+#button_saiten input {
+  font-size: 30px;
+}
+
+#button_home input, #button_retry input {
+  font-size: 24px;
+}
+
+input[type="submit"] {
+  width: 200px;
+  font-weight: bold;
+  font-family: 'HG教科書体';
+  padding: 10px 0px;
+  background-image: linear-gradient( to bottom, #b0e0e6 0%, #00bfff 100%);
+  opacity: 0.9;
+}
+
+#edit_panel {
+  background:linear-gradient(#FFFFFF, rgba(255,255,255,0.4));
+  margin-bottom:10px; 
+  top:90%; 
+  cursor:pointer;
+}
+#edit_panel p {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  line-height: 1.0;
+  font-size: 28px;
+  margin:10px 10px;
+}
+#edit_panel a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  padding: 0px;
+}
+
+#intro_field {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 1200px;
+  margin: 20px auto;
+  padding: 0px 10px 0px 10px;
+}
+
+.intro_text p {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  line-height: 0.9;
+}
+.intro_text img {
+  border:double 4px #FFFFFF;
+}
+
+.intro_panel, .attention_panel {
+  background-color: rgba(135, 206, 235, 0.7);
+  border: solid 1px skyblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+  width: 380px;
+  margin: 30px 30px 30px 30px;
+  padding: 0;
+}
+.attention_panel {
+  background:linear-gradient(#FFB000, rgba(200,58,0,0.7));
+  margin:0 auto;
+  width: 480px;
+  float: none;
+}
+
+.intro_panel p, .attention_panel p {
+  text-align: center;
+  color: black;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.attention_panel p {
+  font-size: 28px;
+  line-height: 1.0;
+  margin:10px auto;
+}
+.attention_panel a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.intro_class_text p {
+  width:750px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  float: right;
+  margin:10px auto;
+}
+
+.intro_rule_text p, .intro_onegai_text p {
+  width:900px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin:20px auto;
+}
+.intro_onegai_text p a{
+  color: Orange;
+}

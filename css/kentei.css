@@ -1,0 +1,1174 @@
+
+/* 検定ページに関する設定 */
+
+/* unicode第3・第4水準用のフォント */
+uni {
+  font-weight: normal;
+  font-size: 40px;
+}
+uni2 {
+  font-weight: normal;
+  font-size: 120px;
+}
+
+#test_panel {
+  background:linear-gradient(to right, #a8c0ff, #3f2b96);
+  left:10%;
+}
+#live_panel {
+  background:linear-gradient(to right, #f12711, #f5af19);
+  right:10%;
+}
+
+.play_style_panel {
+  width: 380px;
+  height: 200px;
+  position: absolute;
+}
+.play_style_panel a {
+  width: 380px;
+  height: 200px;
+}
+.genre_panel, .genre_panel_on_live, .level_panel {
+  width: 280px;
+  position: absolute;
+}
+.reset_panel {
+  width: 70px;
+  position: static;
+}
+
+.play_style_panel p {
+  font-size: 55px;
+  margin:80px auto;
+}
+.genre_panel_on_live p, .level_panel p {
+  font-size: 50px;
+}
+.kensaku_panel p {
+  font-family: 'メイリオ';
+  margin:10px auto;
+}
+.reset_panel p {
+  font-size: 10px;
+  margin:10px auto;
+}
+
+.genre_panel_animation {
+  position:absolute;
+}
+
+#play_style_field, #genre_field {
+  position:relative;
+}
+#play_style_field {
+  height:400px;
+}
+#live_field {
+  display:none;
+  position:relative;
+  height:500px;
+}
+#level_field {
+  position:relative; 
+  height:350px; 
+  display:none;
+}
+#about_tokoton_field {
+  height:1370px;
+  position:relative; 
+  display:none;
+}
+#edit_field {
+  position:relative; 
+  display:none;
+}
+#class_page #genre_field {
+  display:none;
+}
+.field h3 {
+  color:rgba(255, 255, 255, 0.9); 
+  text-align:center;
+}
+#about_tokoton_field p, #edit_field p {
+  font-size: 30px;
+  font-family: 'メイリオ';
+  color:white; 
+  text-align:center;
+}
+#edit_field h3 {
+  color:white;
+}
+#edit_field p {
+  font-size:24px;
+  color:white;
+}
+
+.medal_on_genre {
+  float: left;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+#medals_on_result img {
+  display:none;
+  float: left;
+  position: absolute;
+  top:1.5%; 
+  left:13%;
+}
+#medals_on_result_on_live img {
+  display:none;
+  float: left;
+  position: absolute;
+  top:23%; 
+  left:15%;
+}
+
+.float_left {
+  clear: both;
+  float: left;
+  width: 50%;
+}
+.float_right {
+  float: right;
+  width: 50%;
+}
+
+.question {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0px 10px 40px;
+  line-height: 2;
+  float:left; 
+  margin:10px 0;
+}
+
+toi {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+kanji {
+  color: white;
+  font-size: 44px;
+  line-height: 0;
+}
+
+.link_kanji_pedia a:hover {
+	color:yellow;
+}
+
+table {
+  border-spacing: auto;
+  table-layout: fixed;
+}
+
+.test_table th {
+  text-align: left;
+  width: 350px;
+}
+.edit_table th[rowspan="3"] {
+  width: 170px;
+}
+.edit_table th[name="num"] {
+  width: 70px;
+}
+#edit_field .mini_panel p {
+  font-size:17px;
+}
+.test_table td, .edit_table td {
+  position:relative;
+}
+.test_table .kensaku_panel {
+  opacity:0; 
+  display:none;
+  left:80%; 
+  top:20%; 
+}
+
+/* 解答フォーム */
+
+#intro_field, #test_field, #fukusyuu_field {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 1200px;
+  margin: 20px auto;
+  padding: 0px 10px 0px 10px;
+}
+#test_field, #fukusyuu_field {
+  background-color: rgba(0, 0, 0, 0.7);
+  position:relative; 
+  display:none;
+}
+
+.button {
+  text-align: center;
+  padding: 40px;
+  clear: both;
+}
+.button input {
+  font-size: 30px;
+}
+#button_home, #button_retry {
+  padding: 20px;
+}
+#button_saiten input {
+  font-size: 30px;
+}
+#button_home input, #button_retry input {
+  font-size: 24px;
+}
+
+.no_select {
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+#clear_line {
+  margin: 40px auto;
+}
+#clear_line h3 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding-top: 30px;
+}
+#genre_text {
+  color:yellow;
+}
+
+#saiten_kekka, #saiten_kekka_on_live {
+  display: none;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#saiten_kekka p, #saiten_kekka_on_live p {
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  margin:30px auto;
+}
+#saiten_kekka_on_live p {
+  display: none;
+}
+#saiten_text_on_live {
+  position:absolute; 
+  top:5%; 
+  left:5%; 
+}
+p#saiten_text_on_live {
+  font-size:50px;
+}
+p#judge_on_live {
+  font-size:60px;
+}
+
+#count_up {
+  font-size: 54px;
+}
+
+/* Tweetボタン */
+.a_tweet {
+  background: linear-gradient(#05FBFF, rgba(0, 180, 255, 0.7));
+  border: solid 1px skyblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  width: 300px;
+  color: white;
+  padding: 3px;
+  -ms-user-select: auto;
+  cursor: pointer;
+}
+#a_tweet_tokoton {
+  margin:0 auto;
+}
+#a_tweet_fukusyuu {
+  display: none;
+  margin:0 auto;
+  margin-bottom: 20px;
+}
+
+#result_gold {
+  width: 200px;
+  height: 200px;
+}
+
+#result_silver {
+  width: 200px;
+  height: 200px;
+}
+
+#result_bronze {
+  width: 200px;
+  height: 200px;
+}
+
+#result_gold_on_live {
+  width: 250px;
+  height: 250px;
+}
+
+#result_silver_on_live {
+  width: 250px;
+  height: 250px;
+}
+
+#result_bronze_on_live {
+  width: 250px;
+  height: 250px;
+}
+
+.condition {
+  margin:0; 
+  height: 24px;
+  color:white;
+  font-family: 'メイリオ';
+}
+
+.answer {
+  height: 24px;
+  color: white;
+  font-family: 'メイリオ';
+  margin: 0px;
+}
+
+input[type="text"] {
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 0px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: rgb(255, 255, 100);
+}
+
+input[type="submit"] {
+  width: 200px;
+  font-weight: bold;
+  font-family: 'HG教科書体';
+  padding: 10px 0px;
+  background-image: linear-gradient( to bottom, #b0e0e6 0%, #00bfff 100%);
+  opacity: 0.9;
+}
+
+#saiten_bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+#saiten_tyuu {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+}
+
+
+/* kanken~.html */
+
+
+#about_tokoton_panel {
+  background: linear-gradient(#FFEEEE, #FFB6C1); 
+  width:200px; 
+  border-radius: 30px; 
+  top:0%; 
+  left:0%;
+}
+#about_tokoton_panel a {
+  border-radius: 30px;
+}
+#about_tokoton_panel a p {
+  margin-bottom:20px; 
+  margin-top:20px; 
+  font-family:'メイリオ'; 
+  font-size:28px; 
+  line-height:1.2; 
+  font-weight:300;
+}
+
+#fukusyuu_panel {
+  background:linear-gradient(#00FF20, rgba(0,150,55,0.5)); 
+  width:200px; 
+  top:0%; 
+  right:0%;
+}
+#fukusyuu_panel a p {
+  margin-bottom:0px; 
+  margin-top:20px; 
+  font-size:34px;
+}
+#fukusyuu_panel a #cookie_fukusyuu {
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+.mode_switch {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.mode_switch input {
+  display: none;
+}
+
+.mode_switch label {
+  padding: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mode_switch label:before {
+  padding: 6px 10px;
+  content: '試験';
+  border-radius: 6px 0 0 6px;
+  background: linear-gradient(to bottom, #F0F0F0 0%, #DDD 100%);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  color: #333;
+}
+
+.mode_switch label:after {
+  padding: 6px 10px;
+  content: 'とことん';
+  border-radius: 0 6px 6px 0;
+  background: magenta;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  color: #FFF;
+}
+
+.mode_switch input+label:hover:before {
+  opacity: 0.5;
+}
+
+.mode_switch input:checked+label:before {
+  background: purple;
+  color: #FFF;
+  opacity: 1;
+}
+
+.mode_switch input:checked+label:after {
+  background: linear-gradient(to bottom, #F0F0F0 0%, #DDD 100%);
+  color: #333;
+}
+
+.mode_switch input:checked+label:hover:after {
+  opacity: 0.5;
+}
+
+p.text_on_class_genre {
+  font-size:50px; 
+}
+p.text_on_kanken_genre {
+  font-size:50px; 
+  margin-bottom: 0px;
+}
+
+p.cookie_text_on_genre, p.nokori_text_on_genre {
+  font-size:24px; 
+  opacity:0;
+}
+
+p.text_on_level {
+  margin-bottom:0px; 
+  font-family:sans-serif; 
+  font-weight:normal;
+}
+p.nokori_text_on_level {
+  font-size:24px;
+}
+
+#edit_panel {
+  background:linear-gradient(#FFFFFF, rgba(255,255,255,0.4));
+  margin-bottom:10px; 
+  top:90%; 
+  cursor:pointer;
+}
+
+.margin_on_title {
+  margin-top: 60px;
+}
+
+/* とことんモード紹介ページ */
+
+.pre_title {
+  color: white;
+}
+.pre_text {
+  margin-top: 90px;
+}
+
+#pre_ateji_panel {
+  background:linear-gradient(#FFD700, rgba(255,255,0,0.5)); 
+  position:relative; 
+  margin:0 auto;
+}
+#pre_ateji_panel p {
+  color:black;
+  font-family:'HG教科書体';
+  font-weight: bold;
+}
+.pre_genre {
+  margin-bottom:0px; 
+  font-size:38px;
+}
+.pre_nokori {
+  font-size:24px;
+}
+#pre_level_panels {
+  width:820px; 
+  height:150px; 
+  margin:0 auto;
+}
+#pre_level1_panel {
+  background:linear-gradient(#00FF20, rgba(0,150,55,0.5)); 
+  position:relative; 
+  width:250px; 
+  margin:10px;
+}
+#pre_level2_panel {
+  background:linear-gradient(#05BBFF, rgba(0,80,255,0.5));
+  position:relative; 
+  width:250px; 
+  margin:10px;
+}
+#pre_level3_panel {
+  background:linear-gradient(#FF8000, rgba(255,150,0,0.5)); 
+  position:relative; 
+  width:250px; 
+  margin:10px;
+}
+#pre_level1_panel .pre_level {
+  color:black; 
+  margin-bottom:0px; 
+  font-size:32px; 
+  font-family:'メイリオ';
+}
+#pre_level2_panel .pre_level {
+  color:black; 
+  margin-bottom:0px; 
+  font-size:32px; 
+  font-family:'メイリオ';
+}
+#pre_level3_panel .pre_level {
+  color:black; 
+  margin-bottom:0px; 
+  font-size:32px; 
+  font-family:'メイリオ';
+}
+#pre_level1_panel .pre_nokori {
+  color:black;
+  font-family:'HG教科書体';
+}
+#pre_level2_panel .pre_nokori {
+  color:black;
+  font-family:'HG教科書体';
+}
+#pre_level3_panel .pre_nokori {
+  color:black;
+  font-family:'HG教科書体';
+}
+
+.back_panel {
+  background:linear-gradient(#05FBFF, rgba(0,180,255,0.7)); 
+  width:200px; 
+  border-radius: 30px; 
+  top:0%; 
+  left:0%; 
+  z-index:1;
+}
+.back_panel a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.back_panel a p {
+  margin-bottom:20px; 
+  margin-top:20px; 
+  font-size:28px; 
+  line-height:1.0;
+}
+
+#pre_table1 {
+  margin-left: 20px;
+  width: 500px;
+}
+#pre_table1 td {
+  width:190px;
+}
+#pre_table2 {
+  margin-top:95px; 
+  margin-right:125px; 
+  width:370px;
+}
+#pre_table2 p {
+  margin:0; 
+  font-weight:normal; 
+  font-size:24px;
+}
+#pre_table2 kanji {
+  font-weight: 900; 
+  font-size: 40px; 
+  font-family: 'HG教科書体';
+}
+#pre_table3 {
+  margin-top:45px; 
+  margin-right: 145px;
+  width: 420px
+}
+#pre_table3 td {
+  width:150px;
+}
+
+#pre_fukusyuu_panel {
+  background:linear-gradient(#00FF20, rgba(0,150,55,0.5)); 
+  width:200px; 
+  height:120px; 
+  margin-left:220px;
+}
+#pre_fukusyuu_panel p {
+  color:black;
+  font-family:'HG教科書体';
+}
+.pre_fukusyuu {
+  margin-bottom:0px; 
+  font-size:32px;
+}
+#pre_fukusyuu_panel .pre_nokori {
+  font-size:24px;
+}
+
+input.pre_correct {
+  background-color: coral;
+}
+input.pre_incorrect {
+  background-color: cornflowerblue;
+}
+
+.margin_on_pre_text {
+  margin-top: 150px;
+}
+
+#right_arrow1 {
+  margin-top:95px; 
+  font-size:60px;
+}
+#right_arrow2 {
+  margin-left:460px; 
+  margin-top:65px; 
+  font-size:60px;
+}
+
+/* 編集ページ */
+
+#back_panel_on_about a {
+  border-radius: 30px;
+}
+#back_panel_on_edit a {
+  border-radius: 30px;
+}
+
+.edit_table{
+	margin:20px auto;
+	margin-bottom:40px;
+}
+.edit_table tr th{
+	color:white;
+	font-size:32px;
+	text-align:center;
+}
+
+/* テキスト設定 */
+
+#tokoton_texts {
+  margin: 40px auto;
+  display: none;
+}
+#tokoton_texts h3 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding-top: 30px;
+}
+
+#fukusyuu_texts {
+  margin: 40px auto;
+}
+#fukusyuu_texts h3 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding-top: 30px;
+}
+#fukusyuu_text {
+  opacity:0;
+}
+#kokufuku_text {
+  color:yellow; 
+  opacity:0; 
+  display:none;
+}
+
+#tokoton_kekka {
+  display: none;
+  text-align: center;
+  padding:0;
+}
+#tokoton_kekka p {
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  margin:30px auto;
+}
+#clear_on_tokoton {
+  font-size: 54px;
+}
+
+#finish_kekka {
+  display: none;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-top:0px;
+}
+#finish_kekka p {
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  margin:30px auto;
+}
+
+#q_num_text_on_live {
+  color:white; 
+  font-size:50px; 
+  text-align: center; 
+  margin: 30px; 
+}
+#clear_line_text_on_live {
+  top: 20%;
+  left: 62%;
+  color:white; 
+  font-size:70px; 
+  text-align: center;
+  opacity:0;
+}
+#genre_on_clear_line {
+  margin:10px auto;
+}
+#haiten_on_clear_line {
+  color:white; 
+  font-size:40px; 
+  width:300px; 
+  margin-left: 350px; 
+  line-height: 0.5;
+}
+
+#kanji_on_live {
+  font-size: 140px;
+  color: white;
+  text-align: center;
+  width: 1200px;
+  margin: 0;
+}
+
+#input_on_live {
+  margin: auto;
+}
+#yomi_on_live {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#genre_text_on_live {
+  color:white; 
+  font-size:50px; 
+  top:5%;
+}
+#panel_on_live {
+  position:absolute; 
+  top:26%; 
+  left:35%;
+}
+#genre_on_live {
+  color:black; 
+  font-size:50px; 
+  margin: 20px auto;
+}
+#haiten_on_live {
+  top:65%;
+  color:white; 
+  font-size:40px; 
+  text-align:center; 
+  margin: 0px;
+}
+
+#marubatsu_on_live {
+  top:2%; 
+  text-align:center; 
+  color:white; 
+  font-size:25px; 
+  font-family:'メイリオ'; 
+  width:1200px;
+}
+#question_on_live {
+  position: absolute;
+  top:12%;
+  width: 1200px;
+  font-family: メイリオ;
+  color: white;
+  font-weight: normal;
+}
+#yomi_on_live {
+  top:18%; 
+  left:-4%;
+  text-align:center; 
+  width:1200px; 
+  position:absolute; 
+}
+#kanji_on_live {
+  position:absolute; 
+  top:29%; 
+  left:-4%; 
+  line-height:1;
+}
+#input_on_live {
+  text-align:center; 
+  font-size:30px; 
+  width:8em; 
+  top:68%;
+}
+#q_on_part_text {
+  display:none;
+  position:absolute; 
+  top:70%; 
+  right:5%; 
+  color:white; 
+  font-size:30px; 
+}
+#q_on_part {
+  font-size:60px;
+}
+
+#jouken {
+  display:none;
+  position:absolute; 
+  left:0%; 
+  top:65%; 
+  width: 450px;
+  text-align: center;
+}
+#waku_jouken {
+  width: 100px;
+  margin:auto;
+}
+#waku_jouken p {
+  margin: 0;
+  font-size: 20px;
+  font-family: メイリオ;
+  text-align: center;
+}
+#waku_jouken[name="注意"] {
+  background: linear-gradient(#FFF9B1, #FFFD46);
+  border: solid 2px #ff9000;
+}
+#waku_jouken[name="ヒント"] {
+  background: linear-gradient(rgb(191, 251, 255), rgb(110, 228, 248));
+  border: solid 2px #0848ff;
+}
+#waku_jouken[name="条件"] {
+  background: linear-gradient(#FFEEEE, #FFB6C1);
+  border: solid 2px hotpink;
+}
+#jouken_text {
+  color:white;
+  font-size: 25px;
+  margin: 5px;
+  font-family: 'メイリオ';
+}
+
+#score_on_live {
+  position:absolute; 
+  top:27%; 
+  right:20%;
+}
+#count_up_on_live {
+  font-size:150px;
+}
+#judge_on_live {
+  position:absolute; 
+  top:65%; 
+  font-size:60px; 
+  text-align:center; 
+  width:1200px;
+}
+
+#button_kentei_start {
+  position:absolute; 
+  top:88%;
+}
+#button_start {
+  position:absolute; 
+  top:85%;
+}
+#button_judge {
+  position:absolute; 
+  top:85%; 
+}
+#button_next_on_live {
+  position:absolute; 
+  top:85%;
+}
+#button_home_on_live {
+  position:absolute; 
+  top:70%; 
+}
+
+#girl_on_live img {
+ position:absolute; 
+ top: 0%;
+ right: 3%;
+}
+#girl_manten, #girl_gokaku, #girl_sukoshi, #girl_none {
+  display: none;
+  width: 300px;
+}
+
+#q_num_text_on_live {
+  animation-delay:0.2s; 
+  opacity:0;
+}
+
+form[name='form_on_live'] {
+  display: none;
+}
+
+#one_genre_on_live {
+  display:none;
+}
+
+/* 送信ボタンに関する設定 */
+
+#class_page #test_page #button_retry {
+  padding-bottom:0px; 
+  display:none;
+}
+#class_page #test_page #button_home {
+  display:none;
+}
+#class_page #live_page .button {
+  display:none;
+}
+
+#kanken_page #test_page .button {
+  display:none;
+}
+#kanken_page #test_page #button_retry,
+#kanken_page #test_page #button_next {
+  padding-bottom:0px;
+}
+#kanken_page #test_page #button_finish {
+  padding-top:15px;
+}
+#kanken_page #fukusyuu_page .button {
+  display:none;
+  padding-top:30px;
+}
+#kanken_page #fukusyuu_page #button_all_answer {
+  padding-bottom:40px;
+}
+
+.class_genre_length_1 article:nth-child(1) {
+  left:35%;
+}
+
+.class_genre_length_3 article:nth-child(1) {
+  left:6%;
+}
+.class_genre_length_3 article:nth-child(2) {
+  left:34.5%;
+}
+.class_genre_length_3 article:nth-child(3) {
+  right:6.5%;
+}
+
+.class_genre_length_5 article:nth-child(1) {
+  top:20%; left:6%;
+}
+.class_genre_length_5 article:nth-child(2) {
+  top:20%; left:34.5%;
+}
+.class_genre_length_5 article:nth-child(3) {
+  top:20%; right:6.5%;
+}
+.class_genre_length_5 article:nth-child(4) {
+  top:57%; left:20%;
+}
+.class_genre_length_5 article:nth-child(5) {
+  top:57%; right:20%;
+}
+
+.kanken_genre_length_1 article:nth-child(1) {
+  left:34.5%;
+}
+
+.kanken_genre_length_2 article:nth-child(1) {
+  left:20%;
+}
+.kanken_genre_length_2 article:nth-child(2) {
+  right:20%;
+}
+
+.kanken_genre_length_3 article:nth-child(1) {
+  left:6%;
+}
+.kanken_genre_length_3 article:nth-child(2) {
+  left:34.5%;
+}
+.kanken_genre_length_3 article:nth-child(3) {
+  right:6.5%;
+}
+
+.kanken_level_length_1 article:nth-child(1) {
+  left:34.5%;
+}
+
+.kanken_level_length_2 article:nth-child(1) {
+  left:20%;
+}
+.kanken_level_length_2 article:nth-child(2) {
+  right:20%;
+}
+
+.kanken_level_length_3 article:nth-child(1) {
+  left:6%;
+}
+.kanken_level_length_3 article:nth-child(2) {
+  left:34.5%;
+}
+.kanken_level_length_3 article:nth-child(3) {
+  right:6.5%;
+}
+
+article[name="植物"] {
+background:linear-gradient(#00FF20,rgba(0,150,55,0.5));
+}
+
+article[name="魚介類"] {
+background:linear-gradient(#05BBFF,rgba(0,80,255,0.5));
+}
+
+article[name="鳥類"] {
+background:linear-gradient(#FFDD33,rgba(255,220,0,0.4));
+}
+
+article[name="虫"] {
+background:linear-gradient(#FFF700,rgba(255,255,0,0.5));
+}
+
+article[name="動物"] {
+background:linear-gradient(#FF8000,rgba(255,120,0,0.4));
+}
+
+article[name="物・現象"] {
+background:linear-gradient(#A060FF,rgba(50,0,55,0.6));
+}
+
+article[name="常用熟字訓"] {
+background:linear-gradient(#DDDDDD,rgba(255,255,255,0.4));
+}
+
+article[name="当て字"] {
+background:linear-gradient(to right, #ffdef8, #ff4595);
+}
+
+article[name="外国地名"] {
+background:linear-gradient(to right, #e5c0ff, #800080);
+}
+
+article[name="国名"] {
+background:linear-gradient(to right, #1e9600, #fff200, #ff0000);
+}
+
+article[name="都市名"] {
+background:linear-gradient(to right, #005aa7, #fffde4);
+}
+
+article[name="外来語"] {
+background:linear-gradient(to right, #4eff0d, #ffffe6);
+}
+
+article[name="漢字一文字"] {
+background:linear-gradient(#05FBFF, #1E00FF);
+}
+
+article[name="激難当て字"] {
+background:linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+}
+
+article[name="究極"] {
+background:linear-gradient(#FF0020,rgba(255,0,55,0.5));
+}
+
+article[name="熟語"] {
+background:radial-gradient(#F2B9A1, #FF7500);
+}
+
+article[name="送り仮名有"] {
+background:linear-gradient(to right, #ffc3ae, #ff4b1f);
+}
+
+article[name="送り仮名無"] {
+background:linear-gradient(to right, #007fff, #001c84);
+}
+
+article[name="表外読み"] {
+background:linear-gradient(to right, #78ffb3, #009135);
+}
+
+article[name="音読み"] {
+background:linear-gradient(#FFB000,rgba(200,58,0,0.7));
+}
+
+article[name="訓読み"] {
+background:linear-gradient(to right, #1c92d2, #f2fcfe);
+}
+
+article[name="レベル1"] {
+background:linear-gradient(#00FF20, rgba(0,150,55,0.5));
+}
+article[name="レベル2"] {
+background:linear-gradient(#05BBFF, rgba(0,80,255,0.5));
+}
+article[name="レベル3"] {
+background:linear-gradient(#FF8000, rgba(255,150,0,0.5));
+}

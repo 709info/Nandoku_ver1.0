@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>難読漢字検定　試験</title>
+    <link rel="stylesheet" href="../css/all_pages.css?v=100">
+    <link rel="stylesheet" href="../css/kentei.css?v=100">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <style type="text/css">
+        body {
+            background-color: #FFF;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-y: scroll;
+            font-family: 'メイリオ';
+        }
+    </style>
+    
+    <noscript>
+    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+    </noscript>
+
+</head>
+
+<body>
+
+    <!-- wrap_page -->
+
+    <script type="text/javascript" src="../get_time.js"></script>
+    <script type="text/javascript" src="../jquery.js"></script>
+
+    <script type="text/javascript">
+        // - - jsファイルを取得・ロード - -
+        
+        const array = location.href.split("/");
+        const js_name = "./data_1class.js";
+        
+        // time -> キャッシュの回避
+        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+    </script>
+
+    <script type="text/javascript">
+		
+		for(let main_q = 0; main_q < DATA.length; main_q++){
+			for(let genre = 0; genre < DATA[main_q].length; genre++){
+				for(let i = 0; i < DATA[main_q][genre].length; i++){
+				    //後ろから前に向かって小さい値を浮かび上がらせるfor文
+				    for(let j = DATA[main_q][genre].length-1; j>i ; j-- ){
+				        //隣りあう２つの値を比べて、後ろが小さければ交換する
+				        let former = kanaToHira(DATA[main_q][genre][j][1]);
+				        let later = kanaToHira(DATA[main_q][genre][j-1][1]);
+				        
+				        if(kanaToHira(DATA[main_q][genre][j][1]) < kanaToHira(DATA[main_q][genre][j-1][1])){
+				            let tmp = DATA[main_q][genre][j];
+				            DATA[main_q][genre][j] = DATA[main_q][genre][j-1];
+				            DATA[main_q][genre][j-1] =tmp;
+				        }
+				    }
+			    }
+			}
+		}
+
+		function kanaToHira(str) {
+		    return str.replace(/[\u30a1-\u30f6]/g, function(match) {
+		        var chr = match.charCodeAt(0) - 0x60;
+		        return String.fromCharCode(chr);
+		    });
+		}
+
+		for (let main_q = 0; main_q < DATA.length; main_q++) {
+		    	if (typeof(KANKEN) !== "undefined") {
+				document.write("QUESTION_STR["+main_q+"] = \"" + QUESTION_STR[main_q] + "\"<br><br>");
+				}
+		    for (let q = 0; q < DATA[main_q].length; q++) {
+		    	if (typeof(CLASS) !== "undefined") {
+				document.write("QUESTION_STR["+main_q+"]["+q+"] = \"" + QUESTION_STR[main_q][q] + "\"<br><br>");
+				}
+				document.write("DATA["+main_q+"]["+q+"] = new Array(<br>");
+		    	for (let i = 0; i < DATA[main_q][q].length; i++) {
+					document.write("[\""+DATA[main_q][q][i][0] + "\", \""+DATA[main_q][q][i][1]+"\"]");
+					if (i === DATA[main_q][q].length - 1) {
+					document.write("<br>");
+					} else {
+					document.write(",<br>");
+					}
+				}
+				document.write(");<br><br>");
+			}
+		}
+
+    </script>
+
+</body>
+
+</html>

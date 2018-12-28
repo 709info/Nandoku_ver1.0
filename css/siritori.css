@@ -1,0 +1,419 @@
+
+/* siritori1~3.html */
+
+kanji {
+  color: white;
+  font-size: 34px;
+  line-height: 0;
+}
+
+input[type="text"] {
+  display: none;
+  text-align:center; 
+  top:68%; 
+  font-size:30px; 
+  width:8em;
+}
+
+/* unicode第3・第4水準用のフォント */
+uni {
+  font-weight: normal;
+  font-size: 85px;
+}
+
+#battle_field {
+  position:relative; 
+  background-color: rgba(0, 0, 0, 0.7);
+  width:1320px; 
+  height: 450px;
+  padding: 0px 10px 0px 10px;
+  margin:0 auto;
+}
+
+#adv_name {
+  top:30%;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  text-align: center;
+  padding-top: 0px;
+  font-family: 'メイリオ';
+}
+#adv_on_intro {
+  top:50%;
+}
+
+.siritori_title {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding-top: 0px;
+}
+
+.siritori_subtitle h3 {
+  top:85%;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  font-size: 20px;
+  font-family: 'メイリオ';
+  line-height: 1.5;
+}
+
+#intro_2, #intro_3 {
+  display:none;
+}
+
+.kashira_moji {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#win_text {
+  display: none;
+  color: white;
+  font-size: 40px; 
+  text-align: center; 
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+.kanji_siri {
+  top:23%;
+  color: white;
+  font-size: 100px;
+  line-height: 0;
+}
+
+.table_HP {
+  position:absolute; 
+  top:70%; 
+  width: 176px;
+  height: 70px;
+}
+.table_HP h5 {
+  position:absolute; 
+  top:0%; 
+  margin:0px;
+}
+.table_HP th, .table_HP td {
+  border: solid 2px #FFFFFF;
+}
+.table_HP td {
+  width: 50px;
+}
+.table_HP table {
+  position:absolute; 
+  top:42%;
+}
+
+#my_HP {
+  animation-delay: 0.4s;
+  left:10%;
+}
+#adv_HP {
+  animation-delay: 0.4s;
+  right:10%;
+}
+#my_HP h5 {
+  left:0%;
+}
+#adv_HP h5 {
+  right:0%;
+}
+
+.marubatsu {
+  display:none;
+  width: 100px;
+  height: 100px;
+  top: 68%;
+}
+
+#waku_bunki {
+  position:absolute; 
+  left:32%; 
+  top:55%;
+  background: linear-gradient(#FFEEEE, #FFB6C1);
+  height: 50px;
+  width: 100px;
+  border: solid 2px hotpink;
+}
+#bunki_text {
+  position:absolute; 
+  left:10%; 
+  top:25%;
+  margin: 0;
+  font-size: 20px;
+  font-family: メイリオ;
+}
+
+.waku_kashira {
+  background: linear-gradient(#EEEEFA, #00BFFF);
+  border-radius: 100%;
+  border: solid 2px lightskyblue;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+#kashira_next_set {
+  animation-delay: 0.2s;
+  position:absolute; 
+  top:55%; 
+  right:27%;
+  height: 100px;
+  width: 85px;
+}
+#kashira_next_set h5 {
+  position:absolute; 
+  font-size: 17px; 
+  margin:0px;
+}
+
+#kashira_next {
+  font-size:40px;
+}
+
+#waku_kashira_next {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+#attack_set {
+  position:absolute; 
+  top:25%; 
+  right:25%;
+  height: 100px;
+  width: 144px;
+}
+#attack_set h5 {
+  position:absolute; 
+  margin:0px;
+}
+#waku_attack {
+  position:absolute; 
+  top:64px;
+  background: linear-gradient(#FF8800, #FF2200);
+  height: 60px;
+  width: 100px;
+  border: solid 2px orange;
+}
+
+#attack_text {
+  font-size: 40px;
+  font-family: メイリオ;
+}
+
+#waku_data {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  right: 2%;
+  top: 23%;
+  border: solid 2px skyblue;
+  background-color: rgba(0, 0, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+}
+
+#waku_data h3 {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  font-family: 'メイリオ';
+  line-height: 1.5;
+}
+
+#waku_intro {
+  padding-left: 30px;
+  padding-right: 5px;
+  border: solid 2px orange;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+  width: 500px;
+  height: 280px;
+  position: absolute;
+  left: 1%;
+  top: 22%;
+  cursor: pointer;
+}
+
+#waku_intro ul {
+  padding: 0px;
+  list-style-type: square;
+}
+
+.nices {
+  display:none;
+  position: absolute;
+  font-size: 45px;
+  top: 37%;
+  left: 53%;
+  color: gold;
+  font-family: 'Monotype Corsiva';
+}
+
+#crown {
+  display:none;
+  top:30%; 
+  left:32%; 
+  width: 200px;
+  height: 200px;
+}
+
+#stock_text {
+  position:absolute; 
+  font-size: 17px; 
+  top:70%; 
+  right:25.5%;
+}
+
+#a_tweet{
+  display: none;
+  background: linear-gradient(#05FBFF, rgba(0, 180, 255, 0.7));
+  border: solid 1px skyblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  width: 300px;
+  color: white;
+  padding: 3px;
+  -ms-user-select: auto;
+  cursor: pointer;
+}
+
+.answer {
+  top:30%;
+  color: white;
+  font-family: 'メイリオ';
+  font-size: 24px;
+  margin: 0px;
+}
+
+#time, #time_on_result {
+  color:white; 
+  font-size:30px; 
+  font-family:メイリオ
+}
+#time {
+  display: none;
+  position:absolute; 
+  top:20%; 
+  left:8%;
+}
+#time_on_result {
+  position:absolute; 
+  top:20%; 
+  left:3%;
+}
+
+#slot_page {
+  display: none;
+}
+
+#kashira_text {
+  top:25%; 
+  font-size: 20px; 
+  font-family:'メイリオ';
+}
+
+#waku_slot_now {
+  display: none;
+  top:45%;
+}
+#button_prepare {
+  top:80%;
+}
+
+#battle_page {
+  display:none;
+}
+
+#adv_img img {
+  display: none;
+  position: absolute; 
+  right:15%; 
+  top:34%;
+}
+
+#form_of_kanji {
+  padding-top: 0px;
+}
+
+#waku_kashira_now {
+  display: none;
+  left:32%; 
+  top:20%;
+}
+
+#result_page {
+  display:none;
+}
+
+#adv_result img {
+  position: absolute; 
+  right:15%; 
+  top:34%;
+}
+
+#medal_on_result img {
+  float: left;
+  position: absolute;
+  top: 5%;
+  width: 100px;
+  height: 100px;
+  opacity:0;
+}
+#your_medal1 {
+  left:5%;
+}
+#your_medal2 {
+  left:11%;
+}
+#your_medal3 {
+  left:17%;
+}
+#adv_medal1 {
+  left:86%;
+}
+#adv_medal2 {
+  left:80%;
+}
+#adv_medal3 {
+  left:74%;
+}
+
+#winner_text {
+  text-align:center;
+  margin-top: 60px;
+  font-size: 40px;
+  color: white;
+}
+
+#button_battle {
+  top:85%;
+}
+#button_saiten {
+  display:none; 
+  top:85%;
+}
+#button_next {
+  display:none; 
+  top:85%;
+}
+#button_next_battle {
+  display:none; 
+  top:80%;
+}
+#button_result {
+  display:none; 
+  top:80%;
+}
+#button_retry {
+  top:70%;
+}
+#button_home {
+  top:85%;
+}

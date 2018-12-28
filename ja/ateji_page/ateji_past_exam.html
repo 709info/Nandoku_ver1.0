@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123486040-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-123486040-2');
+	</script>
+
+    <meta charset="utf-8">
+    <title>難読漢字検定 - 熟字訓・当て字　一覧</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <style type="text/css">
+        body {
+            background-color: #000000;
+            background-image: URL("../../img/img_home.jpg");
+            background-attachment: fixed;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    </style>
+
+    <noscript>
+    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+    </noscript>
+
+</head>
+
+<body>
+
+    <p class="page_title">熟字訓・当て字　保管庫</p>
+
+    <div id="intro_page">
+
+        <article id="intro_field" class="field">
+
+			<p class="intro_title margin_on_title">＜熟字訓・当て字　一覧＞</p>
+			
+			<div id="ateji_articles">
+			</div>
+			
+            <div id="button_saiten" class="button only_one_button">
+                <input type="submit" value="戻る" onclick="location.href='./ateji_analysis.html'">
+            </div>
+			
+        </article>
+
+	</div>
+
+    <script type="text/javascript" src="../../js/get_time.js"></script>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+
+    <script type="text/javascript">
+    
+        // cssの読み込み
+        $("head").append('<link rel="stylesheet" href="../../css/all_pages.css?v=' + time + '">');
+        $("head").append('<link rel="stylesheet" href="../../css/ateji.css?v=' + time + '">');
+        
+        const js_name = "../../js/kanji_data/data_ateji_past_exam.js";
+        
+        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+    </script>
+    
+    <script type="text/javascript">
+	    
+	    for (let year = 15; year <= 30; year++) {
+	    	for (let part = 1; part <= 3; part++) {
+	    		
+	    		if (typeof(DATA[year][part]) === "undefined") continue;
+	    		
+				let html =  '<div class="year_text center_text margin_on_title">' +
+					        '    <p>平成' + year + '年度 第' + part + '回　熟字訓・当て字</p>' +
+					        '</div>';
+				
+				const name = 'H'+ year +'_part'+ part;
+				
+				html += '<article name="'+ name +'" class="table_article">' +
+						'	<table name="'+ name +'_left" class="ateji_table float_left" border="1">' +
+	        			'	</table>' +
+						'	<table name="'+ name +'_right" class="ateji_table float_right" border="1">' +
+	        			'	</table>' +
+	        			'</article>';
+	        	
+	    		$("#ateji_articles").append(html);
+	        	
+	        	let question_html = '<p class="question_text">（六）次の<b>熟字訓・当て字</b>の<b>読み</b>を記せ。</p>';
+	        	
+	        	$('article[name="'+ name +'"]').prepend(question_html);
+	        	
+	        	for (let i = 0; i < 10; i++) {
+	        		let ateji_html = 	'<tr>' +
+	        							'	<th>問' + (i+1) + '</th>' +
+	        							'	<td>' + DATA[year][part][i][0] + '</td>' +
+	        							'	<td>' + DATA[year][part][i][1].replace(",","<br>") + '</td>' +
+	        							'</tr>';
+	        		
+	        		let selector;
+	        		if (i < 5) {
+	        			selector = 'table[name="'+ name +'_left"]';
+	        		} else {
+	        			selector = 'table[name="'+ name +'_right"]';
+	        		}
+	        		
+	        		$(selector).append(ateji_html);
+	        	}
+
+	    		if (typeof(DATA[year][part][10]) === "undefined") continue;
+	    		
+	    		let percent_html =  '<p class="percent_text">平均得点：受検者 - <y>' + DATA[year][part][10].toFixed(1) + '点</y>' +
+	    							'　合格者 - <y>' + DATA[year][part][11].toFixed(1) + '点</y></p>';
+	    		
+	        	$('article[name="'+ name +'"]').append(percent_html);
+	    	}
+	    }
+	    
+    </script>
+
+</body>
+
+</html>

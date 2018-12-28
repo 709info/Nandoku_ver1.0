@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>難読漢字検定　試験</title>
+    <link rel="stylesheet" href="../css/all_pages.css?v=100">
+    <link rel="stylesheet" href="../css/kentei.css?v=100">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <style type="text/css">
+        body {
+            background-color: #FFF;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-y: scroll;
+            font-family: 'メイリオ';
+        }
+    </style>
+    
+    <noscript>
+    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+    </noscript>
+
+</head>
+
+<body>
+
+    <!-- wrap_page -->
+
+    <script type="text/javascript" src="../js/get_time.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+    <script type="text/javascript">
+        // - - jsファイルを取得・ロード - -
+        
+        const array = location.href.split("/");
+        const js_name = "../js/kanji_data_log/data_kanken_jun1_jukugo.js";
+        
+        // time -> キャッシュの回避
+        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+        document.write('<script type="text/javascript" src="../js/format_of_kentei.js?v='+time+'"><\/script>');
+        document.write('<script type="text/javascript" src="../js/functions_of_all_pages.js?v='+time+'"><\/script>');
+        document.write('<script type="text/javascript" src="../js/functions_of_kentei.js?v='+time+'"><\/script>');
+    </script>
+
+    <script type="text/javascript">
+        // - - ページの初期設定 - -
+
+        document.title = TITLE;
+        $(".page_title").html(PAGE_TITLE);
+
+        // - - 出題準備 - -
+
+var str = "文字列をUTF-8に";
+var utf8str = unescape(encodeURIComponent(str));
+var utf16str = decodeURIComponent(escape(utf8str));
+for (let main_q = 0; main_q < DATA.length; main_q++) {
+    	if (typeof(KANKEN) !== "undefined") {
+		document.write("QUESTION_STR["+main_q+"] = \"" + encodeURIComponent(QUESTION_STR[main_q]) + "\"<br><br>");
+		}
+    for (let q = 0; q < DATA[main_q].length; q++) {
+    	if (typeof(CLASS) !== "undefined") {
+		document.write("QUESTION_STR["+main_q+"]["+q+"] = \"" + encodeURIComponent(QUESTION_STR[main_q][q]) + "\"<br><br>");
+		}
+		document.write("DATA["+main_q+"]["+q+"] = new Array(<br>");
+    	for (let i = 0; i < DATA[main_q][q].length; i++) {
+			document.write("[\""+encodeURIComponent(DATA[main_q][q][i][0]) + "\", \""+encodeURIComponent(DATA[main_q][q][i][1])+"\"]");
+			if (i === DATA[main_q][q].length - 1) {
+			document.write("<br>");
+			} else {
+			document.write(",<br>");
+			}
+		}
+		document.write(");<br><br>");
+	}
+}
+
+		// パネルクリックで値が確定
+		let play_style; // 出題スタイル("test"か"live")
+        let genre; // 出題ジャンル(インデックス番号)
+        
+		let mode = "試験";
+		
+		// 出題する漢字・読み・条件を記録
+		let kanji_mem = new Array();
+        let yomi_mem = new Array();
+        let jouken_mem = new Array();
+
+        // - - 出題の構成開始 - -
+
+        function Be_on_the_test() {
+        
+            // 試験ページへの切り替え
+			Go_to_test_page();
+
+            // 検定レベル・合格ラインの表示
+            Show_kentei_texts();
+
+            // 解答フォームの構成・表示
+			Make_form();
+
+            let asked_q_num = 0; // 現時点で出題した問題数
+
+            // 大問ずつ試験を構成
+            for (let main_q = 0; main_q < MAIN_Q_NUM; main_q++) {
+
+				// この大問における出題数
+				const q_num = Q_NUM[main_q];
+
+                // 2つ目以降の出題カテゴリをランダムで決定
+                if (main_q >= 1) {
+                    genre = Math.floor(Math.random() * KANJI[main_q].length);
+                }
+
+                // 2段組にすべきか判断(trueなら2段)
+                const double_column = (q_num % 2 === 0);
+
+                // 問題文を構成・表示
+                Make_question(main_q, "", "", QUESTION_STR[main_q][genre]);
+                
+                // <table>要素の構成
+                Make_table("#test_Q" + (main_q + 1), double_column);
+
+                // 一問ずつ出題
+                for (let q = 0; q < q_num; q++) {
+
+                    // 出題漢字(の番号)をランダムに決定
+                    const i = Math.floor(Math.random() * KANJI[main_q][genre].length);
+
+					// 漢字・読み・条件を取得
+					const data = Get_data(main_q, genre, i);
+					const kanji = data[0], yomi = data[1], condition = data[2];
+
+                    // 試験テーブル構成
+                    Make_toi_and_kanji(data, double_column, q, q_num, main_q);
+                    
+                    // 正解の読みを記録
+                    yomi_mem[asked_q_num] = yomi;
+
+                    // 一度使った漢字は削除
+                    KANJI[main_q][genre].splice(i, 1);
+                    YOMI[main_q][genre].splice(i, 1);
+
+                    asked_q_num++;
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

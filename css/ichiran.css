@@ -1,0 +1,202 @@
+
+/* 一覧ページに関する設定 */
+
+#ichiran_field {
+  background-color: rgba(0, 0, 0, 0.5);
+  color:white;
+  width: 1200px;
+}
+#ichiran_field img {
+  border:double 4px #FFFFFF;
+}
+
+h3 {
+  color: white;
+}
+h5 {
+  font-family: HG教科書体;
+}
+
+/* unicode第3・第4水準用のフォント */
+uni {
+  font-weight: normal;
+  font-size: 40px;
+}
+
+.kensaku_panel p {
+  font-family: 'メイリオ';
+  margin:10px auto;
+}
+
+.link_kanji_pedia a:hover {
+	color:yellow;
+}
+
+table {
+  border-spacing: auto;
+  table-layout: fixed;
+}
+
+th {
+  text-align: left;
+}
+
+#ichiran_field {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 1200px;
+  margin: 20px auto;
+  padding: 0px 10px 0px 10px;
+}
+
+.button {
+  text-align: center;
+  padding: 40px;
+  clear: both;
+}
+.button input {
+  font-size: 30px;
+}
+#button_home {
+  padding: 20px;
+}
+#button_home input {
+  font-size: 24px;
+}
+
+.ichiran_table {
+  margin: 20px auto;
+  margin-bottom: 20px;
+}
+.ichiran_table th {
+  text-align: center;
+}
+
+.legend th {
+  font-size: 22px; 
+  font-family:メイリオ;
+}
+.legend th:nth-child(1) {
+  width: 96px;
+}
+.legend th:nth-child(2) {
+  width: 250px;
+}
+.legend th:nth-child(3) {
+  width: 450px;
+}
+
+.ichiran th {
+  color:white;
+  font-size:32px;
+}
+.ichiran th:nth-child(2) {
+  font-size: 48px;
+}
+.ichiran th:nth-child(3) {
+  width: 250px;
+}
+.ichiran th:nth-child(4) {
+  width: 450px; 
+  font-size: 18px; 
+  font-family: 'メイリオ';
+}
+.ichiran td {
+  position:relative; 
+  width:70px;
+}
+
+.a_kanji_pedia {
+  text-decoration:none;
+}
+
+/* 一覧パネルの雛形 */
+
+.ichiran_panel {
+  background-color: rgba(135, 206, 235, 0.7);
+  border: solid 1px skyblue;
+  box-shadow: 3px 3px 15px #ffffff;
+  width: 280px;
+  margin: 10px;
+  float: left;
+  padding: 0;
+}
+.ichiran_panel a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  padding: 0px;
+}
+.ichiran_panel p {
+  text-shadow: 1px 1px 1px #ffffff, -1px -1px 1px #ffffff, 1px -1px 1px #ffffff, -1px 1px 1px #ffffff;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0.0;
+  font-family: 'MS 明朝';
+}
+.ichiran_panel a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.check_mark {
+  background: linear-gradient(#00FF00, #DDEE22); 
+  border:1px solid #FFFFFF; 
+  border-radius: 100%; 
+  height: 20px;  
+  width: 20px; 
+  position:relative; 
+  left:7%;
+}
+
+#check_panels {
+  width:620px; 
+  height:100px;
+  margin:0 auto; 
+}
+
+#panel_all {
+  background: linear-gradient(#05FBFF, rgba(0,180,255,0.7));
+}
+#panel_only_checked {
+  background: linear-gradient(#05BBFF, rgba(0,80,255,0.5));
+}
+#panel_all a {
+  position:relative;
+}
+#panel_only_checked a {
+  position:relative;
+}
+
+.left_position {
+  left: 23%;
+}
+.right_position {
+  left: 71%;
+}
+
+.checkbox_of_ichiran {
+	width: 24px;
+	height:	24px;
+}
+
+@-moz-document url-prefix(){
+  .checkbox_of_ichiran {
+	-moz-transform:		scale(2);
+	-webkit-transform:	scale(2);
+  }
+}
+
+@media all and (-ms-high-contrast: none){
+  .center {
+    top: auto;
+  }
+}
+
+.ateji_table th {
+  color:white;
+  font-size:32px;
+}

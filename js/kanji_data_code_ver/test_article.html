@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>難読漢字検定　試験</title>
+    <link rel="stylesheet" href="../css/all_pages.css?v=100">
+    <link rel="stylesheet" href="../css/kentei.css?v=100">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <style type="text/css">
+        body {
+            background-color: #FFF;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-y: scroll;
+            font-family: 'メイリオ';
+        }
+    </style>
+    
+    <noscript>
+    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+    </noscript>
+
+</head>
+
+<body>
+
+    <!-- wrap_page -->
+
+    <script type="text/javascript" src="../jquery.js"></script>
+
+    <script type="text/javascript">
+        // - - jsファイルを取得・ロード - -
+
+const CLASS = 6;
+const KENTEI_NAME = "六級";
+const FILE_NAME = "6class"; // 「○○.html」などで使用
+const GENRE = [["植物", "魚介類", "鳥類", "動物", "常用熟字訓"],
+			   	["訓読み"],
+			   	["熟語"]];
+const Q_NUM = [10, 10, 5]; // 大問ごとの問題数
+const UNIT_SCORE = [4, 4, 4]; // 大問ごとにおける一問正解の配点
+const MAX_SCORE = 100; // 満点
+const GOKAKU_SCORE = 80; // 合格点
+
+        document.write('<script type="text/javascript" src="../format_of_kentei.js"><\/script>');
+    </script>
+
+    <script type="text/javascript">
+        // - - ページの初期設定 - -
+	let html = "";
+	
+	Object.keys(GENRE_COLOR_LIST).forEach(function( key ) {
+		html +=  'article[name="'+ key +'"] {<br>'+
+				 '  '+GENRE_COLOR_LIST[key]+'<br>'+
+				 '}<br><br>';
+	});
+	
+	document.write(html);
+    </script>
+
+</body>
+
+</html>

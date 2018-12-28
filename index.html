@@ -1,0 +1,588 @@
+﻿﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123486040-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-123486040-2');
+	</script>
+
+    <meta name="keywords" content="クイズ,難読漢字,検定">
+    <meta name="description" content="このサイトでは、漢字検定やクイズで扱われる難読漢字をWEBテスト形式で出題します。100点満点で採点し、検定結果はTwitterで投稿することができます。漢検準１級・１級のトレーニングも出来ますので、勉強にぜひ活用してみてください。実況動画の投稿も推奨しています。ぜひゲーム感覚でお楽しみください。">
+    <meta charset="utf-8">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@709info_0103" />
+	<meta property="og:url" content="https://se130054.web.fc2.com/" />
+	<meta property="og:title" content="難読漢字検定 ver1.0" />
+	<meta property="og:description" content="WEB形式漢字検定サイト - 漢検一級レベルから究極の難問まで　挑戦者お待ちしております！&#x1f60a;" />
+	<meta property="og:image" content="https://se130054.web.fc2.com/img/img_home.jpg" />
+	
+    <title>難読漢字検定 ver1.0 - 漢検一級レベルから究極の難問まで</title>
+    <link rel="stylesheet" href="./css/all_pages.css?v=75">
+    <link rel="stylesheet" href="./css/index.css?v=75">
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <style type="text/css">
+        body {
+            background-color: #000000;
+            background-image: URL("./img/img_home.jpg");
+            background-attachment: fixed;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    </style>
+
+    <noscript>
+		<META HTTP-EQUIV=Refresh CONTENT="0; URL=./ja/nojava.html"></META>
+	</noscript>
+
+</head>
+
+<body id="home">
+
+    <div id="loader_bg">
+        <div id="loader">
+            <img src="./img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+            <p>Now Loading...</p>
+        </div>
+    </div>
+
+    <div id="wrap">
+
+		<!-- 背景のYouTube動画に関する設定 -->
+	    <div class="mainvisual__video" id="js-mainvisualVideo" data-property="{
+	      videoURL: 'KGEDjtDDpQc',
+	      containment: 'body',
+	      autoPlay: true,
+	      loop: true,
+	      mute: true,
+	      startAt: 0,
+	      opacity: 1,
+	      showControls: false,
+	      showYTLogo: false}">
+	  	</div>
+	  
+		<!-- ポップアップメッセージ -->
+		<!--
+			<a id="news">
+				<p>動画投稿 推進中！<br>ぜひご参加下さい。</p>
+			</a>
+		-->
+
+		<header class="add_anim1 add_delay">
+	    	<h1 class="page_title">難読漢字検定 ver1.0</h1>
+	    </header>
+
+	    <div class="home_text">
+	        <h2 class="add_anim1 add_delay">
+	        	このページでは難読漢字を読むことを中心とした</h2>
+	        <h2 class="add_anim1 add_delay">
+	        	漢字能力の検定を行うことができます。</h2>
+	        <h2 class="add_anim1 add_delay">
+	        	管理人：<a href="https://twitter.com/709info_0103" target="_brank"><img src="./img/twitter.png" width="24">709info</a>
+	        </h2>
+	    </div>
+
+	    <article id="panel_introduction" class="bar_panel add_anim1 add_delay">
+	        <a>
+	            <p>当サイト・検定について</p>
+	        </a>
+	    </article>
+
+	    <article id="panel_about_movie" class="bar_panel add_anim1 add_delay">
+	        <a>
+	            <p>動画投稿について</p>
+	        </a>
+	    </article>
+
+	    <article id="panel_movie_list" class="bar_panel add_anim1 add_delay">
+	        <a>
+	            <p>動画投稿者リスト</p>
+	        </a>
+	    </article>
+	    
+		<!-- class_panels -->
+	    <div id="class_panels" class="add_anim1 add_delay">
+
+	        <article id="panel_6class" class="panel">
+	            <a>
+	                <div class="medal"></div>
+	                <div class="manten_num"></div>
+	                <p>六級</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_5class" class="panel">
+	            <a>
+	                <div class="medal"></div>
+	                <div class="manten_num"></div>
+	                <p>五級</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_4class" class="panel">
+	            <a>
+	                <div class="medal"></div>
+	                <div class="manten_num"></div>
+	                <p>四級</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_3class" class="panel">
+	            <a>
+	                <div class="medal"></div>
+	                <div class="manten_num"></div>
+	                <p>三級</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_2class" class="panel">
+	            <a>
+	                <div class="medal"></div>
+	                <div class="manten_num"></div>
+	                <p>二級</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_1class" class="panel">
+	            <a>
+	                <div class="medal"></div>
+	                <div class="manten_num"></div>
+	                <p>一級</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+	        
+	    </div>
+	    
+	    <!-- kanken_panels -->
+
+	    <hr class="after_anim1">
+
+	    <p class="page_title after_anim1">漢検トレーニング</p>
+
+	    <div class="home_text">
+	        <h2 class="after_anim1">漢検準一級・一級を目標としている方は</h2>
+	        <h2 class="after_anim1">こちらで勉強することができます。</h2>
+	    </div>
+
+	    <div id="kanken_switch" class="switch after_anim1">
+	        <input id="switch" name="kanken" checked type="checkbox" onclick="Switch_kanken();">
+	        <label for="switch"></label>
+	    </div>
+
+		<!-- kanken_panels -->
+	    <div id="kanken_jun1_panels" class="after_anim1">
+
+	        <article id="panel_kanken_jun1_jukugo" class="panel panel_test">
+	            <a>
+	                <div class="medal"></div>
+	                <p>熟語の読み</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_kanken_jun1_kun" class="panel panel_test">
+	            <a>
+	                <div class="medal"></div>
+	                <p>訓読み</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_ichiran_jun1_jukugo" class="panel panel_ichiran">
+	            <a>
+	                <p>問題一覧を表示</p>
+	            </a>
+	        </article>
+
+	        <article id="panel_ichiran_jun1_kun" class="panel panel_ichiran">
+	            <a>
+	                <p>問題一覧を表示</p>
+	            </a>
+	        </article>
+
+	    </div>
+
+	    <div id="kanken_1_panels" class="after_anim1">
+
+	        <article id="panel_kanken_1_ateji" class="panel panel_test">
+	            <a>
+	                <div class="medal"></div>
+	                <p>当て字</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_kanken_1_jukugo" class="panel panel_test">
+	            <a>
+	                <div class="medal"></div>
+	                <p>熟語の読み</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_kanken_1_kun" class="panel panel_test">
+	            <a>
+	                <div class="medal"></div>
+	                <p>訓読み</p>
+	                <p class="high_score"></p>
+	            </a>
+	        </article>
+
+	        <article id="panel_ichiran_1_ateji" class="panel panel_ichiran">
+	            <a>
+	                <p>問題一覧を表示</p>
+	            </a>
+	        </article>
+
+	        <article id="panel_ichiran_1_jukugo" class="panel panel_ichiran">
+	            <a>
+	                <p>問題一覧を表示</p>
+	            </a>
+	        </article>
+
+	        <article id="panel_ichiran_1_kun" class="panel panel_ichiran">
+	            <a>
+	                <p>問題一覧を表示</p>
+	            </a>
+	        </article>
+
+	    </div>
+	    <!-- kanken_panels -->
+
+	    <hr class="after_anim1">
+
+	    <p id="siritori_title" class="page_title after_anim1">漢字しりとり勝負</p>
+
+	    <div class="home_text">
+	        <h2 id="siritori_text1" class="after_anim1">難読漢字をしりとり形式で出題する</h2>
+	        <h2 id="siritori_text2" class="after_anim1">対戦型ゲームモードです。</h2>
+	    </div>
+
+		<!-- siritori_panels -->
+	    <div id="siritori_panels" class="after_anim1">
+
+	        <article id="panel_siritori1" class="panel">
+	            <a>
+	                <img src="./img/adv1.gif" class="adv_on_home">
+	                <p>レベル1</p>
+	                <p>対戦相手:ポチ</p>
+	            </a>
+	        </article>
+
+	        <article id="panel_siritori2" class="panel">
+	            <a>
+	                <img src="./img/adv2.gif" class="adv_on_home">
+	                <p>レベル2</p>
+	                <p>対戦相手:フブキ</p>
+	            </a>
+	        </article>
+
+	        <article id="panel_siritori3" class="panel">
+	            <a>
+	                <img src="./img/adv3.gif" class="adv_on_home">
+	                <p>レベル3</p>
+	                <p>対戦相手:クロ</p>
+	            </a>
+	        </article>
+
+	    </div>
+	    <!-- siritori_panels -->
+
+	    <hr class="after_anim1">
+
+	    <p id="analysis_title" class="page_title after_anim1">漢検１級 出題データ分析</p>
+
+	    <div class="home_text">
+	        <h2 id="siritori_text1" class="after_anim1">漢検で実際に出題された「熟字訓・当て字」を元に</h2>
+	        <h2 id="siritori_text2" class="after_anim1">出題傾向・頻出度を分析します。</h2>
+	    </div>
+
+	    <article id="panel_ateji_analysis" class="bar_panel after_anim1">
+	        <a>
+	            <p>過去問題　分析・考察</p>
+	        </a>
+	    </article>
+	    
+	    <article id="panel_ateji_good_taisaku" class="bar_panel after_anim1">
+	        <a>
+	            <p>おすすめの対策法</p>
+	        </a>
+	    </article>
+	    
+	    <article id="panel_ateji_bad_taisaku" class="bar_panel after_anim1">
+	        <a>
+	            <p>良くない対策法とＱ＆Ａ</p>
+	        </a>
+	    </article>
+	    
+	    <hr class="after_anim1">
+
+	    <article id="panel_link" class="bar_panel after_anim1">
+	        <a>
+	            <p>リンク・素材提供元</p>
+	        </a>
+	    </article>
+	    
+	    <article id="panel_omake" class="bar_panel after_anim1">
+	        <a>
+	            <p>おまけ</p>
+	        </a>
+	    </article>
+	    
+		<footer id="footer">
+			<p class="after_anim1">Copyright © 2017 709info All Rights Reserved.</p>
+		</footer>
+
+	</div>
+	
+    <script type="text/javascript" src="./js/get_time.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+
+    <script type="text/javascript">
+        // キャッシュの回避
+        
+        // jsの読み込み
+        document.write('<script type="text/javascript" src="./js/functions_of_all_pages.js?v=' + time + '"><\/script>');
+    </script>
+
+	<script src="./js/jquery.mb.YTPlayer.min.js?v=1"></script>
+    <script type="text/javascript">
+    
+    	$('#js-mainvisualVideo').YTPlayer();
+    	
+        $(function() {
+
+            // ロード画面の表示
+            let h = $(window).height();
+            $('#wrap').css('display', 'none');
+            $('#loader_bg ,#loader').height(h).css('display', 'block');
+
+            //右クリック禁止
+            $(document).on('contextmenu', function(e) {
+                return false;
+            });
+
+	        // #newsアニメーション
+	        $('#news').css({
+	            	'display': 'block',
+	                'top': '-400px'
+	            }).animate({
+	                'top': '40px'
+	            }, 1000).animate({
+	                'top': '30px'
+	            }, 500)
+	            .delay(15000).fadeOut('slow').bind('click', function() {
+	                $(this).stop(true, false).fadeOut('slow');
+	            });
+	            
+	        $(".panel p").css("font-size", "48px").css("line-height", "0.5");
+	        $(".panel_ichiran p").css("font-size", "20px");
+        });
+        
+        //全ての読み込みが完了したらロード画面を非表示
+        $(window).load(function() {
+            $('#loader_bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+            $('#wrap').css('display', 'block');
+            
+            Add_anim1();
+        });
+
+    </script>
+
+    <script type="text/javascript">
+		
+		// - - <a>タグに自動でhref属性を追加 - -
+		
+		$("article").each(function() {
+			let id = $(this).attr("id").replace("panel_", "");
+			let page_name;
+			
+			if (id.indexOf("class") !== -1) {
+				page_name = "class.html#" + id.replace("class", "");
+		    } else if (id.indexOf("kanken") !== -1) {
+				page_name = "kanken.html#" + id.replace("kanken_", "");
+		    } else if (id.indexOf("ichiran") !== -1) {
+				page_name = "ichiran.html#" + id.replace("ichiran_", "");
+		    } else if (id.indexOf("siritori") !== -1) {
+				page_name = "siritori.html#" + id.replace("siritori", "");
+		    } else if (id.indexOf("ateji") !== -1) {
+				page_name = "ateji_page/" + id + ".html";
+		    } else {
+		    	page_name = id + ".html";
+		    }
+		    
+		    $(this).children("a").attr("href", "./ja/"+ page_name);
+		});
+		
+        // - - メダル・王冠の表示 - - 
+		
+        // 1級～6級
+        const MANTEN = [200, 100, 100, 100, 100, 100];
+        const GOKAKU = [180, 80, 80, 80, 80, 80];
+        for (let i = 1; i <= 6; i++) {
+            let score = Get_cookie(i + 'class');
+            	// Number()は避ける  null => 0になってしまうため
+            	// nullなら「未プレイ」、0なら「プレイしたが0点だった」と区別する
+            let manten = Number(Get_cookie(i + 'class_manten'));
+
+			// パネル内の最高点の表示
+            if (score === null) score = "--"; // 未プレイ
+            $("#panel_" + i + "class .high_score").html('最高点：' + score);
+
+            // メダル画像の表示
+            if (manten !== 0) {
+                $("#panel_" + i + "class .manten_num").html('<font size="5">×</font>' + manten).css("opacity", 1);
+            }
+            Show_medal("#panel_" + i + "class .medal", score, MANTEN[i - 1], GOKAKU[i - 1]);
+        }
+
+        // 漢検トレーニング
+        let KANKEN_LIST = new Array();
+		$(".panel_test").each(function() {
+			const page_name = $(this).attr("id").replace("panel_", ""); // id属性からジャンルを取得
+		    KANKEN_LIST.push(page_name);
+		});
+
+        for (let i = 0; i < KANKEN_LIST.length; i++) {
+            let score = Get_cookie(KANKEN_LIST[i]);
+            
+			// パネル内の最高点の表示
+            if (score === null) score = "--";
+            $("#panel_" + KANKEN_LIST[i] + " .high_score").html('最高点：' + score);
+
+            // メダル画像の表示
+            if (score !== "--") {
+                Show_medal("#panel_" + KANKEN_LIST[i] + " .medal", score, 100, 90);
+            }
+        }
+
+        // しりとり勝負
+        for (let i = 1; i <= 3; i++) {
+            let defeat = Get_cookie('defeat_level' + i);
+
+            // 王冠画像の表示
+            if (defeat) {
+                $("#panel_siritori" + i + " a").append('<img src="./img/crown.png" class="crown_on_home">');
+            }
+        }
+
+        // パネル上のメダル表示
+        function Show_medal(id, score, manten, gokaku) {
+        
+        	let medal;
+            if (score == manten) {
+                medal = "gold";
+            } else if (score >= gokaku) {
+                medal = "silver";
+            } else if (score >= gokaku - 30) {
+                medal = "bronze";
+            } else {
+            	return;
+            }
+            
+            $(id).html('<img src="./img/'+ medal +'.png" class="medal_on_home">');
+        }
+
+		// - - 漢検スイッチの設定 - -
+
+        // 漢検スイッチの取得
+        let kanken_switch = Get_cookie('kanken_switch');
+        let id_show;
+        let id_hide;
+        
+        if (kanken_switch === null) {
+        	kanken_switch = '準1級';
+        }
+
+        // 漢検スイッチへの反映
+        if (kanken_switch === '準1級') {
+        	id_show = '#kanken_jun1_panels';
+        	id_hide = '#kanken_1_panels';
+        } else if (kanken_switch === '1級') {
+        	id_show = '#kanken_1_panels';
+        	id_hide = '#kanken_jun1_panels';
+        }
+        $('input[name="kanken"]').prop("checked", (kanken_switch === '準1級') ? true : false);
+        $(id_hide).css('pointer-events', 'none');
+
+        // 漢検スイッチの切り替え
+        function Switch_kanken() {
+        	let show_anim;
+        	let hide_anim;
+            if (kanken_switch === '1級') {
+	        	id_show = '#kanken_1_panels';
+	        	id_hide = '#kanken_jun1_panels';
+	        	show_anim = 'anim1';
+	        	hide_anim = 'anim2';
+                kanken_switch = '準1級';
+            } else if (kanken_switch === '準1級') {
+	        	id_show = '#kanken_jun1_panels';
+	        	id_hide = '#kanken_1_panels';
+	        	show_anim = 'anim2';
+	        	hide_anim = 'anim1';
+                kanken_switch = '1級';
+            }
+
+            $(id_show).removeClass(show_anim).addClass(show_anim + '_out').css('pointer-events', 'none');
+            $(id_hide).removeClass(hide_anim + '_out').addClass(hide_anim).css('pointer-events', 'default');
+            
+            Write_cookie(kanken_switch, 'kanken_switch');
+        }
+
+        // - - スライドアニメーション - -
+
+		$(".add_anim1").addClass("anim1");
+		$(".after_anim1").css("opacity", "0");
+		
+		$(".add_delay").each(function(i, elem) {
+		    $(elem).css("animation-delay", (1.2 + (i * 0.1)) + "s");
+		});
+
+        // アニメーションクラスの追加
+        $(window).scroll(function() {
+			Add_anim1();
+        });
+    
+        // アニメーションを開始すべきか判定
+    	function Add_anim1() {
+            $(".after_anim1").each(function(i) {
+            
+            	// 隠しパネルは見せない
+				if ("#" + $(this).attr('id') === id_hide) return true;
+		        
+		        // 要素の可視領域を計算
+                const img_pos = $(this).offset().top;
+                const win_height = $(window).height();
+                let anim_pos = img_pos - win_height + 50;
+                if (i < $(".after_anim1").length - 3) {
+                    anim_pos += 50;
+                }
+                
+                if (Get_browser() === "chrome" || Get_browser() === "fox") anim_pos += 1875;
+                
+                // 要素が可視領域に入るとアニメーション開始
+                if ($(window).scrollTop() > Math.floor(anim_pos)) {
+                	$(this).addClass('anim1');
+                }
+            });
+    	}
+    
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <title>六級　検定試験</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style type="text/css">
+  <!--
+  body{background-color:#000000;
+       background-image:URL("Blueplanet.jpg");
+       background-repeat:no-repeat;
+       background-size:cover}
+  -->
+  </style>
+  
+  <script type="text/javascript" src="//23193612.ranking.fc2.com/analyze.js" charset="utf-8"></script>
+  <script type="text/javascript" src="./jquery.js"></script>
+  <script type="text/javascript">
+  <!--
+  function Conf(){
+   if(confirm("採点を開始します。よろしいですか?")){
+    var score = 0;
+  	var judge;
+  	    
+  	if(document.Q1.q1.value == "かきつばた"){$('form[name="Q1"] input[name="q1"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q1"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q2.value == "へちま"){$('form[name="Q1"] input[name="q2"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q2"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q3.value == "ゆず"){$('form[name="Q1"] input[name="q3"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q3"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q4.value == "りんご"){$('form[name="Q1"] input[name="q4"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q4"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q5.value == "きゅうり"){$('form[name="Q1"] input[name="q5"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q5"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q6.value == "なでしこ"){$('form[name="Q1"] input[name="q6"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q6"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q7.value == "ひまわり"){$('form[name="Q1"] input[name="q7"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q7"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q8.value == "あじさい"){$('form[name="Q1"] input[name="q8"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q8"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q9.value == "ぼたん"){$('form[name="Q1"] input[name="q9"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q9"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q1.q10.value == "あかね"){$('form[name="Q1"] input[name="q10"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q1"] input[name="q10"]').css({'background-color':'cornflowerblue'});}
+  	    
+  	if(document.Q2.q1.value == "なぞらえる"){$('form[name="Q2"] input[name="q1"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q1"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q2.value == "つぶやく"){$('form[name="Q2"] input[name="q2"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q2"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q3.value == "もとより"){$('form[name="Q2"] input[name="q3"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q3"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q4.value == "むしろ"){$('form[name="Q2"] input[name="q4"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q4"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q5.value == "ねんごろ"){$('form[name="Q2"] input[name="q5"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q5"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q6.value == "あざける"){$('form[name="Q2"] input[name="q6"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q6"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q7.value == "ふさわしい"){$('form[name="Q2"] input[name="q7"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q7"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q8.value == "ようやく"){$('form[name="Q2"] input[name="q8"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q8"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q9.value == "とがる"){$('form[name="Q2"] input[name="q9"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q9"]').css({'background-color':'cornflowerblue'});}
+  	if(document.Q2.q10.value == "からかう"){$('form[name="Q2"] input[name="q10"]').css({'background-color':'coral'}); score++;}else{$('form[name="Q2"] input[name="q10"]').css({'background-color':'cornflowerblue'});}
+  	    
+  	score = score * 5;
+  	    
+  	if(score === 100){judge = "満点合格";
+  	} else if(score >= 80){judge = "合格";
+  	} else {judge = "不合格";}
+  	    
+  	$("#clear_line").css("display","none");
+  	window.scrollTo(0,0);
+  	$("#saiten").css("display","block");
+  	$("#saiten").html("採点結果： " + score + "点 /100点<br><br>判定： " + judge + " です。");
+  	$("#sub-saiten").css("display","none");
+  	$("#sub-home").css("display","default");
+   }
+  }
+  
+  $(function(){
+   $(document).on('contextmenu',function(e){
+	return false;
+   });
+  });
+  
+  //-->
+  </script>
+  
+  <noscript>
+   <META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html">
+  </noscript>
+  
+ </head>
+ 
+ <body onCopy="return false;" onSelectStart="return false;" id="selectableDiv">
+ 
+  <h1>難読漢字検定　六級</h1>
+  
+  <article id="question">
+  
+   <h3 id="clear_line">合格ライン：100点中80点以上</h3>
+   <h3 id="saiten"></h3>
+  
+   <form name="Q1" class="form-q">
+    <h4 style="padding:20px">[一] 次の植物を表す漢字の読みを平仮名で答えなさい。（5点×10問）</h4>
+    <table>
+     <tr><th><h4>　 問１　<k>燕子花</k></h4></th><td><input type="text" name="q1"></td> <th><h4>問６　 <k>撫子</k></h4></th><td><input type="text" name="q6"></td>
+     <tr><th><h4>　 問２　<k>糸瓜  </k></h4></th><td><input type="text" name="q2"></td> <th><h4>問７　 <k>向日葵</k></h4></th><td><input type="text" name="q7"></td>
+     <tr><th><h4>　 問３　<k>柚子  </k></h4></th><td><input type="text" name="q3"></td> <th><h4>問８　 <k>紫陽花</k></h4></th><td><input type="text" name="q8"></td>
+     <tr><th><h4>　 問４　<k>林檎  </k></h4></th><td><input type="text" name="q4"></td> <th><h4>問９　 <k>牡丹</k></h4></th><td><input type="text" name="q9"></td>
+     <tr><th><h4>　 問５　<k>胡瓜  </k></h4></th><td><input type="text" name="q5"></td> <th><h4>問10　 <k>茜</k></h4></th><td><input type="text" name="q10"></td>
+    </table>
+   </form>
+   <br>
+   
+   <form name="Q2" class="form-q">
+    <h4 style="padding:20px">[二] 次の漢字の読みを<u>送り仮名も含めて</u>答えなさい。（5点×10問）</h4>
+    <table>
+     <tr><th><h4>　 問１　<k>準える</k></h4></th><td><input type="text" name="q1"></td> <th><h4>問６　 <k>嘲る    </k></h4></th><td><input type="text" name="q6"></td>
+     <tr><th><h4>　 問２　<k>呟く  </k></h4></th><td><input type="text" name="q2"></td> <th><h4>問７　 <k>相応しい</k></h4></th><td><input type="text" name="q7"></td>
+     <tr><th><h4>　 問３　<k>固より</k></h4></th><td><input type="text" name="q3"></td> <th><h4>問８　 <k>漸く    </k></h4></th><td><input type="text" name="q8"></td>
+     <tr><th><h4>　 問４　<k>寧ろ  </k></h4></th><td><input type="text" name="q4"></td> <th><h4>問９　 <k>尖る    </k></h4></th><td><input type="text" name="q9"></td>
+     <tr><th><h4>　 問５　<k>懇ろ  </k></h4></th><td><input type="text" name="q5"></td> <th><h4>問10　 <k>揶揄う  </k></h4></th><td><input type="text" name="q10"></td>
+    </table>
+   </form>
+
+   <div id="sub-saiten"><input type="submit" value="採点開始" onclick="Conf()"></div>
+   <div id="sub-home" style="display:none"><input type="submit" value="ホームに戻る" onclick="location.href='./index.html'"></div>
+  
+  </article>
+  
+  <!-- [FC2 Analyzer] http://analyzer.fc2.com/  -->
+  <script language="javascript" src="//analyzer54.fc2.com/ana/processor.php?uid=2747672" type="text/javascript"></script>
+  <noscript><div align="right"><img src="//analyzer54.fc2.com/ana/icon.php?uid=2747672&ref=&href=&wid=0&hei=0&col=0" /></div></noscript>
+  <div style="width:180px;display:inline;"><ol style="text-align:left;list-style-type:none;margin:3px;font-size:10pt;display:inline;"></ol></div>
+  <!-- [FC2 Analyzer]  -->
+  
+ </body>
+</html>
