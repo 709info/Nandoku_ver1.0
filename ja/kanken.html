@@ -13,436 +13,436 @@
 	  gtag('config', 'UA-123486040-2');
 	</script>
 
-    <meta charset="utf-8">
-    <title>難読漢字検定　試験</title>
-    <link rel="shortcut icon" href="../img/favicon.ico">
+	<meta charset="utf-8">
+	<title>難読漢字検定　試験</title>
+	<link rel="shortcut icon" href="../img/favicon.ico">
 
-    <style type="text/css">
-        body {
-            background-color: #000000;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            overflow-y: scroll;
-        }
-    </style>
+	<style type="text/css">
+		body {
+			background-color: #000000;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			overflow-y: scroll;
+		}
+	</style>
 
-    <noscript>
-    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
-    </noscript>
+	<noscript>
+		<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+	</noscript>
 
 </head>
 
 <body id="kanken_page">
 
-    <div id="loader_bg">
-        <div id="loader">
-            <img src="../img/img-loading.gif" alt="Now Loading..." />
-            <p>Now Loading...</p>
-        </div>
-    </div>
+	<div id="loader_bg">
+		<div id="loader">
+			<img src="../img/img-loading.gif" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
 
-    <div id="saiten_bg">
-        <div id="saiten_tyuu">
-            <img src="../img/img-loading.gif" alt="Now Loading..." />
-            <p>採点中・・・</p>
-        </div>
-    </div>
+	<div id="saiten_bg">
+		<div id="saiten_tyuu">
+			<img src="../img/img-loading.gif" alt="Now Loading..." />
+			<p>採点中・・・</p>
+		</div>
+	</div>
 
-    <div id="wrap">
+	<div id="wrap">
 
 		<header>
-	    	<h1 class="page_title">難読漢字検定 ver1.0</h1>
-	    </header>
-	    
-        <div id="genre_page">
+			<h1 class="page_title">難読漢字検定 ver1.0</h1>
+		</header>
+		
+		<div id="genre_page">
 
-            <article id="genre_field" class="field">
+			<article id="genre_field" class="field">
 
-                <h3>特訓したい分野をお選び下さい。</h3>
+				<h3>特訓したい分野をお選び下さい。</h3>
 
-                <div class="mode_switch">
-                    <input id="switch" name="mode" checked type="checkbox" onclick="Switch_mode();">
-                    <label for="switch"></label>
-                </div>
+				<div class="mode_switch">
+					<input id="switch" name="mode" checked type="checkbox" onclick="Switch_mode();">
+					<label for="switch"></label>
+				</div>
 
-                <div id="genre_panels">
-                </div>
+				<div id="genre_panels">
+				</div>
 
-                <article id="about_tokoton_panel" class="panel genre_panel">
-                    <a onClick="Show_intro();">
-                        <p>とことんモードとは？</p>
-                    </a>
-                </article>
+				<article id="about_tokoton_panel" class="panel genre_panel">
+					<a onClick="Show_intro();">
+						<p>とことんモードとは？</p>
+					</a>
+				</article>
 
-                <article id="fukusyuu_panel" class="panel genre_panel">
-                    <a onClick="Show_list();">
-                        <p>復習リスト</p>
-                        <p id="cookie_fukusyuu"></p>
-                    </a>
-                </article>
+				<article id="fukusyuu_panel" class="panel genre_panel">
+					<a onClick="Show_list();">
+						<p>復習リスト</p>
+						<p id="cookie_fukusyuu"></p>
+					</a>
+				</article>
 
-		        <article id="edit_panel" class="center bar_panel">
-		        	<a onClick="Show_edit();">
-		            	<p>登録データの管理・編集</p>
-		            </a>
-		        </article>
-		        
-            </article>
+				<article id="edit_panel" class="center bar_panel">
+					<a onClick="Show_edit();">
+						<p>登録データの管理・編集</p>
+					</a>
+				</article>
+				
+			</article>
 
-        </div>
+		</div>
 
-        <div id="about_tokoton_page">
+		<div id="about_tokoton_page">
 
-            <article id="about_tokoton_field" class="field">
+			<article id="about_tokoton_field" class="field">
 
-                <article id="back_panel_on_about" class="back_panel">
-                    <a onClick="Hide_intro();">
-                        <p>もどる</p>
-                    </a>
-                </article>
+				<article id="back_panel_on_about" class="back_panel">
+					<a onClick="Hide_intro();">
+						<p>もどる</p>
+					</a>
+				</article>
 
-                <h3 class="pre_title">＜とことんモードについて＞</h3>
-                
-                <p>１．登録されている問題を順番に解いていくモードです。</p>
-                
-	                <article id="pre_ateji_panel" class="genre_panel">
-			    		<p class="pre_genre">当て字</p>
-			    		<p class="pre_nokori">残り：700</p>
-				    </article>
-				    
-                <p class="pre_text">２．分野・レベルを選択して挑戦できます。</p>
-        
-        		<div id="pre_level_panels">
+				<h3 class="pre_title">＜とことんモードについて＞</h3>
+				
+				<p>１．登録されている問題を順番に解いていくモードです。</p>
+				
+					<article id="pre_ateji_panel" class="genre_panel">
+						<p class="pre_genre">当て字</p>
+						<p class="pre_nokori">残り：700</p>
+					</article>
+					
+				<p class="pre_text">２．分野・レベルを選択して挑戦できます。</p>
+		
+				<div id="pre_level_panels">
 
-	                <article id="pre_level1_panel" class="panel">
-			    		<p class="pre_level">LEVEL 1</p>
-			    		<p class="pre_nokori">残り：300</p>
-				    </article>
-                
-	                <article id="pre_level2_panel" class="panel">
-			    		<p class="pre_level">LEVEL 2</p>
-			    		<p class="pre_nokori">残り：250</p>
-				    </article>
-                
-	                <article id="pre_level3_panel" class="panel">
-			    		<p class="pre_level">LEVEL 3</p>
-			    		<p class="pre_nokori">残り：150</p>
-				    </article>
-				    
+					<article id="pre_level1_panel" class="panel">
+						<p class="pre_level">LEVEL 1</p>
+						<p class="pre_nokori">残り：300</p>
+					</article>
+				
+					<article id="pre_level2_panel" class="panel">
+						<p class="pre_level">LEVEL 2</p>
+						<p class="pre_nokori">残り：250</p>
+					</article>
+				
+					<article id="pre_level3_panel" class="panel">
+						<p class="pre_level">LEVEL 3</p>
+						<p class="pre_nokori">残り：150</p>
+					</article>
+					
 				</div>
 		
-                <p class="pre_text">３．間違えた問題は「復習リスト」に登録されます。</p>
+				<p class="pre_text">３．間違えた問題は「復習リスト」に登録されます。</p>
 
-                <table id="pre_table1" class="float_left">
-                	<tr>
-            			<th>
-                    		<h4><toi>問4</toi><kanji>沿階草</kanji></h4>
-                    	</th>
-                    	<td>
-                    		<input type="text" value="じゃのひげ" class="pre_correct">
-                    	</td>
-                    </tr>
-                	<tr>
-            			<th>
-                    		<h4><toi>問5</toi><kanji>満江紅</kanji></h4>
-                    	</th>
-                    	<td>
-                    		<input type="text" value="うめもどき" class="pre_incorrect">
-                    	</td>
-                    </tr>
-                	<tr>
-            			<th>
-                    		<h4><toi>問6</toi><kanji>接続草</kanji></h4>
-                    	</th>
-                    	<td>
-                    		<input type="text" value="すぎな" class="pre_correct">
-                    	</td>
-                    </tr>
+				<table id="pre_table1" class="float_left">
+					<tr>
+						<th>
+							<h4><toi>問4</toi><kanji>沿階草</kanji></h4>
+						</th>
+						<td>
+							<input type="text" value="じゃのひげ" class="pre_correct">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<h4><toi>問5</toi><kanji>満江紅</kanji></h4>
+						</th>
+						<td>
+							<input type="text" value="うめもどき" class="pre_incorrect">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<h4><toi>問6</toi><kanji>接続草</kanji></h4>
+						</th>
+						<td>
+							<input type="text" value="すぎな" class="pre_correct">
+						</td>
+					</tr>
 				</table>
-                <table id="pre_table2" class="float_right">
-                	<tr>
-            			<th>
-                    		<p><kanji>「満江紅」</kanji>が登録される</p>
-                    	</th>
-                    </tr>
+				<table id="pre_table2" class="float_right">
+					<tr>
+						<th>
+							<p><kanji>「満江紅」</kanji>が登録される</p>
+						</th>
+					</tr>
 				</table>
 				
 				<p id="right_arrow1">⇨</p>
 				
-                <p class="pre_text margin_on_pre_text">４．復習リストを選択すると、問題に再挑戦できます。</p>
+				<p class="pre_text margin_on_pre_text">４．復習リストを選択すると、問題に再挑戦できます。</p>
 
-                <article id="pre_fukusyuu_panel" class="panel">
-		    		<p class="pre_fukusyuu">復習リスト</p>
-		    		<p class="pre_nokori">登録数：25</p>
-			    </article>
+				<article id="pre_fukusyuu_panel" class="panel">
+					<p class="pre_fukusyuu">復習リスト</p>
+					<p class="pre_nokori">登録数：25</p>
+				</article>
 
-                <table id="pre_table3" class="float_right">
-                	<tr>
-            			<th>
-                    		<h4><toi>問1</toi><kanji>満江紅</kanji></h4>
-                    	</th>
-                    	<td>
-                    		<input type="text" value="あかうきくさ" class="pre_correct">
-                    	</td>
-                    </tr>
+				<table id="pre_table3" class="float_right">
+					<tr>
+						<th>
+							<h4><toi>問1</toi><kanji>満江紅</kanji></h4>
+						</th>
+						<td>
+							<input type="text" value="あかうきくさ" class="pre_correct">
+						</td>
+					</tr>
 				</table>
 				
 				<p id="right_arrow2">⇨</p>
 
-            </article>
+			</article>
 
-        </div>
+		</div>
 
-        <div id="edit_page">
+		<div id="edit_page">
 
-            <article id="edit_field" class="field">
+			<article id="edit_field" class="field">
 
-                <article id="back_panel_on_edit" class="back_panel">
-                    <a onClick="Hide_edit();">
-                        <p>もどる</p>
-                    </a>
-                </article>
+				<article id="back_panel_on_edit" class="back_panel">
+					<a onClick="Hide_edit();">
+						<p>もどる</p>
+					</a>
+				</article>
 
-                <h3 class="margin_on_title">＜出題データの編集＞</h3>
-                
+				<h3 class="margin_on_title">＜出題データの編集＞</h3>
+				
 				<table id="edit_table_all_ask" class="edit_table" border="1">
 					<tr>
 						<th>すべての分野・レベルの総出題数</th>
 						<th id="th_all_asked" name="num"></th>
 						<td>
 							<div class="mini_panel reset_panel">
-	    						<a id="all_asked" onClick="Reset_asked(this);">
-	    							<p>リセット</p>
-	    						</a>
-	    					</div>
-	    				</td>
+								<a id="all_asked" onClick="Reset_asked(this);">
+									<p>リセット</p>
+								</a>
+							</div>
+						</td>
 					</tr>
 				</table>
-                <div id="edit_table_ask">
-                </div>
-                
-                <p>※「リセット」を押すと、もう一度はじめから出題されます。</p>
+				<div id="edit_table_ask">
+				</div>
+				
+				<p>※「リセット」を押すと、もう一度はじめから出題されます。</p>
 
-                <h3 class="margin_on_title">＜復習データの編集＞</h3>
-                
-	    		<table class="edit_table" border="1">
+				<h3 class="margin_on_title">＜復習データの編集＞</h3>
+				
+				<table class="edit_table" border="1">
 					<tr>
 						<th>すべての分野・レベルの総出題数</th>
 						<th id="th_all_fukusyuu" name="num"></th>
 						<td>
 							<div class="mini_panel reset_panel">
-	    						<a id="all_fukusyuu" onClick="Reset_fukusyuu(this);">
-	    							<p>消去</p>
-	    						</a>
-	    					</div>
-	    				</td>
+								<a id="all_fukusyuu" onClick="Reset_fukusyuu(this);">
+									<p>消去</p>
+								</a>
+							</div>
+						</td>
 					</tr>
 				</table>
-                <div id="edit_table_fukusyuu">
-                </div>
-                
-                <p>※「消去」を押すと、復習問題がすべて消去されます。</p>
+				<div id="edit_table_fukusyuu">
+				</div>
+				
+				<p>※「消去」を押すと、復習問題がすべて消去されます。</p>
 
-            </article>
+			</article>
 
-        </div>
+		</div>
 
-        <div id="level_page">
+		<div id="level_page">
 
-            <article id="level_field" class="field">
+			<article id="level_field" class="field">
 
-                <h3>問題の難易度をお選び下さい。</h3>
+				<h3>問題の難易度をお選び下さい。</h3>
 
-                <div id="level_panels">
-                </div>
+				<div id="level_panels">
+				</div>
 
-            </article>
+			</article>
 
-        </div>
+		</div>
 
-        <div id="test_page">
+		<div id="test_page">
 
-            <article id="test_field" class="field">
+			<article id="test_field" class="field">
 
-                <!-- 合格ライン -->
-                <div id="clear_line" class="add_delay">
-                    <h3 id="kentei_level"></h3>
-                    <h3 id="gokaku_line"></h3>
-                    <h3 id="genre_text"></h3>
-                </div>
-                <div id="tokoton_texts" class="add_delay">
-                    <h3 id="tokoton_text"></h3>
-                    <h3 id="tokoton_text2"></h3>
-                </div>
+				<!-- 合格ライン -->
+				<div id="clear_line" class="add_delay">
+					<h3 id="kentei_level"></h3>
+					<h3 id="gokaku_line"></h3>
+					<h3 id="genre_text"></h3>
+				</div>
+				<div id="tokoton_texts" class="add_delay">
+					<h3 id="tokoton_text"></h3>
+					<h3 id="tokoton_text2"></h3>
+				</div>
 
-                <!-- 採点結果 -->
-                <div id="saiten_kekka" class="add_delay">
-                    <p id="saiten_kekka_text">採点結果：<font id="count_up"></font>/<font id="max_score"></font>点</p>
-                    <p id="judge_text">判定：<font id="judge"></font></p>
+				<!-- 採点結果 -->
+				<div id="saiten_kekka" class="add_delay">
+					<p id="saiten_kekka_text">採点結果：<font id="count_up"></font>/<font id="max_score"></font>点</p>
+					<p id="judge_text">判定：<font id="judge"></font></p>
 
-                    <!-- ツイートボタン -->
-                    <a id="a_tweet" class="a_tweet" target="_blank">
+					<!-- ツイートボタン -->
+					<a id="a_tweet" class="a_tweet" target="_blank">
 						この結果をツイート
 					</a>
-                </div>
+				</div>
 
-                <div id="tokoton_kekka" class="add_delay">
-                    <p>採点結果：<font id="clear_on_tokoton"></font>/10個</p>
-                    <p id="clear_num">総クリア数：<font id="all_clear_on_tokoton"></font></p>
-                </div>
-                <div id="finish_kekka" class="add_delay">
-                	<p id="full_tokoton">すべての問題が出題されました。</p>
-                    <p>これまでの成果：総クリア数　<font id="all_clear_on_finish"></font></p>
-                    <p id="otsukare">お疲れ様でした。</p>
+				<div id="tokoton_kekka" class="add_delay">
+					<p>採点結果：<font id="clear_on_tokoton"></font>/10個</p>
+					<p id="clear_num">総クリア数：<font id="all_clear_on_tokoton"></font></p>
+				</div>
+				<div id="finish_kekka" class="add_delay">
+					<p id="full_tokoton">すべての問題が出題されました。</p>
+					<p>これまでの成果：総クリア数　<font id="all_clear_on_finish"></font></p>
+					<p id="otsukare">お疲れ様でした。</p>
 
-                    <!-- ツイートボタン -->
-                    <a id="a_tweet_tokoton" class="a_tweet" target="_blank">
+					<!-- ツイートボタン -->
+					<a id="a_tweet_tokoton" class="a_tweet" target="_blank">
 						この結果をツイート
 					</a>
-                </div>
+				</div>
 
-                <!-- 採点結果のメダル表示 -->
-                <div id="medals_on_result">
-                    <img src="../img/gold.png" id="result_gold">
-                    <img src="../img/silver.png" id="result_silver">
-                    <img src="../img/bronze.png" id="result_bronze">
-                </div>
+				<!-- 採点結果のメダル表示 -->
+				<div id="medals_on_result">
+					<img src="../img/gold.png" id="result_gold">
+					<img src="../img/silver.png" id="result_silver">
+					<img src="../img/bronze.png" id="result_bronze">
+				</div>
 
-                <!-- 解答フォーム -->
-                <form id="form_on_test">
-                </form>
+				<!-- 解答フォーム -->
+				<form id="form_on_test">
+				</form>
 
-                <!-- 送信ボタン -->
-                <div id="button_saiten" class="button">
-                    <input type="submit" value="採点開始" onclick="Saiten()">
-                </div>
-                <div id="button_retry" class="button">
-                    <input type="submit" value="再挑戦" onclick="Retry()">
-                </div>
-                <div id="button_home" class="button">
-                    <input type="submit" value="ホームに戻る" onclick="location.href='../index.html'">
-                </div>
-                <div id="button_next" class="button">
-                    <input type="submit" value="次の問題へ" onclick="Be_on_the_test()">
-                </div>
-                <div id="button_finish" class="button">
-                    <input type="submit" value="ここでやめる" onclick="Finish_tokoton();">
-                </div>
+				<!-- 送信ボタン -->
+				<div id="button_saiten" class="button">
+					<input type="submit" value="採点開始" onclick="Saiten()">
+				</div>
+				<div id="button_retry" class="button">
+					<input type="submit" value="再挑戦" onclick="Retry()">
+				</div>
+				<div id="button_home" class="button">
+					<input type="submit" value="ホームに戻る" onclick="location.href='../index.html'">
+				</div>
+				<div id="button_next" class="button">
+					<input type="submit" value="次の問題へ" onclick="Be_on_the_test()">
+				</div>
+				<div id="button_finish" class="button">
+					<input type="submit" value="ここでやめる" onclick="Finish_tokoton();">
+				</div>
 
-            </article>
+			</article>
 
-        </div>
+		</div>
 
-        <div id="fukusyuu_page">
+		<div id="fukusyuu_page">
 
-            <article id="fukusyuu_field" class="field">
+			<article id="fukusyuu_field" class="field">
 
-                <!-- 復習リストメッセージ -->
-                <div id="fukusyuu_texts">
-                    <h3 id="fukusyuu_text"></h3>
-                    <h3 id="kokufuku_text"></h3>
-                </div>
+				<!-- 復習リストメッセージ -->
+				<div id="fukusyuu_texts">
+					<h3 id="fukusyuu_text"></h3>
+					<h3 id="kokufuku_text"></h3>
+				</div>
 
-                <!-- ツイートボタン -->
-                <a id="a_tweet_fukusyuu" class="a_tweet" target="_blank">
+				<!-- ツイートボタン -->
+				<a id="a_tweet_fukusyuu" class="a_tweet" target="_blank">
 					この結果をツイート
 				</a>
 
-                <!-- 解答フォーム -->
-                <form id="form_on_fukusyuu">
-                </form>
+				<!-- 解答フォーム -->
+				<form id="form_on_fukusyuu">
+				</form>
 
-                <!-- 送信ボタン -->
-                <div id="button_all_answer" class="button">
-                    <input type="submit" value="解答を表示" onclick="All_answer();">
-                </div>
-                <div id="button_home_fukusyuu" class="button">
-                    <input type="submit" value="ホームに戻る" onclick="location.href='../index.html'">
-                </div>
+				<!-- 送信ボタン -->
+				<div id="button_all_answer" class="button">
+					<input type="submit" value="解答を表示" onclick="All_answer();">
+				</div>
+				<div id="button_home_fukusyuu" class="button">
+					<input type="submit" value="ホームに戻る" onclick="location.href='../index.html'">
+				</div>
 
-            </article>
+			</article>
 
-        </div>
+		</div>
 
-    </div>
+	</div>
 
 	<footer id="footer">
 		<p class="after_anim1">Copyright © 2017 709info All Rights Reserved.</p>
 	</footer>
 
-    <script type="text/javascript" src="../js/get_time.js"></script>
-    <script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/get_time.js"></script>
+	<script type="text/javascript" src="../js/jquery.js"></script>
 
-    <script type="text/javascript">
-    
-        // cssの読み込み
-        $("head").append('<link rel="stylesheet" href="../css/all_pages.css?v=' + time + '">');
-        $("head").append('<link rel="stylesheet" href="../css/kentei.css?v=' + time + '">');
-        
-        // - - jsファイルを取得・ロード - -
-        
-        // URLからジャンルを取得
-        // 不適切なハッシュなら「準１級　熟語」に変換
-        let hash = location.hash.substring(1);
-        const valid_hash_list = ["jun1_jukugo", "jun1_kun", "1_ateji", "1_jukugo", "1_kun"];
-        const is_valid_hash = valid_hash_list.indexOf(hash);
-        if (is_valid_hash === -1) hash = "jun1_jukugo";
-        
-        const js_name = "../js/kanji_data/data_kanken_" + hash + ".js";
-        
-        // time -> キャッシュの回避
-        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
-        document.write('<script type="text/javascript" src="../js/format_of_kentei.js?v='+time+'"><\/script>');
-        document.write('<script type="text/javascript" src="../js/functions_of_all_pages.js?v='+time+'"><\/script>');
-        document.write('<script type="text/javascript" src="../js/functions_of_kentei.js?v='+time+'"><\/script>');
-    </script>
+	<script type="text/javascript">
+	
+		// cssの読み込み
+		$("head").append('<link rel="stylesheet" href="../css/all_pages.css?v=' + time + '">');
+		$("head").append('<link rel="stylesheet" href="../css/kentei.css?v=' + time + '">');
+		
+		// - - jsファイルを取得・ロード - -
+		
+		// URLからジャンルを取得
+		// 不適切なハッシュなら「準１級　熟語」に変換
+		let hash = location.hash.substring(1);
+		const valid_hash_list = ["jun1_jukugo", "jun1_kun", "1_ateji", "1_jukugo", "1_kun"];
+		const is_valid_hash = valid_hash_list.indexOf(hash);
+		if (is_valid_hash === -1) hash = "jun1_jukugo";
+		
+		const js_name = "../js/kanji_data/data_kanken_" + hash + ".js";
+		
+		// time -> キャッシュの回避
+		document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+		document.write('<script type="text/javascript" src="../js/format_of_kentei.js?v='+time+'"><\/script>');
+		document.write('<script type="text/javascript" src="../js/functions_of_all_pages.js?v='+time+'"><\/script>');
+		document.write('<script type="text/javascript" src="../js/functions_of_kentei.js?v='+time+'"><\/script>');
+	</script>
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 
 		// - - ページの初期設定 - -
 
-        document.title = TITLE;
-        $(".page_title").html(PAGE_TITLE);
+		document.title = TITLE;
+		$(".page_title").html(PAGE_TITLE);
 
-        // 背景画像の設定
-        $('body').css({
-            backgroundImage: 'url("' + BACKGROUND_URL + '")'
-        });
+		// 背景画像の設定
+		$('body').css({
+			backgroundImage: 'url("' + BACKGROUND_URL + '")'
+		});
 
-        // ロード画面の表示
-        $('#wrap').hide();
-        $('#loader_bg ,#loader').height($(window).height()).show();
+		// ロード画面の表示
+		$('#wrap').hide();
+		$('#loader_bg ,#loader').height($(window).height()).show();
 
 		//全ての読み込みが完了したらロード画面を非表示
-        $(window).load(function() {
-            $('#loader_bg').delay(900).fadeOut(800, function() {
-            	$('.zoom_up').css('position', 'relative');
-            });
-            $('#loader').delay(600).fadeOut(300);
-            $('#wrap').show();
-        });
-        
-        // 右クリック禁止
-        let is_copy_ban = true;
-        $(document).on('contextmenu', function(e) {
-        	if (is_copy_ban) {
-            	return false;
-            }
-        });
-        $(document).bind("copy selectstart",function(e){
-        	if (is_copy_ban) {
-            	return false;
-            }
-        });
-        
-        // 「戻る」パネルの移動
-        const BACK_PANEL_ID = ["#back_panel_on_about", "#back_panel_on_edit"];
-        Move_back_panel(BACK_PANEL_ID);
+		$(window).load(function() {
+			$('#loader_bg').delay(900).fadeOut(800, function() {
+				$('.zoom_up').css('position', 'relative');
+			});
+			$('#loader').delay(600).fadeOut(300);
+			$('#wrap').show();
+		});
+		
+		// 右クリック禁止
+		let is_copy_ban = true;
+		$(document).on('contextmenu', function(e) {
+			if (is_copy_ban) {
+				return false;
+			}
+		});
+		$(document).bind("copy selectstart",function(e){
+			if (is_copy_ban) {
+				return false;
+			}
+		});
+		
+		// 「戻る」パネルの移動
+		const BACK_PANEL_ID = ["#back_panel_on_about", "#back_panel_on_edit"];
+		Move_back_panel(BACK_PANEL_ID);
 
-        // モード(試験 or とことん)のcookie取得
-        let mode = Get_cookie('mode_switch');
-        if (!mode) mode = '試験';
+		// モード(試験 or とことん)のcookie取得
+		let mode = Get_cookie('mode_switch');
+		if (!mode) mode = '試験';
 
 		// "animation-delay"プロパティを追加
 		let tmp_id = "";
@@ -455,14 +455,14 @@
 				delay += 0.2;
 			}
 			
-		    $(this).css({
-		    	"animation-delay": delay + "s",
-		    	"opacity": "0"
-		    });
+			$(this).css({
+				"animation-delay": delay + "s",
+				"opacity": "0"
+			});
 		});
 
-        // - - 出題準備 - -
-        
+		// - - 出題準備 - -
+		
 		let LIST = new Array(); // 分野・レベル別の復習リスト
 		let LIST_NUM = new Array(); // 登録数
 		let KANJI_CLEAR = new Array(); // クリア数
@@ -478,90 +478,90 @@
 		let ALL_ASKED_NUM; // 総出題数
 		
 		// データ格納
-        Data_set();
+		Data_set();
 
-    	// - - - ジャンル選択画面の構成 - - -
-    	
-    	// ジャンルフィールド構成
+		// - - - ジャンル選択画面の構成 - - -
+		
+		// ジャンルフィールド構成
 		Make_genre_field();
 
 		// ジャンルパネル内の表示
-        Show_genre_data();
+		Show_genre_data();
 
 		// パネル内の表示データの更新
 		Reflect_mode();
 
-        // - - 出題の構成開始 - -
+		// - - 出題の構成開始 - -
 
 		// 受検者のパネル選択で値が確定
-        let genre;
-        let level;
+		let genre;
+		let level;
 
 		// IDからジャンルを取得
 		function Get_genre(elem) {
-		    genre = Number(elem.name);
-		    
-		    Show_level_panels(); // レベル選択画面へ
+			genre = Number(elem.name);
+			
+			Show_level_panels(); // レベル選択画面へ
 		}
 
 		// IDからレベルを取得
 		function Get_level(elem) {
-		    level = Number(elem.name);
-		    
-		    Be_on_the_test(); // 出題開始
+			level = Number(elem.name);
+			
+			Be_on_the_test(); // 出題開始
 		}
 
 		// とことんモードで使用
-        let kanji_clear; // クリア数
-        let kanji_asked; // 既出数(＝出題済みの問題数)
-        let kanji_num; // 登録数
-        let is_tokoton_second = false;
-        let kanji_asked_initial;
-        
-        let yomi_mem = new Array(); // 出題した漢字の読みを記録
+		let kanji_clear; // クリア数
+		let kanji_asked; // 既出数(＝出題済みの問題数)
+		let kanji_num; // 登録数
+		let is_tokoton_second = false;
+		let kanji_asked_initial;
+		
+		let yomi_mem = new Array(); // 出題した漢字の読みを記録
 
-        function Be_on_the_test() {
-        
-            $("html").animate({
-                scrollTop: 0
-            });
-            
+		function Be_on_the_test() {
+		
+			$("html").animate({
+				scrollTop: 0
+			});
+			
 			if (mode === '試験') {
 				kanji_num = DATA[genre][level].length;
-            } else if (mode === 'とことん') {
-	            // 既クリア数・既出題数の取得
-	            if (!is_tokoton_second) {
-		            kanji_clear = KANJI_CLEAR[genre][level];
-		            kanji_asked = KANJI_ASKED[genre][level];
-		            kanji_asked_initial = kanji_asked;
-		            kanji_num = DATA[genre][level].length;
-	            }
+			} else if (mode === 'とことん') {
+				// 既クリア数・既出題数の取得
+				if (!is_tokoton_second) {
+					kanji_clear = KANJI_CLEAR[genre][level];
+					kanji_asked = KANJI_ASKED[genre][level];
+					kanji_asked_initial = kanji_asked;
+					kanji_num = DATA[genre][level].length;
+				}
 
-                // 出題する漢字が尽きた場合
-                if (kanji_asked >= kanji_num) {
-                    Finish_tokoton();
-                    return;
-                }
-                
-                $("#tokoton_texts").show();
-            }
-            
-            // コピー禁止開始
-            is_copy_ban = true;
+				// 出題する漢字が尽きた場合
+				if (kanji_asked >= kanji_num) {
+					Finish_tokoton();
+					return;
+				}
+				
+				$("#tokoton_texts").show();
+			}
+			
+			// コピー禁止開始
+			is_copy_ban = true;
 			$('body').addClass('no_select');
 
-            // 試験・とことんページへの切り替え
-            Go_to_test_page();
-            
-            // 合格ラインの表示
-            Show_kentei_texts();
+			// 試験・とことんページへの切り替え
+			Go_to_test_page();
+			
+			// 合格ラインの表示
+			Show_kentei_texts();
 
-            // 解答フォームの表示
-            if (!is_tokoton_second) {
+			// 解答フォームの表示
+			if (!is_tokoton_second) {
 				Make_form();
 			}
-            
-            let asked_q_num = 0;
+			
+			let asked_q_num = 0;
 
 			for (let main_q = 0; main_q < DATA[genre].length; main_q++) {
 
@@ -571,429 +571,429 @@
 					level = main_q;
 				}
 
-	            // 出題数の決定
-	            let q_num;
-	            if (mode === '試験') {
+				// 出題数の決定
+				let q_num;
+				if (mode === '試験') {
 					if (DATA[genre].length === 1) {
-		            	q_num = 50;
-		            } else if (DATA[genre].length === 2) {
-		            	if (main_q === 0) {
-		            		q_num = 30;
-		            	} else if (main_q === 1) {
-		            		q_num = 20;
-		            	}
-		            } else if (DATA[genre].length === 3) {
-		            	q_num = Q_NUM[main_q];
-		            }
-	            } else if (mode === 'とことん') {
-	                q_num = 10;
-	            }
+						q_num = 50;
+					} else if (DATA[genre].length === 2) {
+						if (main_q === 0) {
+							q_num = 30;
+						} else if (main_q === 1) {
+							q_num = 20;
+						}
+					} else if (DATA[genre].length === 3) {
+						q_num = Q_NUM[main_q];
+					}
+				} else if (mode === 'とことん') {
+					q_num = 10;
+				}
 
-	            // 2段組にすべきか判断(trueなら2段)
-	            const double_column = (q_num % 2 === 0);
+				// 2段組にすべきか判断(trueなら2段)
+				const double_column = (q_num % 2 === 0);
 
-	            // 問題文を取得
+				// 問題文を取得
 				Make_question(main_q, genre, level, QUESTION_STR[genre]);
-                
-                // <table>要素の構成
-                Make_table("#test_Q" + (main_q + 1), double_column);
+				
+				// <table>要素の構成
+				Make_table("#test_Q" + (main_q + 1), double_column);
 
-	            // 一問ずつランダム・順番に出題
-	            for (let q = 0; q < q_num; q++) {
+				// 一問ずつランダム・順番に出題
+				for (let q = 0; q < q_num; q++) {
 
-	                // 出題漢字(の番号)をランダムに決定
-	                let i;
-	                if (mode === '試験') {
-	                    i = Math.floor(Math.random() * DATA[genre][level].length);
-	                } else if (mode === 'とことん') {
-	                    i = kanji_asked_initial;
-	                }
+					// 出題漢字(の番号)をランダムに決定
+					let i;
+					if (mode === '試験') {
+						i = Math.floor(Math.random() * DATA[genre][level].length);
+					} else if (mode === 'とことん') {
+						i = kanji_asked_initial;
+					}
 
-	                if (!DATA[genre][level][i]) break;
+					if (!DATA[genre][level][i]) break;
 
 					// 漢字・読み・条件を取得
 					const data = Get_data(genre, level, i);
 					const kanji = data[0], yomi = data[1], condition = data[2];
 
-                    // 試験テーブル構成
-                    Make_toi_and_kanji(data, double_column, q, q_num, main_q);
-                    
-	                // 正解の読みを記録
-	                yomi_mem[asked_q_num] = yomi;
+					// 試験テーブル構成
+					Make_toi_and_kanji(data, double_column, q, q_num, main_q);
+					
+					// 正解の読みを記録
+					yomi_mem[asked_q_num] = yomi;
 
-	                // 一度使った漢字は削除
-	                DATA[genre][level].splice(i, 1);
-	                
-	                asked_q_num++;
-	            }
+					// 一度使った漢字は削除
+					DATA[genre][level].splice(i, 1);
+					
+					asked_q_num++;
+				}
 
-	            if (mode === 'とことん' || DATA[genre].length < 2) break;
-            }
-        }
+				if (mode === 'とことん' || DATA[genre].length < 2) break;
+			}
+		}
 
-        // - - 採点開始 - -
+		// - - 採点開始 - -
 
-        function Saiten() {
+		function Saiten() {
 
-            if (mode === '試験') {
-                if (!confirm("採点を開始します。よろしいですか?")) {
-                    return;
-                }
+			if (mode === '試験') {
+				if (!confirm("採点を開始します。よろしいですか?")) {
+					return;
+				}
 
-                $('#test_page').fadeOut('normal');
-                $('#saiten_bg, #saiten_tyuu').height($(window).height()).fadeIn('normal');
-            }
-            
-            // コピー禁止解除
-            is_copy_ban = false;
+				$('#test_page').fadeOut('normal');
+				$('#saiten_bg, #saiten_tyuu').height($(window).height()).fadeIn('normal');
+			}
+			
+			// コピー禁止解除
+			is_copy_ban = false;
 			$('.no_select').removeClass('no_select');
 
-            $("html").animate({
-                scrollTop: 0
-            }, function() {
+			$("html").animate({
+				scrollTop: 0
+			}, function() {
 
-                if (mode === 'とことん') {
-                    $("#tokoton_texts").hide();
-                    is_tokoton_second = true;
-                } else if (mode === '試験') {
-                	// clear_lineの削除
-                    const elem = document.getElementById('clear_line');
-                    elem.parentNode.removeChild(elem);
-                }
+				if (mode === 'とことん') {
+					$("#tokoton_texts").hide();
+					is_tokoton_second = true;
+				} else if (mode === '試験') {
+					// clear_lineの削除
+					const elem = document.getElementById('clear_line');
+					elem.parentNode.removeChild(elem);
+				}
 
 				let score = 0; // 合計得点
-                let checked_q_num = 0; // すでに採点した問題数
+				let checked_q_num = 0; // すでに採点した問題数
 
-	            let list = LIST[genre][level]; // 復習リスト
-	            let correct_num = 0;
-                const cookie = COOKIE + '_' + GENRE_EN[genre] + '_'+LEVEL_EN[level];
+				let list = LIST[genre][level]; // 復習リスト
+				let correct_num = 0;
+				const cookie = COOKIE + '_' + GENRE_EN[genre] + '_'+LEVEL_EN[level];
 
 				for (let main_q = 0; main_q < MAIN_Q_NUM; main_q++) {
 
-		            // 採点数の決定
-		            let q_num;
-		            if (mode === '試験') {
+					// 採点数の決定
+					let q_num;
+					if (mode === '試験') {
 						if (DATA[genre].length === 1) {
-			            	q_num = 50;
-			            } else if (DATA[genre].length === 2) {
-			            	if (main_q === 0) {
-			            		q_num = 30;
-			            	} else if (main_q === 1) {
-			            		q_num = 20;
-			            	}
-			            } else if (DATA[genre].length === 3) {
-			            	q_num = Q_NUM[main_q];
-			            }
-		            } else if (mode === 'とことん') {
-		                q_num = 10;
-		            }
+							q_num = 50;
+						} else if (DATA[genre].length === 2) {
+							if (main_q === 0) {
+								q_num = 30;
+							} else if (main_q === 1) {
+								q_num = 20;
+							}
+						} else if (DATA[genre].length === 3) {
+							q_num = Q_NUM[main_q];
+						}
+					} else if (mode === 'とことん') {
+						q_num = 10;
+					}
 
-	                // 一問ずつ正誤判定
-	                for (let q = 0; q < q_num; q++) {
+					// 一問ずつ正誤判定
+					for (let q = 0; q < q_num; q++) {
 
 						const input_selector = "input[name='Q" + (main_q + 1) + "q" + (q + 1) + "']";
 						
 						// 出題されていなければ採点終了
 						if ($(input_selector).length === 0) break;
 						
-                        const input = $(input_selector).val();
-                        const yomi = yomi_mem[checked_q_num];
-                        
-                        // 正誤判定
-                        const data = Check_answer(input, yomi);
-                        const is_correct = data[0], answer = data[1], answers = data[2];
+						const input = $(input_selector).val();
+						const yomi = yomi_mem[checked_q_num];
+						
+						// 正誤判定
+						const data = Check_answer(input, yomi);
+						const is_correct = data[0], answer = data[1], answers = data[2];
 
-                        // フィールド内のカラーリング
-                        const field_name = 'Q' + (main_q + 1) + 'q' + (q + 1);
-                        Coloring_field(is_correct, field_name);
+						// フィールド内のカラーリング
+						const field_name = 'Q' + (main_q + 1) + 'q' + (q + 1);
+						Coloring_field(is_correct, field_name);
 
-                        // 正解の表示
-                        Show_answers(data, yomi, field_name);
-                        
-	                    if (is_correct) {
+						// 正解の表示
+						Show_answers(data, yomi, field_name);
+						
+						if (is_correct) {
 							score += UNIT_SCORE[main_q]; // 配点分を加点
 							correct_num++;
-	                    } else if (mode === 'とことん') {
-	                        // 復習リストに追加
+						} else if (mode === 'とことん') {
+							// 復習リストに追加
 							Add_to_list(q + kanji_asked, cookie + '_list');
-	                    }
+						}
 
-	                    checked_q_num++;
-	                }
-	                
-		            if (mode === 'とことん' || DATA[genre].length < 2) break;
-	            }
-	            
+						checked_q_num++;
+					}
+					
+					if (mode === 'とことん' || DATA[genre].length < 2) break;
+				}
+				
 				if (mode === 'とことん') score = correct_num;
 
-                Make_result(score); // 採点結果を出力
+				Make_result(score); // 採点結果を出力
 				Show_result(score); // 採点結果を表示
-                
-                if (mode === '試験') {
-                    Write_cookie_score(score, COOKIE);
-                    Write_cookie_score(score, COOKIE + '_' + GENRE_EN[genre]);
-                } else if (mode === 'とことん') {
-                    kanji_clear += correct_num;
-                    kanji_asked += checked_q_num;
+				
+				if (mode === '試験') {
+					Write_cookie_score(score, COOKIE);
+					Write_cookie_score(score, COOKIE + '_' + GENRE_EN[genre]);
+				} else if (mode === 'とことん') {
+					kanji_clear += correct_num;
+					kanji_asked += checked_q_num;
 					
-                    Write_cookie(kanji_clear, cookie + '_clear');
-                    Write_cookie(kanji_asked, cookie + '_asked');
-                }
-            });
-        }
+					Write_cookie(kanji_clear, cookie + '_clear');
+					Write_cookie(kanji_asked, cookie + '_asked');
+				}
+			});
+		}
 
-        // - - 採点結果の出力 - -
+		// - - 採点結果の出力 - -
 
-        let judge; // 合否判定(満点 or 合格 or あと少し or 不合格)
-        let judge_text; // 判定テキスト
-        
-        function Make_result(score) {
-        
-	        if (mode === '試験') {
+		let judge; // 合否判定(満点 or 合格 or あと少し or 不合格)
+		let judge_text; // 判定テキスト
+		
+		function Make_result(score) {
+		
+			if (mode === '試験') {
 
-	            // スコアによって判定を分岐
-	            if (score === MAX_SCORE) {
-	                judge = "満点";
-	                $("#judge").css('font-size', '48px');
-	                judge_text = "<font color='gold'>満点合格</font>です。";
-	            } else if (score >= GOKAKU_SCORE) {
-	                judge = "合格";
-	                $("#judge").css('font-size', '48px');
-	                judge_text = "<font color='yellow'>合格</font>です。";
-	            } else if (score >= GOKAKU_SCORE - 30) {
-	                judge = "あと少し";
-	                judge_text = "あと" + (GOKAKU_SCORE - score) + "点で合格です。";
-	            } else {
-	                judge = "不合格";
-	                judge_text = "不合格です。";
-	            }
+				// スコアによって判定を分岐
+				if (score === MAX_SCORE) {
+					judge = "満点";
+					$("#judge").css('font-size', '48px');
+					judge_text = "<font color='gold'>満点合格</font>です。";
+				} else if (score >= GOKAKU_SCORE) {
+					judge = "合格";
+					$("#judge").css('font-size', '48px');
+					judge_text = "<font color='yellow'>合格</font>です。";
+				} else if (score >= GOKAKU_SCORE - 30) {
+					judge = "あと少し";
+					judge_text = "あと" + (GOKAKU_SCORE - score) + "点で合格です。";
+				} else {
+					judge = "不合格";
+					judge_text = "不合格です。";
+				}
 
-	            // 採点結果をhtmlに反映
-	            $("#max_score").html(MAX_SCORE);
-	            $("#judge").html(judge_text);
+				// 採点結果をhtmlに反映
+				$("#max_score").html(MAX_SCORE);
+				$("#judge").html(judge_text);
 
-	            // 採点結果をtwitterボタンに反映
+				// 採点結果をtwitterボタンに反映
 				Set_tweet_button(score);
 
-            } else if (mode === 'とことん') {
-            	
-                // 採点結果をhtmlに反映
-	            $('#clear_on_tokoton').html(score + "個");
-                $("#all_clear_on_tokoton").html((score + kanji_clear) + "個");
-            }
-        }
+			} else if (mode === 'とことん') {
+				
+				// 採点結果をhtmlに反映
+				$('#clear_on_tokoton').html(score + "個");
+				$("#all_clear_on_tokoton").html((score + kanji_clear) + "個");
+			}
+		}
 
 		// 結果画面の表示
 		function Show_result(score) {
-	        if (mode === '試験') {
-	            $('#saiten_bg, #saiten_tyuu').delay(400).fadeOut('normal', function() {
+			if (mode === '試験') {
+				$('#saiten_bg, #saiten_tyuu').delay(400).fadeOut('normal', function() {
 
-		            $("#clear_line").hide();
-		            $("#button_saiten").hide();
-		            $("#saiten_kekka").show();
-            		$('#saiten_kekka_text').addClass('anim1');
-		            $("#button_retry").show();
-		            $("#button_home").show();
-	                $('#test_page').fadeIn('normal');
-		            
+					$("#clear_line").hide();
+					$("#button_saiten").hide();
+					$("#saiten_kekka").show();
+					$('#saiten_kekka_text').addClass('anim1');
+					$("#button_retry").show();
+					$("#button_home").show();
+					$('#test_page').fadeIn('normal');
+					
 					// アニメーションでカウントアップ
 					Count_up(score);
-	            });
+				});
 
-	        } else if (mode === 'とことん') {
-		        $("#button_saiten").hide();
-                $("#tokoton_kekka").show();
-                $("#tokoton_kekka p").addClass('anim1');
-                $("#clear_num").addClass('anim1');
-	            $("#button_next").show();
-	            $("#button_finish").show();
-	        }
-	        
-	        $('.kensaku_panel').addClass('anim2');
-	        $('.kensaku_panel').show();
+			} else if (mode === 'とことん') {
+				$("#button_saiten").hide();
+				$("#tokoton_kekka").show();
+				$("#tokoton_kekka p").addClass('anim1');
+				$("#clear_num").addClass('anim1');
+				$("#button_next").show();
+				$("#button_finish").show();
+			}
+			
+			$('.kensaku_panel').addClass('anim2');
+			$('.kensaku_panel').show();
 		}
 
 		// とことんモード中断・もしくは終了
-        function Finish_tokoton() {
-        
+		function Finish_tokoton() {
+		
 			Show_otsukare_page();
 
-            $("#all_clear_on_finish").html(kanji_clear +"個/"+ kanji_num +"個");
-            
-            // Tweetボタンの設定
+			$("#all_clear_on_finish").html(kanji_clear +"個/"+ kanji_num +"個");
+			
+			// Tweetボタンの設定
 			Set_tweet_button();
 
-            window.scrollTo(0, 0);
-        }
+			window.scrollTo(0, 0);
+		}
 
 		// - - 復習モード - -
 
-        // 復習リストの表示
-        function Show_list() {
+		// 復習リストの表示
+		function Show_list() {
 
-            if (IS_ALL_LIST_NULL) return;
+			if (IS_ALL_LIST_NULL) return;
 
 			mode = "復習";
-            
-            // コピー禁止開始
-            is_copy_ban = true;
+			
+			// コピー禁止開始
+			is_copy_ban = true;
 			$('body').addClass('no_select');
 
-            // 復習ページへの切り替え
-            Go_to_test_page();
+			// 復習ページへの切り替え
+			Go_to_test_page();
 
-            $("#fukusyuu_text").html("復習リスト　登録数：" + ALL_LIST_NUM + "問");
-            
-            // 解答フォームの表示
+			$("#fukusyuu_text").html("復習リスト　登録数：" + ALL_LIST_NUM + "問");
+			
+			// 解答フォームの表示
 			Make_form();
 
 			// ジャンル・分野ごとに出題
 			let asked_q_num = 0;
 			let main_q = 0;
-            for (let genre_f = 0; genre_f < GENRE[0].length; genre_f++) {
-            	for (let level_f = 0; level_f < LEVEL.length; level_f++) {
-            	
-            		const list = LIST[genre_f][level_f];
+			for (let genre_f = 0; genre_f < GENRE[0].length; genre_f++) {
+				for (let level_f = 0; level_f < LEVEL.length; level_f++) {
+				
+					const list = LIST[genre_f][level_f];
 
-	                if (!list) continue;
+					if (!list) continue;
 
-	                // 問題文を取得(配点は無し)
+					// 問題文を取得(配点は無し)
 					Make_question(main_q, genre_f, level_f, QUESTION_STR[genre_f]);
 
-	                // <table>要素の構成
-	                Make_table("#test_Q" + (main_q + 1) +"", true);
+					// <table>要素の構成
+					Make_table("#test_Q" + (main_q + 1) +"", true);
 
-	                const q_num = LIST_NUM[genre_f][level_f];
-	                const list_array = list.split(",");
+					const q_num = LIST_NUM[genre_f][level_f];
+					const list_array = list.split(",");
 
-	                // 一問ずつ順番に出題
-	                for (let q = 0; q < q_num; q++) {
+					// 一問ずつ順番に出題
+					for (let q = 0; q < q_num; q++) {
 
-	                    // 出題漢字を決定
-	                    const i = Number(list_array[q]) - q;
+						// 出題漢字を決定
+						const i = Number(list_array[q]) - q;
 
 						// 漢字・読み・条件を取得
 						const data = Get_data(genre_f, level_f, i);
 						const kanji = data[0], yomi = data[1], condition = data[2];
 
-	                    // 出題テーブル構成(常に2段組)
+						// 出題テーブル構成(常に2段組)
 						Make_toi_and_kanji(data, true, q, q_num, main_q);
 
-	                    // 正解の読みを記録
-	                    yomi_mem[asked_q_num] = yomi;
+						// 正解の読みを記録
+						yomi_mem[asked_q_num] = yomi;
 
-	                    // 一度使った漢字は削除
-	                    DATA[genre_f][level_f].splice(i, 1);
-	                    
-	                    asked_q_num++;
-	                }
-	                
-	                main_q++;
-                }
-            }
-        }
+						// 一度使った漢字は削除
+						DATA[genre_f][level_f].splice(i, 1);
+						
+						asked_q_num++;
+					}
+					
+					main_q++;
+				}
+			}
+		}
 
 		// 復習リストの解答表示
-        function All_answer() {
-            
-            // コピー禁止解除
-            is_copy_ban = false;
+		function All_answer() {
+			
+			// コピー禁止解除
+			is_copy_ban = false;
 			$('.no_select').removeClass('no_select');
 
-            $("html").animate({
-                scrollTop: 0
-            }, function() {
+			$("html").animate({
+				scrollTop: 0
+			}, function() {
 
-        		// - - 採点開始 - -
+				// - - 採点開始 - -
 
-	            let cleared_sum = 0; // 克服した総数
-	            let checked_q_num = 0; // すでに採点した問題数
+				let cleared_sum = 0; // 克服した総数
+				let checked_q_num = 0; // すでに採点した問題数
 
-	            // 分野・レベルずつ処理
-	            let main_q = 0;
-	            for (let genre_f = 0; genre_f < GENRE[0].length; genre_f++) {
-		            for (let level_f = 0; level_f < LEVEL.length; level_f++) {
+				// 分野・レベルずつ処理
+				let main_q = 0;
+				for (let genre_f = 0; genre_f < GENRE[0].length; genre_f++) {
+					for (let level_f = 0; level_f < LEVEL.length; level_f++) {
 
 						let list = LIST[genre_f][level_f];
-	            		let cleared = 0; // 大問ごとに克服した数
+						let cleared = 0; // 大問ごとに克服した数
 
-		                // その分野の復習リストがなければパス
-		                if (!list) continue;
+						// その分野の復習リストがなければパス
+						if (!list) continue;
 
-		                let correct_num = 0; // 正解数
-		                const cookie = COOKIE + '_' + GENRE_EN[genre_f] + '_' + LEVEL_EN[level_f];
-		                const list_array = list.split(",");
+						let correct_num = 0; // 正解数
+						const cookie = COOKIE + '_' + GENRE_EN[genre_f] + '_' + LEVEL_EN[level_f];
+						const list_array = list.split(",");
 
-		                // 一問ずつ正誤判定
-		                for (let q = 0; q < LIST_NUM[genre_f][level_f] + cleared; q++) {
+						// 一問ずつ正誤判定
+						for (let q = 0; q < LIST_NUM[genre_f][level_f] + cleared; q++) {
 
 							const input_selector = "input[name='Q" + (main_q + 1) + "q" + (q + 1) + "']";
 							
 							if ($(input_selector).length === 0) break;
 							
-	                        const input = $(input_selector).val();
-	                        const yomi = yomi_mem[checked_q_num];
-	                        
-	                        // 正誤判定
-	                        const data = Check_answer(input, yomi);
-	                        const is_correct = data[0], answer = data[1], answers = data[2];
+							const input = $(input_selector).val();
+							const yomi = yomi_mem[checked_q_num];
+							
+							// 正誤判定
+							const data = Check_answer(input, yomi);
+							const is_correct = data[0], answer = data[1], answers = data[2];
 
-	                        // フィールド内のカラーリング
-	                        const field_name = 'Q' + (main_q + 1) + 'q' + (q + 1);
-	                        Coloring_field(is_correct, field_name);
+							// フィールド内のカラーリング
+							const field_name = 'Q' + (main_q + 1) + 'q' + (q + 1);
+							Coloring_field(is_correct, field_name);
 
-	                        // 正解の表示
-	                        Show_answers(data, yomi, field_name);
+							// 正解の表示
+							Show_answers(data, yomi, field_name);
 
-		                    if (is_correct) {
-		                    
+							if (is_correct) {
+							
 								// 復習リストへの追加
 								Remove_from_list(list_array[q], cookie + '_list');
 								
-		                        cleared++;
-		                        correct_num++;
-		                    }
+								cleared++;
+								correct_num++;
+							}
 
-		                    checked_q_num++;
-		                }
+							checked_q_num++;
+						}
 
 						// クリア数をcookieに記録
-		                kanji_clear = Number(Get_cookie(cookie + '_clear'));
-		                Write_cookie(kanji_clear + cleared, cookie + '_clear');
-		                
-		                cleared_sum += cleared;
-		                main_q++;
-		            }
-	            }
+						kanji_clear = Number(Get_cookie(cookie + '_clear'));
+						Write_cookie(kanji_clear + cleared, cookie + '_clear');
+						
+						cleared_sum += cleared;
+						main_q++;
+					}
+				}
 
-	            $("#kokufuku_text").show();
-	            $("#kokufuku_text").html("克服した数：" + cleared_sum + "個");
-	            $('#kokufuku_text').addClass('anim1');
-	            $('#a_tweet_fukusyuu').fadeIn(1000).css("display", "block"); // inline防止
+				$("#kokufuku_text").show();
+				$("#kokufuku_text").html("克服した数：" + cleared_sum + "個");
+				$('#kokufuku_text').addClass('anim1');
+				$('#a_tweet_fukusyuu').fadeIn(1000).css("display", "block"); // inline防止
 
-	            // 採点結果をtwitterボタンに反映
+				// 採点結果をtwitterボタンに反映
 				Set_tweet_button(cleared_sum);
 
-	        	$("#button_home_fukusyuu").show();
-	            $("#button_all_answer").hide();
-                $('.kensaku_panel').addClass('anim2');
-                $('.kensaku_panel').show();
-                
-	            window.scrollTo(0, 0);
-	        });
-        }
+				$("#button_home_fukusyuu").show();
+				$("#button_all_answer").hide();
+				$('.kensaku_panel').addClass('anim2');
+				$('.kensaku_panel').show();
+				
+				window.scrollTo(0, 0);
+			});
+		}
 		
 		// ハッシュフラグメントの取得
 		$(window).on('hashchange', function() {
 			Retry();
 		});
 
-        // 再挑戦
-        function Retry() {
-            location.reload();
-            window.scrollTo(0, 0);
-        }
-    </script>
+		// 再挑戦
+		function Retry() {
+			location.reload();
+			window.scrollTo(0, 0);
+		}
+	</script>
 
 </body>
 

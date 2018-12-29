@@ -13,67 +13,67 @@
 	  gtag('config', 'UA-123486040-2');
 	</script>
 
-    <meta charset="utf-8">
-    <title>難読漢字検定 - 熟字訓・当て字　一覧</title>
-    <link rel="shortcut icon" href="../../img/favicon.ico">
+	<meta charset="utf-8">
+	<title>難読漢字検定 - 熟字訓・当て字　一覧</title>
+	<link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <style type="text/css">
-        body {
-            background-color: #000000;
-            background-image: URL("../../img/img_home.jpg");
-            background-attachment: fixed;
-            background-position: 50% 50%;
-            background-size: cover;
-        }
-    </style>
+	<style type="text/css">
+		body {
+			background-color: #000000;
+			background-image: URL("../../img/img_home.jpg");
+			background-attachment: fixed;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+	</style>
 
-    <noscript>
-    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
-    </noscript>
+	<noscript>
+		<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+	</noscript>
 
 </head>
 
 <body>
 
-    <p class="page_title">熟字訓・当て字　保管庫</p>
+	<p class="page_title">熟字訓・当て字　保管庫</p>
 
-    <div id="intro_page">
+	<div id="intro_page">
 
-        <article id="intro_field" class="field">
+		<article id="intro_field" class="field">
 
 			<p class="intro_title margin_on_title">＜漢検協会公認の問題集＞</p>
 
 			<span id="article_here"></span>
 			
-            <div id="button_saiten" class="button only_one_button">
-                <input type="submit" value="戻る" onclick="location.href='./ateji_analysis.html'">
-            </div>
+			<div id="button_saiten" class="button only_one_button">
+				<input type="submit" value="戻る" onclick="location.href='./ateji_analysis.html'">
+			</div>
 			
-        </article>
+		</article>
 
 	</div>
 
-    <script type="text/javascript" src="../../js/get_time.js"></script>
-    <script type="text/javascript" src="../../js/jquery.js"></script>
+	<script type="text/javascript" src="../../js/get_time.js"></script>
+	<script type="text/javascript" src="../../js/jquery.js"></script>
 
-    <script type="text/javascript">
-    
-        // cssの読み込み
-        $("head").append('<link rel="stylesheet" href="../../css/all_pages.css?v=' + time + '">');
-        $("head").append('<link rel="stylesheet" href="../../css/ateji.css?v=' + time + '">');
-        
-        let js_name = "../../js/kanji_data/data_ateji_past_exam.js";
-        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
-        js_name = "../../js/kanji_data/data_ateji_on_workbook.js";
-        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
-    </script>
-    
-    <script type="text/javascript">
+	<script type="text/javascript">
+	
+		// cssの読み込み
+		$("head").append('<link rel="stylesheet" href="../../css/all_pages.css?v=' + time + '">');
+		$("head").append('<link rel="stylesheet" href="../../css/ateji.css?v=' + time + '">');
+		
+		let js_name = "../../js/kanji_data/data_ateji_past_exam.js";
+		document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+		js_name = "../../js/kanji_data/data_ateji_on_workbook.js";
+		document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+	</script>
+	
+	<script type="text/javascript">
 
-    	let input_array = new Array();
-    	let q_num_on_book;
-    	let book_title;
-    	
+		let input_array = new Array();
+		let q_num_on_book;
+		let book_title;
+		
 		BOOK_LIST.forEach(function(BOOK_TITLE) {
 			
 			book_title = BOOK_TITLE;
@@ -126,51 +126,51 @@
 			$('article[name="' + BOOK_TITLE + '"]').html(html);
 			
 			let q_num_count = 0;
-		    for (let n = 0; n < MONDAI[BOOK_TITLE].length; n++) {
+			for (let n = 0; n < MONDAI[BOOK_TITLE].length; n++) {
 				let mondai_text = MONDAI[BOOK_TITLE][n][0];
 
 				if (mondai_text.split("(").length === 2) {
-				    let condition = mondai_text.split("(")[1].split(")")[0]; // 括弧の中身を取り出す
-				    q_num_count++;
-				    
-				    while (condition.indexOf("」") !== -1) {
-				    	condition = condition.split("」")[1];
-				    	q_num_count++;
-				    }
+					let condition = mondai_text.split("(")[1].split(")")[0]; // 括弧の中身を取り出す
+					q_num_count++;
+					
+					while (condition.indexOf("」") !== -1) {
+						condition = condition.split("」")[1];
+						q_num_count++;
+					}
 				} else {
 					q_num_count++;
 				}
 			}
 			
-		    q_num_on_book = q_num_count;
-		    $('article[name="' + BOOK_TITLE + '"] .q_num_on_book').html(q_num_on_book);
-		    
-		    Check_input();
-    	});
-	    
-	    function Check_input(e) {
-	    	
-	    	const name_array = ["begin_year", "begin_part", "end_year", "end_part"];
-	    	
-	    	if (typeof(e) !== "undefined") {
-	    		book_title = $(e).attr("name");
-	    	}
-	    	
+			q_num_on_book = q_num_count;
+			$('article[name="' + BOOK_TITLE + '"] .q_num_on_book').html(q_num_on_book);
+			
+			Check_input();
+		});
+		
+		function Check_input(e) {
+			
+			const name_array = ["begin_year", "begin_part", "end_year", "end_part"];
+			
+			if (typeof(e) !== "undefined") {
+				book_title = $(e).attr("name");
+			}
+			
 			name_array.forEach(function(name) {
-	    		input_array[name] = $('article[name="' + book_title + '"] input[name="'+ name +'"]').val();
-	    	});
-	    	
-	    	if (typeof(e) === "undefined") {
-	    		input_array["begin_year"] = BOOK_DATE[book_title]["year"];
-	    		input_array["begin_part"] = BOOK_DATE[book_title]["part"];
-	    	}
-	    	
+				input_array[name] = $('article[name="' + book_title + '"] input[name="'+ name +'"]').val();
+			});
+			
+			if (typeof(e) === "undefined") {
+				input_array["begin_year"] = BOOK_DATE[book_title]["year"];
+				input_array["begin_part"] = BOOK_DATE[book_title]["part"];
+			}
+			
 			for(const key in input_array) {
 				
 				let num = input_array[key];
 				
 				num = String(num).replace(/[０-９]/g, function(s) {
-				    return String.fromCharCode(s.charCodeAt(0) - 65248);
+					return String.fromCharCode(s.charCodeAt(0) - 65248);
 				});
 				
 				if (key.indexOf("year") !== -1) {
@@ -183,108 +183,108 @@
 				$('article[name="' + book_title + '"] input[name="'+ key +'"]').val(num);
 			}
 			
-	    	$('article[name="' + book_title + '"] table[name="ranking_of_hit"]').html("");
-	    	
-	    	Make_hit_table();
-	    }
-	    
-	    function Make_hit_table() {
-		    
-		    let HIT = new Array();	// HIT[year][part] = hit_num
-		    let max_num = 1;
-		    let q_num_on_exam = 0;
-		    let sum_of_hit_num = 0;
-		    
-		    for (let year = input_array["begin_year"]; year <= input_array["end_year"]; year++) {
-			    
-			    let begin_part = 1;
-			    let end_part = 3;
-			    
-			    if (year === input_array["begin_year"]) begin_part = input_array["begin_part"];
-			    if (year === input_array["end_year"]) end_part = input_array["end_part"];
-			    
-			    HIT[year] = new Array();
+			$('article[name="' + book_title + '"] table[name="ranking_of_hit"]').html("");
+			
+			Make_hit_table();
+		}
+		
+		function Make_hit_table() {
+			
+			let HIT = new Array();	// HIT[year][part] = hit_num
+			let max_num = 1;
+			let q_num_on_exam = 0;
+			let sum_of_hit_num = 0;
+			
+			for (let year = input_array["begin_year"]; year <= input_array["end_year"]; year++) {
 				
-		    	for (let part = begin_part; part <= end_part; part++) {
-		    		
-		    		if (typeof(DATA[year][part]) === "undefined") continue;
+				let begin_part = 1;
+				let end_part = 3;
+				
+				if (year === input_array["begin_year"]) begin_part = input_array["begin_part"];
+				if (year === input_array["end_year"]) end_part = input_array["end_part"];
+				
+				HIT[year] = new Array();
+				
+				for (let part = begin_part; part <= end_part; part++) {
+					
+					if (typeof(DATA[year][part]) === "undefined") continue;
 					
 					let hit_num = 0;
-		        	for (let i = 0; i < 10; i++) {
-		        		const kanji = DATA[year][part][i][0];
-		        		
-		        		for (let n = 0; n < MONDAI[book_title].length; n++) {
-		        			let mondai_text = MONDAI[book_title][n][0];
-		        			let mondai_list = new Array();
+					for (let i = 0; i < 10; i++) {
+						const kanji = DATA[year][part][i][0];
+						
+						for (let n = 0; n < MONDAI[book_title].length; n++) {
+							let mondai_text = MONDAI[book_title][n][0];
+							let mondai_list = new Array();
 
 							if (mondai_text.split("(").length === 2) {
-							    let condition = mondai_text.split("(")[1].split(")")[0]; // 括弧の中身を取り出す
-							    mondai_list.push(mondai_text.split("(")[0]);
-							    
-							    while (condition.indexOf("」") !== -1) {
-							    	mondai_list.push(condition.split("「")[1].split("」")[0]);
-							    	condition = condition.split("」")[1];
-							    }
+								let condition = mondai_text.split("(")[1].split(")")[0]; // 括弧の中身を取り出す
+								mondai_list.push(mondai_text.split("(")[0]);
+								
+								while (condition.indexOf("」") !== -1) {
+									mondai_list.push(condition.split("「")[1].split("」")[0]);
+									condition = condition.split("」")[1];
+								}
 							} else {
 								mondai_list.push(mondai_text);
 							}
 							
-		        			mondai_list.forEach(function(mondai) {
-			        			if (mondai === kanji) {
-			        				hit_num++;
-			        				sum_of_hit_num++;
-			        				
-			        				return false;
-			        			}
-		        			});
-		        			
-		        		}
-		        		
-		        		q_num_on_exam++;
-		        	}
-		        	
-		        	HIT[year][part] = hit_num;
-		    	}
-		    }
-		    
-		    $('article[name="' + book_title + '"] .q_num_on_exam').html(q_num_on_exam);
-		    $('article[name="' + book_title + '"] .sum_of_hit_num').html(sum_of_hit_num);
-		    $('article[name="' + book_title + '"] .hitting_ratio').html((100 * sum_of_hit_num / q_num_on_exam).toFixed(1));
-		    $('article[name="' + book_title + '"] .efficiency').html(((q_num_on_exam / 10) * q_num_on_book / sum_of_hit_num).toFixed(1));
+							mondai_list.forEach(function(mondai) {
+								if (mondai === kanji) {
+									hit_num++;
+									sum_of_hit_num++;
+									
+									return false;
+								}
+							});
+							
+						}
+						
+						q_num_on_exam++;
+					}
+					
+					HIT[year][part] = hit_num;
+				}
+			}
 			
-		    for (let year = input_array["begin_year"]; year <= input_array["end_year"]; year++) {
-			    
-		    	let exam_data = new Array();
-		    	
-		    	let sum = 0;
-		    	let is_all_empty = true;
-		    	for (let part = 1; part <= 3; part++) {
-	    			if (typeof(HIT[year]) !== "undefined" && typeof(HIT[year][part]) !== "undefined") {
-	    				exam_data[part] = HIT[year][part];
-	    				sum += HIT[year][part];
-	    				is_all_empty = false;
-		    		} else {
-		    			exam_data[part] = "-";
-		    		}
-		    		
-		    		if (year === 30 && part === 3) exam_data[part] = "-";
-		    	}
-		    	
-		    	if (is_all_empty) sum = "-";
-	    		
-	    		let ateji_html = 	'<tr>' +
-	    							'	<th>平成' + year + '年度</th>' +
-	    							'	<td>' + exam_data[1] + '</td>' +
-	    							'	<td>' + exam_data[2] + '</td>' +
-	    							'	<td>' + exam_data[3] + '</td>' +
-	    							'	<td>' + sum + '</td>' +
-	    							'</tr>';
-	    		
-	    		$('article[name="' + book_title + '"] table[name="ranking_of_hit"]').append(ateji_html);
-		    }
-    	}
-    	
-    </script>
+			$('article[name="' + book_title + '"] .q_num_on_exam').html(q_num_on_exam);
+			$('article[name="' + book_title + '"] .sum_of_hit_num').html(sum_of_hit_num);
+			$('article[name="' + book_title + '"] .hitting_ratio').html((100 * sum_of_hit_num / q_num_on_exam).toFixed(1));
+			$('article[name="' + book_title + '"] .efficiency').html(((q_num_on_exam / 10) * q_num_on_book / sum_of_hit_num).toFixed(1));
+			
+			for (let year = input_array["begin_year"]; year <= input_array["end_year"]; year++) {
+				
+				let exam_data = new Array();
+				
+				let sum = 0;
+				let is_all_empty = true;
+				for (let part = 1; part <= 3; part++) {
+					if (typeof(HIT[year]) !== "undefined" && typeof(HIT[year][part]) !== "undefined") {
+						exam_data[part] = HIT[year][part];
+						sum += HIT[year][part];
+						is_all_empty = false;
+					} else {
+						exam_data[part] = "-";
+					}
+					
+					if (year === 30 && part === 3) exam_data[part] = "-";
+				}
+				
+				if (is_all_empty) sum = "-";
+				
+				let ateji_html = 	'<tr>' +
+									'	<th>平成' + year + '年度</th>' +
+									'	<td>' + exam_data[1] + '</td>' +
+									'	<td>' + exam_data[2] + '</td>' +
+									'	<td>' + exam_data[3] + '</td>' +
+									'	<td>' + sum + '</td>' +
+									'</tr>';
+				
+				$('article[name="' + book_title + '"] table[name="ranking_of_hit"]').append(ateji_html);
+			}
+		}
+		
+	</script>
 
 </body>
 

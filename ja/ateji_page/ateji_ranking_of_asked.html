@@ -13,42 +13,42 @@
 	  gtag('config', 'UA-123486040-2');
 	</script>
 
-    <meta charset="utf-8">
-    <title>難読漢字検定 - 熟字訓・当て字　一覧</title>
-    <link rel="shortcut icon" href="../../img/favicon.ico">
+	<meta charset="utf-8">
+	<title>難読漢字検定 - 熟字訓・当て字　一覧</title>
+	<link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <style type="text/css">
-        body {
-            background-color: #000000;
-            background-image: URL("../../img/img_home.jpg");
-            background-attachment: fixed;
-            background-position: 50% 50%;
-            background-size: cover;
-        }
-    </style>
+	<style type="text/css">
+		body {
+			background-color: #000000;
+			background-image: URL("../../img/img_home.jpg");
+			background-attachment: fixed;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+	</style>
 
-    <noscript>
-    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
-    </noscript>
+	<noscript>
+		<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+	</noscript>
 
 </head>
 
 <body>
 
-    <p class="page_title">熟字訓・当て字　保管庫</p>
+	<p class="page_title">熟字訓・当て字　保管庫</p>
 
-    <div id="intro_page">
+	<div id="intro_page">
 
-        <article id="intro_field" class="field">
+		<article id="intro_field" class="field">
 
 			<p class="intro_title margin_on_title">＜出題回数ランキング＞</p>
 			
-	        <div class="center_text">
-	        	<p>調査したい年度（〇年度第〇回から〇年度第〇回まで）を入力し、<br>
-	        	実行ボタンをクリックしてください。<br><br>
-	        	※出題数1回のみの当て字は3つまでしか表示しません。</p>
-	        </div>
-	        
+			<div class="center_text">
+				<p>調査したい年度（〇年度第〇回から〇年度第〇回まで）を入力し、<br>
+				実行ボタンをクリックしてください。<br><br>
+				※出題数1回のみの当て字は3つまでしか表示しません。</p>
+			</div>
+			
 			<div id="ateji_articles">
 				<article name="ranking_of_asked" class="table_article">
 					<div class="mini_panel eval_panel">
@@ -58,11 +58,11 @@
 					第<input type="text" name="begin_part" value="1">回
 					　～　平成<input type="text" name="end_year" value="30">年度 
 					第<input type="text" name="end_part" value="3">回</p>
-    				<p class="q_num_text">累計：<span style="color:gold;">4回</span> - <span id="q_of_4">0</span>個,
-    				　<span style="color:yellow;">3回</span> - <span id="q_of_3">0</span>個,
-    				　<span style="color:khaki;">2回</span> - <span id="q_of_2">0</span>個,
-    				　 1回 - <span id="q_of_1">0</span>個<br>
-    				重複率：<y><span id="overlap_rate">0</span>％</y></p>
+					<p class="q_num_text">累計：<span style="color:gold;">4回</span> - <span id="q_of_4">0</span>個,
+					　<span style="color:yellow;">3回</span> - <span id="q_of_3">0</span>個,
+					　<span style="color:khaki;">2回</span> - <span id="q_of_2">0</span>個,
+					　 1回 - <span id="q_of_1">0</span>個<br>
+					重複率：<y><span id="overlap_rate">0</span>％</y></p>
 					<table name="legend_of_asked" class="ranking_table" border="1">
 						<tr>
 							<th>出題回数</th>
@@ -70,55 +70,55 @@
 							<td>読み</td>
 							<td>出題履歴</td>
 						</tr>
-    				</table>
+					</table>
 					<table name="ranking_of_asked" class="ranking_table" border="1">
-    				</table>
-    				<div class="center_text"><p>・<br>・<br>・</p></div>
-    			</article>
+					</table>
+					<div class="center_text"><p>・<br>・<br>・</p></div>
+				</article>
 			</div>
 			
-            <div id="button_saiten" class="button only_one_button">
-                <input type="submit" value="戻る" onclick="location.href='./ateji_analysis.html'">
-            </div>
+			<div id="button_saiten" class="button only_one_button">
+				<input type="submit" value="戻る" onclick="location.href='./ateji_analysis.html'">
+			</div>
 			
-        </article>
+		</article>
 
 	</div>
 
-    <script type="text/javascript" src="../../js/get_time.js"></script>
-    <script type="text/javascript" src="../../js/jquery.js"></script>
+	<script type="text/javascript" src="../../js/get_time.js"></script>
+	<script type="text/javascript" src="../../js/jquery.js"></script>
 
-    <script type="text/javascript">
-    
-        // cssの読み込み
-        $("head").append('<link rel="stylesheet" href="../../css/all_pages.css?v=' + time + '">');
-        $("head").append('<link rel="stylesheet" href="../../css/ateji.css?v=' + time + '">');
-        
-        const js_name = "../../js/kanji_data/data_ateji_past_exam.js";
-        
-        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
-    </script>
-    
-    <script type="text/javascript">
-	    
-    	let input_array = new Array();
-    	
-	    Check_input();
-	    
-	    function Check_input() {
-	    	
-	    	const name_array = ["begin_year", "begin_part", "end_year", "end_part"];
-	    	
+	<script type="text/javascript">
+	
+		// cssの読み込み
+		$("head").append('<link rel="stylesheet" href="../../css/all_pages.css?v=' + time + '">');
+		$("head").append('<link rel="stylesheet" href="../../css/ateji.css?v=' + time + '">');
+		
+		const js_name = "../../js/kanji_data/data_ateji_past_exam.js";
+		
+		document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+	</script>
+	
+	<script type="text/javascript">
+		
+		let input_array = new Array();
+		
+		Check_input();
+		
+		function Check_input() {
+			
+			const name_array = ["begin_year", "begin_part", "end_year", "end_part"];
+			
 			name_array.forEach(function(name) {
-	    		input_array[name] = $('input[name="'+ name +'"]').val();
-	    	});
-	    	
+				input_array[name] = $('input[name="'+ name +'"]').val();
+			});
+			
 			for(const key in input_array) {
 				
 				let num = input_array[key];
 				
 				num = num.replace(/[０-９]/g, function(s) {
-				    return String.fromCharCode(s.charCodeAt(0) - 65248);
+					return String.fromCharCode(s.charCodeAt(0) - 65248);
 				});
 				
 				if (key.indexOf("year") !== -1) {
@@ -131,97 +131,97 @@
 				$('input[name="'+ key +'"]').val(num);
 			}
 			
-	    	$('table[name="ranking_of_asked"]').html("");
-	    	
-	    	Make_rank_table();
-	    }
-	    
-	    function Make_rank_table() {
-		    
-		    let RANK = new Array();	// [num, kanji, yomi, year_part]
-		    let max_num = 1;
-		    
-		    for (let year = input_array["begin_year"]; year <= input_array["end_year"]; year++) {
-			    
-			    let begin_part = 1;
-			    let end_part = 3;
-			    
-			    if (year === input_array["begin_year"]) begin_part = input_array["begin_part"];
-			    if (year === input_array["end_year"]) end_part = input_array["end_part"];
+			$('table[name="ranking_of_asked"]').html("");
+			
+			Make_rank_table();
+		}
+		
+		function Make_rank_table() {
+			
+			let RANK = new Array();	// [num, kanji, yomi, year_part]
+			let max_num = 1;
+			
+			for (let year = input_array["begin_year"]; year <= input_array["end_year"]; year++) {
 				
-		    	for (let part = begin_part; part <= end_part; part++) {
-		    		
-		    		if (typeof(DATA[year][part]) === "undefined") continue;
+				let begin_part = 1;
+				let end_part = 3;
+				
+				if (year === input_array["begin_year"]) begin_part = input_array["begin_part"];
+				if (year === input_array["end_year"]) end_part = input_array["end_part"];
+				
+				for (let part = begin_part; part <= end_part; part++) {
 					
-		        	for (let i = 0; i < 10; i++) {
-		        		const kanji = DATA[year][part][i][0];
-		        		const yomi = DATA[year][part][i][1];
-		        		let year_part = "H" + year + "-" + part;
-		        		
-		        		RANK.push({"num":1, "kanji":kanji, "yomi":yomi, "year_part":year_part});
-		        		
-		        		for (let n = 0; n < RANK.length - 1; n++) {
-		        			if (RANK[n]["kanji"] === kanji) {
-		        				RANK[n]["num"]++;
-		        				RANK[n]["year_part"] += ", " + year_part;
+					if (typeof(DATA[year][part]) === "undefined") continue;
+					
+					for (let i = 0; i < 10; i++) {
+						const kanji = DATA[year][part][i][0];
+						const yomi = DATA[year][part][i][1];
+						let year_part = "H" + year + "-" + part;
+						
+						RANK.push({"num":1, "kanji":kanji, "yomi":yomi, "year_part":year_part});
+						
+						for (let n = 0; n < RANK.length - 1; n++) {
+							if (RANK[n]["kanji"] === kanji) {
+								RANK[n]["num"]++;
+								RANK[n]["year_part"] += ", " + year_part;
 								
-			        			if (max_num < RANK[n]["num"]) {
-			        				max_num = RANK[n]["num"];
-			        			}
-			        			
-			        			RANK.pop();
-			        			
+								if (max_num < RANK[n]["num"]) {
+									max_num = RANK[n]["num"];
+								}
+								
+								RANK.pop();
+								
 								break;
-		        			}
-		        		}
-		        	}
-		    	}
-		    }
+							}
+						}
+					}
+				}
+			}
 
 			let overlap_count = 0;
-		    for (let num = 1; num <= 4; num++) {
-			    
-			    let font_color = "white";
-			    
-			    if (num === 2) {
-			    	font_color = "khaki";
-			    } else if (num === 3) {
-			    	font_color = "yellow";
-			    } else if (num === 4) {
-			    	font_color = "gold";
-			    }
-			    
-			    let one_count = 0;
-			    let num_count = 0;
-			    
-		    	for (let i = 0; i < RANK.length; i++) {
-		    		
-		    		if (RANK[i]["num"] !== num) continue;
-		    		
-		    		num_count++;
-		    		
-		    		if (num >= 2) overlap_count++;
-		    		
-		    		let ateji_html = 	'<tr>' +
-		    							'	<th><span style="color:'+ font_color +';">' + RANK[i]["num"] + '回</span></th>' +
-		    							'	<td>' + RANK[i]["kanji"] + '</td>' +
-		    							'	<td>' + RANK[i]["yomi"].replace(",","<br>") + '</td>' +
-		    							'	<td>' + RANK[i]["year_part"] + '</td>' +
-		    							'</tr>';
-		    		
-		    		if (num === 1 && one_count !== 4) one_count++;
-		    		if (one_count === 4) continue;
-		    		
-		    		$('table[name="ranking_of_asked"]').prepend(ateji_html);
-		    	}
-		    	
-		    	$('#q_of_' + num).html(num_count);
-	    	}
-	    	
-		    $('#overlap_rate').html((100 * overlap_count / RANK.length).toFixed(1));
-    	}
+			for (let num = 1; num <= 4; num++) {
+				
+				let font_color = "white";
+				
+				if (num === 2) {
+					font_color = "khaki";
+				} else if (num === 3) {
+					font_color = "yellow";
+				} else if (num === 4) {
+					font_color = "gold";
+				}
+				
+				let one_count = 0;
+				let num_count = 0;
+				
+				for (let i = 0; i < RANK.length; i++) {
+					
+					if (RANK[i]["num"] !== num) continue;
+					
+					num_count++;
+					
+					if (num >= 2) overlap_count++;
+					
+					let ateji_html = 	'<tr>' +
+										'	<th><span style="color:'+ font_color +';">' + RANK[i]["num"] + '回</span></th>' +
+										'	<td>' + RANK[i]["kanji"] + '</td>' +
+										'	<td>' + RANK[i]["yomi"].replace(",","<br>") + '</td>' +
+										'	<td>' + RANK[i]["year_part"] + '</td>' +
+										'</tr>';
+					
+					if (num === 1 && one_count !== 4) one_count++;
+					if (one_count === 4) continue;
+					
+					$('table[name="ranking_of_asked"]').prepend(ateji_html);
+				}
+				
+				$('#q_of_' + num).html(num_count);
+			}
+			
+			$('#overlap_rate').html((100 * overlap_count / RANK.length).toFixed(1));
+		}
 
-    </script>
+	</script>
 
 </body>
 

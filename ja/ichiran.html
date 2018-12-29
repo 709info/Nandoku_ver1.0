@@ -13,50 +13,50 @@
 	  gtag('config', 'UA-123486040-2');
 	</script>
 
-    <meta charset="utf-8">
-    <title>難読漢字検定　試験</title>
-    <link rel="shortcut icon" href="../img/favicon.ico">
+	<meta charset="utf-8">
+	<title>難読漢字検定　試験</title>
+	<link rel="shortcut icon" href="../img/favicon.ico">
 
-    <style type="text/css">
-        body {
-            background-color: #000000;
-            background-repeat: no-repeat;
-            background-size: cover;
+	<style type="text/css">
+		body {
+			background-color: #000000;
+			background-repeat: no-repeat;
+			background-size: cover;
   			background-attachment: fixed;
-            overflow-y: scroll;
-        }
-    </style>
+			overflow-y: scroll;
+		}
+	</style>
 
-    <noscript>
-    	<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
-    </noscript>
+	<noscript>
+		<META HTTP-EQUIV=Refresh CONTENT="0; URL=nojava.html"></META>
+	</noscript>
 
 </head>
 
 <body>
 
-    <div id="loader_bg">
-        <div id="loader">
-            <img src="../img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
-            <p>Now Loading...</p>
-        </div>
-    </div>
+	<div id="loader_bg">
+		<div id="loader">
+			<img src="../img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
 
-    <div id="saiten_bg" style="display:none;">
-        <div id="saiten_tyuu">
-            <img src="../img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
-            <p>採点中・・・</p>
-        </div>
-    </div>
+	<div id="saiten_bg" style="display:none;">
+		<div id="saiten_tyuu">
+			<img src="../img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+			<p>採点中・・・</p>
+		</div>
+	</div>
 
-    <div id="wrap">
+	<div id="wrap">
 
-        <p class="page_title">難読漢字検定</p>
+		<p class="page_title">難読漢字検定</p>
 
-	    <div id="ichiran_page">
+		<div id="ichiran_page">
 
-	        <article id="ichiran_field" class="field">
-	        
+			<article id="ichiran_field" class="field">
+			
 			<h3>＜一覧の見方について＞</h3>
 
 				<h5>
@@ -64,90 +64,90 @@
 				   ・「漢字一字クリック」で<y>漢字ペディア検索</y>ができます。<br>
 				   ・左のチェック<input type="checkbox" class="checkbox_of_ichiran">を入れると<y>復習リスト</y>に登録できます。
 				</h5>
-		        	
-		        <div id="check_panels">
+					
+				<div id="check_panels">
 					<div id="check_now" class="check_mark left_position">
 					</div>
 						
-		            <article id="panel_all" class="ichiran_panel">
-		            	<a name="all">
-		                	<p>全ての問題</p>
-		                </a>
-		            </article>
+					<article id="panel_all" class="ichiran_panel">
+						<a name="all">
+							<p>全ての問題</p>
+						</a>
+					</article>
 						
-		            <article id="panel_only_checked" class="ichiran_panel">
-		            	<a name="only_checked">
-		                	<p>復習リスト</p>
-		                </a>
-		            </article>
+					<article id="panel_only_checked" class="ichiran_panel">
+						<a name="only_checked">
+							<p>復習リスト</p>
+						</a>
+					</article>
 				</div>
 
-                <div id="ichiran_table_here"></div>
+				<div id="ichiran_table_here"></div>
 
-                <div id="button_home" class="button only_one_button">
-                    <input type="submit" value="ホームに戻る" onclick="location.href='../index.html'">
-                </div>
-                
-            </article>
+				<div id="button_home" class="button only_one_button">
+					<input type="submit" value="ホームに戻る" onclick="location.href='../index.html'">
+				</div>
+				
+			</article>
 
-        </div>
+		</div>
 
-    </div>
+	</div>
 
-    <script type="text/javascript" src="../js/get_time.js"></script>
-    <script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/get_time.js"></script>
+	<script type="text/javascript" src="../js/jquery.js"></script>
 
-    <script type="text/javascript">
-    
-        const ICHIRAN = true;
-        
-        // cssの読み込み
-        $("head").append('<link rel="stylesheet" href="../css/all_pages.css?v=' + time + '">');
-        $("head").append('<link rel="stylesheet" href="../css/ichiran.css?v=' + time + '">');
-        
-        // - - jsファイルを取得・ロード - -
-        
-        let hash = location.hash.substring(1);
-        const valid_hash_list = ["jun1_jukugo", "jun1_kun", "1_ateji", "1_jukugo", "1_kun"];
-        const is_valid_hash = valid_hash_list.indexOf(hash);
-        if (is_valid_hash === -1) hash = "jun1_jukugo";
-        
-        const js_name = "../js/kanji_data/data_kanken_" + hash + ".js";
-        
-        // time -> キャッシュの回避
-        document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
-        document.write('<script type="text/javascript" src="../js/format_of_kentei.js?v='+time+'"><\/script>');
-        document.write('<script type="text/javascript" src="../js/functions_of_all_pages.js?v='+time+'"><\/script>');
-        document.write('<script type="text/javascript" src="../js/functions_of_ichiran.js?v='+time+'"><\/script>');
-    </script>
+	<script type="text/javascript">
+	
+		const ICHIRAN = true;
+		
+		// cssの読み込み
+		$("head").append('<link rel="stylesheet" href="../css/all_pages.css?v=' + time + '">');
+		$("head").append('<link rel="stylesheet" href="../css/ichiran.css?v=' + time + '">');
+		
+		// - - jsファイルを取得・ロード - -
+		
+		let hash = location.hash.substring(1);
+		const valid_hash_list = ["jun1_jukugo", "jun1_kun", "1_ateji", "1_jukugo", "1_kun"];
+		const is_valid_hash = valid_hash_list.indexOf(hash);
+		if (is_valid_hash === -1) hash = "jun1_jukugo";
+		
+		const js_name = "../js/kanji_data/data_kanken_" + hash + ".js";
+		
+		// time -> キャッシュの回避
+		document.write('<script type="text/javascript" src="' + js_name + '?v='+time+'"><\/script>');
+		document.write('<script type="text/javascript" src="../js/format_of_kentei.js?v='+time+'"><\/script>');
+		document.write('<script type="text/javascript" src="../js/functions_of_all_pages.js?v='+time+'"><\/script>');
+		document.write('<script type="text/javascript" src="../js/functions_of_ichiran.js?v='+time+'"><\/script>');
+	</script>
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 
 		// - - ページの初期設定 - -
 
-        document.title = TITLE;
-        $(".page_title").html(PAGE_TITLE);
+		document.title = TITLE;
+		$(".page_title").html(PAGE_TITLE);
 
-        // 背景画像の設定
-        $('body').css({
-            backgroundImage: 'url("' + BACKGROUND_URL + '")'
-        });
+		// 背景画像の設定
+		$('body').css({
+			backgroundImage: 'url("' + BACKGROUND_URL + '")'
+		});
 
-        // ロード画面の表示
-        $('#wrap').hide();
-        $('#loader_bg ,#loader').height($(window).height()).show();
+		// ロード画面の表示
+		$('#wrap').hide();
+		$('#loader_bg ,#loader').height($(window).height()).show();
 
 		//全ての読み込みが完了したらロード画面を非表示
-        $(window).load(function() {
-            $('#loader_bg').delay(900).fadeOut(800, function() {
-            	$('.zoom_up').css('position', 'relative');
-            });
-            $('#loader').delay(600).fadeOut(300);
-            $('#wrap').show();
-        });
+		$(window).load(function() {
+			$('#loader_bg').delay(900).fadeOut(800, function() {
+				$('.zoom_up').css('position', 'relative');
+			});
+			$('#loader').delay(600).fadeOut(300);
+			$('#wrap').show();
+		});
 
-        // - - 復習リストの編集用- -
-        
+		// - - 復習リストの編集用- -
+		
 		let LIST = new Array(); // 分野・レベル別の復習リスト
 		let LIST_NUM = new Array(); // 登録数
 		let KANJI_CLEAR = new Array(); // クリア数
@@ -163,29 +163,29 @@
 		let ALL_ASKED_NUM; // 総出題数
 		
 		// データ格納
-        Data_set();
+		Data_set();
 
 		Show_ichiran();
 		
 		// 表示テーブルをチェンジ
-    	$('.ichiran_panel a').on('click',function(){
-    		const name = $(this).attr("name");
-    		
+		$('.ichiran_panel a').on('click',function(){
+			const name = $(this).attr("name");
+			
 			if (name === "all") {
-    			$("#check_now").removeClass("right_position").addClass("left_position");
+				$("#check_now").removeClass("right_position").addClass("left_position");
 				$(".no_check").css("display", "table");
 			} else if (name === "only_checked") {
-    			$("#check_now").removeClass("left_position").addClass("right_position");
+				$("#check_now").removeClass("left_position").addClass("right_position");
 				$(".no_check").hide();
 			}
-    	});
-    			
+		});
+				
 		// ハッシュフラグメントの取得
 		$(window).on('hashchange', function() {
-            location.reload();
-            window.scrollTo(0, 0);
+			location.reload();
+			window.scrollTo(0, 0);
 		});
-    </script>
+	</script>
 
 </body>
 
